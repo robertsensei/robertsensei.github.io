@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ocean: #1d5fa8;
+      --ocean-dark: #144678;
+      --ocean-light: #4f8fd6;
+      --button: #ff8a3d;
+      --button-dark: #c95a17;
+      --go: #3fae5a;
+      --go-dark: #2b7e3f;
+      --warn: #f1c40f;
+      --alarm: #e74c3c;
+      --text: #1d2b3a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Fredoka", "M PLUS Rounded 1c", sans-serif;
+      color: white;
+      background: var(--ocean);
+      background-image:
+        radial-gradient(circle at 20% 15%, var(--ocean-light) 0, transparent 40%),
+        radial-gradient(circle at 85% 80%, var(--ocean-dark) 0, transparent 45%);
+      background-attachment: fixed;
+      min-height: 100vh;
+      padding: 20px 16px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: background-color 0.2s;
+    }
+    body.flash { animation: flash 0.6s steps(1) infinite; }
+    @keyframes flash { 50% { background-color: var(--alarm); background-image: none; } }
+
+    .topbar {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .back, .icon-btn {
+      color: white;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 600;
+      background: rgba(255,255,255,0.15);
+      border: none;
+      border-radius: 999px;
+      padding: 8px 18px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .back:hover, .icon-btn:hover { background: rgba(255,255,255,0.25); }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      text-shadow: 0 4px 0 var(--ocean-dark);
+      margin: 10px 0 18px;
+    }
+
+    .presets { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .preset {
+      font-family: inherit;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text);
+      background: white;
+      border: none;
+      border-radius: 999px;
+      padding: 8px 22px;
+      cursor: pointer;
+      box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+    }
+    .preset:active { transform: translateY(3px); box-shadow: 0 1px 0 rgba(0,0,0,0.2); }
+
+    .clock {
+      margin: 28px 0 10px;
+      background: white;
+      color: var(--text);
+      border-radius: 40px;
+      padding: 10px 50px 20px;
+      box-shadow: 0 14px 0 var(--ocean-dark), 0 24px 40px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .digits {
+      display: flex;
+      align-items: center;
+      font-size: clamp(6rem, 22vw, 15rem);
+      font-weight: 700;
+      line-height: 1.1;
+      font-variant-numeric: tabular-nums;
+    }
+    .digits.warn { color: #d68910; }
+    .digits.done { color: var(--alarm); }
+
+    .unit { display: flex; flex-direction: column; align-items: center; }
+    .adjust { display: flex; gap: 8px; }
+    .adjust button {
+      font-family: inherit;
+      font-size: 1.4rem;
+      font-weight: 700;
+      width: 56px;
+      height: 44px;
+      border: none;
+      border-radius: 12px;
+      background: #e6eef8;
+      color: var(--text);
+      cursor: pointer;
+    }
+    .adjust button:hover { background: #d3e2f4; }
+    .running .adjust { visibility: hidden; }
+
+    .bar {
+      width: 100%;
+      height: 14px;
+      background: #e6eef8;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .bar div { height: 100%; width: 100%; background: var(--go); border-radius: 999px; transition: width 0.25s linear, background 0.3s; }
+
+    .controls { margin-top: 26px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+    .big {
+      font-family: inherit;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 14px 50px;
+      cursor: pointer;
+    }
+    .big:active { transform: translateY(5px); }
+    #start { background: var(--go); box-shadow: 0 7px 0 var(--go-dark); min-width: 240px; }
+    #start.pause { background: var(--button); box-shadow: 0 7px 0 var(--button-dark); }
+    #resetBtn { background: rgba(255,255,255,0.2); box-shadow: 0 7px 0 rgba(0,0,0,0.2); }
+
+    .timesup {
+      margin-top: 18px;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 700;
+      text-shadow: 0 4px 0 rgba(0,0,0,0.3);
+      visibility: hidden;
+    }
+    .timesup.show { visibility: visible; }
+
+    .hint { margin-top: 14px; opacity: 0.6; font-size: 1rem; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <a class="back" href="/">← Home</a>
+    <button class="icon-btn" id="fullscreen">⛶ Fullscreen</button>
+  </div>
+
+  <h1>⏱️ Timer</h1>
+
+  <div class="presets" id="presets"></div>
+
+  <div class="clock" id="clock">
+    <div class="digits" id="digits">
+      <div class="unit">
+        <div class="adjust"><button data-add="60">+</button></div>
+        <span id="mm">01</span>
+        <div class="adjust"><button data-add="-60">−</button></div>
+      </div>
+      <span>:</span>
+      <div class="unit">
+        <div class="adjust"><button data-add="10">+</button></div>
+        <span id="ss">00</span>
+        <div class="adjust"><button data-add="-10">−</button></div>
+      </div>
+    </div>
+    <div class="bar"><div id="bar"></div></div>
+  </div>
+
+  <div class="controls">
+    <button class="big" id="start">▶ Start</button>
+    <button class="big" id="resetBtn">↺ Reset</button>
+  </div>
+
+  <div class="timesup" id="timesup">⏰ Time's up! ・ 終わり！</div>
+  <div class="hint">Tip: press the Space bar to start / pause</div>
+
+  <script>
+    const PRESETS = [30, 60, 120, 180, 300, 600];
+
+    let total = 60;        // seconds the timer was set to
+    let remaining = 60;    // seconds left
+    let endTime = null;    // when running: timestamp it ends
+    let ticker = null;
+    let alarm = null;
+    let lastBeepSecond = null;
+    let audio;
+
+    const mmEl = document.getElementById("mm");
+    const ssEl = document.getElementById("ss");
+    const digitsEl = document.getElementById("digits");
+    const barEl = document.getElementById("bar");
+    const startBtn = document.getElementById("start");
+    const clockEl = document.getElementById("clock");
+    const timesUpEl = document.getElementById("timesup");
+
+    function beep(freq, length, volume = 0.2) {
+      try {
+        audio = audio || new (window.AudioContext || window.webkitAudioContext)();
+        const osc = audio.createOscillator();
+        const gain = audio.createGain();
+        osc.type = "square";
+        osc.frequency.value = freq;
+        gain.gain.setValueAtTime(volume, audio.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audio.currentTime + length);
+        osc.connect(gain).connect(audio.destination);
+        osc.start();
+        osc.stop(audio.currentTime + length);
+      } catch (e) {}
+    }
+
+    function label(sec) {
+      return sec < 60 ? `${sec}s` : `${sec / 60} min`;
+    }
+
+    function draw() {
+      const shown = Math.ceil(remaining);
+      mmEl.textContent = String(Math.floor(shown / 60)).padStart(2, "0");
+      ssEl.textContent = String(shown % 60).padStart(2, "0");
+      const pct = total > 0 ? (remaining / total) * 100 : 0;
+      barEl.style.width = pct + "%";
+
+      digitsEl.classList.toggle("warn", ticker && shown <= 10 && shown > 0);
+      digitsEl.classList.toggle("done", shown === 0 && total > 0 && !!alarm);
+      barEl.style.background = shown <= 10 ? "var(--alarm)" : shown <= total * 0.3 ? "var(--warn)" : "var(--go)";
+    }
+
+    function setTime(sec) {
+      stopAlarm();
+      pause();
+      total = Math.max(0, Math.min(sec, 99 * 60 + 59));
+      remaining = total;
+      draw();
+    }
+
+    function start() {
+      if (remaining <= 0) return;
+      stopAlarm();
+      endTime = Date.now() + remaining * 1000;
+      clockEl.classList.add("running");
+      startBtn.textContent = "❚❚ Pause";
+      startBtn.classList.add("pause");
+      ticker = setInterval(tick, 100);
+      beep(660, 0.08);
+    }
+
+    function pause() {
+      if (ticker) { clearInterval(ticker); ticker = null; }
+      endTime = null;
+      clockEl.classList.remove("running");
+      startBtn.textContent = "▶ Start";
+      startBtn.classList.remove("pause");
+      draw();
+    }
+
+    function tick() {
+      remaining = Math.max(0, (endTime - Date.now()) / 1000);
+      const shown = Math.ceil(remaining);
+      if (shown <= 5 && shown > 0 && shown !== lastBeepSecond) {
+        lastBeepSecond = shown;
+        beep(880, 0.1, 0.12);
+      }
+      if (remaining <= 0) {
+        pause();
+        ringAlarm();
+      }
+      draw();
+    }
+
+    function ringAlarm() {
+      document.body.classList.add("flash");
+      timesUpEl.classList.add("show");
+      let count = 0;
+      const ring = () => {
+        beep(1046, 0.15); setTimeout(() => beep(1318, 0.25), 160);
+        if (++count >= 6) stopAlarm(false);
+      };
+      ring();
+      alarm = setInterval(ring, 700);
+      draw();
+    }
+
+    function stopAlarm(clearScreen = true) {
+      if (alarm) { clearInterval(alarm); alarm = null; }
+      lastBeepSecond = null;
+      if (clearScreen) {
+        document.body.classList.remove("flash");
+        timesUpEl.classList.remove("show");
+      }
+    }
+
+    // Preset buttons
+    const presetBox = document.getElementById("presets");
+    PRESETS.forEach(sec => {
+      const b = document.createElement("button");
+      b.className = "preset";
+      b.textContent = label(sec);
+      b.addEventListener("click", () => setTime(sec));
+      presetBox.appendChild(b);
+    });
+
+    // +/- buttons
+    document.querySelectorAll("[data-add]").forEach(b =>
+      b.addEventListener("click", () => setTime(Math.ceil(remaining) + parseInt(b.dataset.add))));
+
+    startBtn.addEventListener("click", () => ticker ? pause() : start());
+    document.getElementById("resetBtn").addEventListener("click", () => setTime(total));
+
+    document.addEventListener("keydown", e => {
+      if (e.code === "Space") {
+        e.preventDefault();
+        if (alarm || document.body.classList.contains("flash")) { setTime(total); return; }
+        ticker ? pause() : start();
+      }
+    });
+
+    document.getElementById("fullscreen").addEventListener("click", () => {
+      if (document.fullscreenElement) document.exitFullscreen();
+      else document.documentElement.requestFullscreen();
+    });
+
+    draw();
+  </script>
+</body>
+</html>

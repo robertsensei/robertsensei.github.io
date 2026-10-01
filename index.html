@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robert Sensei's Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ocean: #1d5fa8;
+      --ocean-dark: #144678;
+      --ocean-light: #4f8fd6;
+      --card: #ffffff;
+      --text: #1d2b3a;
+      --header-bar: #cfe6fb;
+      --button: #ff8a3d;
+      --button-hover: #ff6f12;
+      --es: #3fae5a;        /* 小学校 color */
+      --es-dark: #2b7e3f;
+      --jhs: #8a5cd6;       /* 中学校 color */
+      --jhs-dark: #633ba6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Fredoka", "M PLUS Rounded 1c", sans-serif;
+      color: var(--text);
+      background: var(--ocean);
+      background-image:
+        radial-gradient(circle at 20% 15%, var(--ocean-light) 0, transparent 40%),
+        radial-gradient(circle at 85% 80%, var(--ocean-dark) 0, transparent 45%);
+      background-attachment: fixed;
+      min-height: 100vh;
+      padding: 36px 16px 60px;
+    }
+
+    header { text-align: center; color: white; margin-bottom: 28px; }
+    header h1 {
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      font-weight: 700;
+      text-shadow: 0 4px 0 var(--ocean-dark);
+    }
+    header p { font-size: clamp(1.1rem, 2.5vw, 1.5rem); opacity: 0.9; margin-top: 4px; }
+
+
+    /* ---------- Classroom tools ---------- */
+    .section-title {
+      max-width: 1200px;
+      margin: 0 auto 14px;
+      color: white;
+      font-family: "M PLUS Rounded 1c", sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      text-shadow: 0 3px 0 var(--ocean-dark);
+    }
+    .tools {
+      max-width: 1200px;
+      margin: 0 auto 36px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .tool {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: white;
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 20px;
+      padding: 14px 20px;
+      box-shadow: 0 7px 0 var(--ocean-dark);
+      transition: transform 0.15s ease;
+    }
+    .tool:hover { transform: translateY(-4px); }
+    .tool .t-icon { font-size: 2.8rem; }
+    .tool .t-name { font-size: 1.5rem; font-weight: 700; line-height: 1.1; }
+    .tool .t-jp { font-family: "M PLUS Rounded 1c", sans-serif; font-size: 1rem; opacity: 0.7; }
+
+    /* ---------- Grade picker ---------- */
+    .picker {
+      max-width: 1200px;
+      margin: 0 auto 32px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 24px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+
+    .school-label {
+      color: white;
+      font-family: "M PLUS Rounded 1c", sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      min-width: 110px;
+    }
+
+    .chip {
+      font-family: "M PLUS Rounded 1c", sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      border: none;
+      border-radius: 999px;
+      padding: 8px 20px;
+      cursor: pointer;
+      background: white;
+      color: var(--text);
+      box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+      transition: transform 0.1s ease;
+    }
+    .chip:active { transform: translateY(3px); box-shadow: 0 1px 0 rgba(0,0,0,0.2); }
+
+    .chip.es.active  { background: var(--es);  color: white; box-shadow: 0 4px 0 var(--es-dark); }
+    .chip.jhs.active { background: var(--jhs); color: white; box-shadow: 0 4px 0 var(--jhs-dark); }
+    .chip.all.active { background: var(--button); color: white; box-shadow: 0 4px 0 #c95a17; }
+
+    .chip .count {
+      font-size: 0.85rem;
+      opacity: 0.7;
+      margin-left: 4px;
+    }
+
+    /* ---------- Section heading ---------- */
+    .current {
+      max-width: 1200px;
+      margin: 0 auto 20px;
+      color: white;
+      font-family: "M PLUS Rounded 1c", sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      text-shadow: 0 3px 0 var(--ocean-dark);
+    }
+
+    /* ---------- Game cards ---------- */
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 0 var(--ocean-dark), 0 18px 30px rgba(0,0,0,0.25);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s ease;
+    }
+    .card:hover { transform: translateY(-6px); }
+
+    .card-title {
+      background: var(--header-bar);
+      font-size: 1.9rem;
+      font-weight: 700;
+      padding: 14px 22px;
+      text-align: center;
+    }
+
+    .thumb {
+      aspect-ratio: 16 / 9;
+      background: var(--ocean);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+    }
+    .icon-svg { width: 80%; height: 80%; filter: drop-shadow(0 6px 0 rgba(0,0,0,0.25)); }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .card-body {
+      padding: 20px 22px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 1;
+    }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      font-family: "M PLUS Rounded 1c", sans-serif;
+      border-radius: 999px;
+      padding: 4px 14px;
+      font-size: 1rem;
+      font-weight: 700;
+      background: #eef4fb;
+    }
+    .tag.es  { background: #e3f5e7; color: var(--es-dark); }
+    .tag.jhs { background: #efe7fb; color: var(--jhs-dark); }
+
+    .card-body p { font-size: 1.2rem; line-height: 1.4; flex: 1; }
+
+    .play {
+      display: block;
+      text-align: center;
+      background: var(--button);
+      color: white;
+      text-decoration: none;
+      font-size: 1.7rem;
+      font-weight: 700;
+      padding: 14px;
+      border-radius: 16px;
+      box-shadow: 0 6px 0 #c95a17;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+    .play:hover { background: var(--button-hover); }
+    .play:active { transform: translateY(4px); box-shadow: 0 2px 0 #c95a17; }
+
+    .empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      background: rgba(255,255,255,0.15);
+      color: white;
+      border-radius: 24px;
+      padding: 50px 20px;
+      font-family: "M PLUS Rounded 1c", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .empty span { display: block; font-size: 3.5rem; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Robert Sensei's Games</h1>
+    <p>English games for the classroom ・ 英語のゲーム</p>
+  </header>
+
+  <h2 class="section-title">🧰 Classroom Tools ・ 授業ツール</h2>
+  <section class="tools">
+    <a class="tool" href="/tools/picker/">
+      <span class="t-icon">🎲</span>
+      <span><div class="t-name">Number Picker</div><div class="t-jp">番号を選ぶ</div></span>
+    </a>
+    <a class="tool" href="/tools/timer/">
+      <span class="t-icon">⏱️</span>
+      <span><div class="t-name">Timer</div><div class="t-jp">タイマー</div></span>
+    </a>
+  </section>
+
+  <h2 class="section-title">🎮 Games ・ ゲーム</h2>
+  <nav class="picker" id="picker"></nav>
+  <h2 class="current" id="current"></h2>
+  <main class="games" id="games"></main>
+
+  <script>
+    // =====================================================================
+    //  YOUR GAMES — this is the only part you need to edit.
+    //  To add a game, copy one { ... } block, paste it after the last one,
+    //  and change the details. Don't forget the comma between blocks!
+    //
+    //  grades: which classes the game is for. Use any of these:
+    //    "es1" "es2" "es3" "es4" "es5" "es6"   ← 小学校 1年〜6年
+    //    "jhs1" "jhs2" "jhs3"                  ← 中学校 1年〜3年
+    //
+    //  icon: optional drawn icon (e.g. "usmap"), shown instead of the emoji.
+    //
+    //  image: a screenshot path like "images/battleforamerica.png",
+    //         or leave it as "" to show the emoji instead.
+    // =====================================================================
+    const GAMES = [
+      {
+        title: "Battle for America",
+        link: "/battleforamerica/",
+        grades: ["jhs1", "jhs2", "jhs3"],
+        description: "Make correct English sentences to claim states for your team. Attack other teams to steal their land!",
+        emoji: "🗺️",
+        icon: "usmap",
+        image: "images/battleforamerica.jpg"
+      },
+      {
+        title: "Relative Pronouns: Titan Escape",
+        link: "/pronounpractice/",
+        grades: ["jhs3"],
+        description: "Write correct sentences with who, which and that to move your team forward and escape the titans. Get caught and you become a titan!",
+        emoji: "⚔️",
+        image: ""
+      },
+      {
+        title: "What Time Is It?: Soccer",
+        link: "/soccerquestiongame/",
+        grades: ["es4"],
+        description: "What time is it? Answer the clock and daily routine questions to move the ball up the field and score a goal! 1 or 2 teams.",
+        emoji: "⚽",
+        image: "images/soccerquestiongame.jpg"
+      },
+    ];
+    // =====================================================================
+
+
+
+    // Drawn icons that a game can use with  icon: "name"
+    const ICONS = {
+      usmap: `<svg viewBox="0 0 296 170" class="icon-svg" aria-hidden="true">
+        <path d="M12 18 L21 14 L152 14 L152 12 L154 16 L179 20 L202 29 L212 36 L212 50 L228 51 L228 48 L243 44 L249 38 L264 38 L271 28 L275 24 L281 25 L285 38 L270 46 L268 56 L271 58 L262 60 L252 64 L252 71 L247 75 L245 81 L243 87 L245 97 L240 100 L233 105 L227 109 L219 118 L217 126 L221 138 L224 148 L222 157 L218 157 L215 151 L211 143 L211 135 L206 129 L200 130 L193 126 L186 126 L178 127 L179 133 L174 133 L167 130 L158 130 L154 132 L145 138 L141 144 L142 153 L133 150 L131 143 L127 138 L122 129 L116 130 L114 134 L108 130 L98 117 L90 117 L90 120 L76 120 L59 113 L48 113 L41 104 L31 100 L25 88 L22 81 L17 74 L13 66 L14 56 L13 47 L15 30Z" fill="#ffffff" stroke="#0d2f52" stroke-width="5" stroke-linejoin="round"/>
+        <circle cx="60" cy="60" r="14" fill="#e74c3c"/>
+        <circle cx="150" cy="80" r="14" fill="#3498db"/>
+        <circle cx="228" cy="95" r="12" fill="#2ecc71"/>
+        <circle cx="110" cy="40" r="10" fill="#f1c40f"/>
+      </svg>`,
+    };
+
+    const SCHOOLS = [
+      { key: "es",  name: "小学校", grades: [1, 2, 3, 4, 5, 6] },
+      { key: "jhs", name: "中学校", grades: [1, 2, 3] },
+    ];
+
+    const LABELS = { all: "すべてのゲーム ・ All games" };
+    SCHOOLS.forEach(s => s.grades.forEach(g => {
+      LABELS[s.key + g] = `${s.name} ${g}年生`;
+    }));
+
+    function countFor(grade) {
+      return GAMES.filter(game => game.grades.includes(grade)).length;
+    }
+
+    function buildPicker() {
+      const picker = document.getElementById("picker");
+
+      const allRow = document.createElement("div");
+      allRow.className = "row";
+      allRow.appendChild(makeChip("all", "すべて ・ All", "all", GAMES.length));
+      picker.appendChild(allRow);
+
+      SCHOOLS.forEach(school => {
+        const row = document.createElement("div");
+        row.className = "row";
+        const label = document.createElement("span");
+        label.className = "school-label";
+        label.textContent = school.name;
+        row.appendChild(label);
+        school.grades.forEach(g => {
+          const key = school.key + g;
+          row.appendChild(makeChip(key, `${g}年`, school.key, countFor(key)));
+        });
+        picker.appendChild(row);
+      });
+    }
+
+    function makeChip(key, text, style, count) {
+      const btn = document.createElement("button");
+      btn.className = `chip ${style}`;
+      btn.dataset.key = key;
+      btn.innerHTML = `${text}<span class="count">(${count})</span>`;
+      btn.addEventListener("click", () => { location.hash = key; });
+      return btn;
+    }
+
+    function gradeTag(grade) {
+      const school = grade.startsWith("jhs") ? "jhs" : "es";
+      const short = (school === "jhs" ? "中" : "小") + grade.replace(/\D/g, "");
+      return `<span class="tag ${school}">${short}</span>`;
+    }
+
+    function render() {
+      const key = LABELS[location.hash.slice(1)] ? location.hash.slice(1) : "all";
+
+      document.querySelectorAll(".chip").forEach(c =>
+        c.classList.toggle("active", c.dataset.key === key));
+      document.getElementById("current").textContent = LABELS[key];
+
+      const list = key === "all" ? GAMES : GAMES.filter(g => g.grades.includes(key));
+      const box = document.getElementById("games");
+
+      if (list.length === 0) {
+        box.innerHTML = `<div class="empty"><span>🚧</span>まだゲームがありません<br>Coming soon!</div>`;
+        return;
+      }
+
+      box.innerHTML = list.map(game => `
+        <div class="card">
+          <div class="card-title">${game.title}</div>
+          <div class="thumb">${game.image ? `<img src="${game.image}" alt="${game.title}">` : (ICONS[game.icon] || game.emoji)}</div>
+          <div class="card-body">
+            <div class="tags">${game.grades.map(gradeTag).join("")}</div>
+            <p>${game.description}</p>
+            <a class="play" href="${game.link}">▶ Play</a>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    buildPicker();
+    render();
+    window.addEventListener("hashchange", render);
+  </script>
+</body>
+</html>
