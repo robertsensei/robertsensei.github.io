@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Recommend It! — Presentation Maker</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#ffffff; --ink:#1a1d23; --muted:#68707d; --line:#e2e5ea; --line2:#cfd4dc;
+    --accent:#1f5fbf; --accent-soft:#e8effa; --ok:#1e8a4c; --ok-soft:#e5f4ec; --warn:#b4441a; --warn-soft:#fbeee8;
+    --sel:#1f8fff; --radius:12px;
+    --font:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Segoe UI","Yu Gothic UI","Meiryo",sans-serif;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--font);-webkit-text-size-adjust:100%;line-height:1.5}
+  button,input,select,textarea{font:inherit;color:inherit}
+  button{cursor:pointer}
+  .ja{color:var(--muted);font-weight:400;font-size:.85em}
+  svg.ic{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+  /* ---------- header & tabs ---------- */
+  header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+  .hrow{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:10px 16px 0;flex-wrap:wrap}
+  .logo{font-weight:800;font-size:1.15rem;letter-spacing:-.01em;margin-right:auto}
+  .logo small{font-weight:500;color:var(--muted);font-size:.72rem;margin-left:6px}
+  .saved{font-size:.8rem;color:var(--muted)}
+  .saved.err{color:var(--warn)}
+  nav{max-width:1240px;margin:6px auto 0;display:flex;gap:2px;overflow-x:auto;padding:0 10px}
+  nav button{background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);padding:10px 14px;font-weight:600;white-space:nowrap}
+  nav button b{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--line);color:var(--ink);font-size:.78rem;margin-right:6px}
+  nav button .ja{color:inherit;margin-left:4px}
+  nav button.on{color:var(--ink);border-bottom-color:var(--accent)}
+  nav button.on b{background:var(--accent);color:#fff}
+
+  main{max-width:1240px;margin:0 auto;padding:22px 16px 80px}
+  .narrow{max-width:900px;margin:0 auto}
+  .tab{display:none}
+  .tab.on{display:block}
+  h2{font-size:1.35rem;margin:0 0 4px;letter-spacing:-.01em}
+  .lead{color:var(--muted);margin:0 0 18px}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-bottom:14px}
+  .card h3{margin:0 0 10px;font-size:1.05rem;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .num{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;font-weight:700;font-size:.9rem;flex:none}
+  label.f{display:block;font-weight:600;font-size:.9rem;margin:0 0 6px}
+  input[type=text],select,textarea{width:100%;border:1.5px solid var(--line2);border-radius:10px;background:#fff;padding:10px 12px;font-size:1.02rem}
+  input[type=text]:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  textarea{min-height:96px;resize:vertical;line-height:1.55}
+  .grid3{display:grid;grid-template-columns:110px 110px 1fr;gap:10px}
+  @media (max-width:560px){ .grid3{grid-template-columns:1fr 1fr} .grid3 > :last-child{grid-column:1/-1} }
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{border:1.5px solid var(--line2);background:#fff;border-radius:999px;padding:8px 15px}
+  .chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+  .chip.on .ja{color:#c9ced8}
+
+  .model{background:var(--accent-soft);border-radius:8px;padding:9px 12px;margin:0 0 10px}
+  .model b{color:var(--accent)}
+  .starters{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+  .starters .lbl{font-size:.82rem;color:var(--muted);align-self:center;margin-right:2px}
+  .st{border:1px solid #c9d6ee;background:#fff;color:#1d3f7a;border-radius:8px;padding:5px 10px;font-size:.9rem}
+  .st:active{background:var(--accent-soft)}
+  .meta{display:flex;justify-content:space-between;gap:10px;font-size:.85rem;color:var(--muted);margin-top:6px;flex-wrap:wrap}
+  .warn{background:var(--warn-soft);color:var(--warn);border-radius:8px;padding:8px 12px;font-size:.92rem;margin-top:8px;display:none}
+  .warn.show{display:block}
+  .tip{background:#fbf6e6;border:1px solid #efe0ae;border-radius:8px;padding:9px 12px;font-size:.92rem;margin:10px 0 0}
+  .tip b{color:#7a5600}
+
+  .btn{border:1.5px solid transparent;border-radius:10px;padding:10px 16px;font-size:1rem;font-weight:600;display:inline-flex;align-items:center;gap:8px;justify-content:center;background:#fff;text-decoration:none;color:inherit}
+  .btn.primary{background:var(--accent);color:#fff}
+  .btn.dark{background:var(--ink);color:#fff}
+  .btn.ghost{border-color:var(--line2)}
+  .btn.danger{border-color:#efc2b0;color:var(--warn)}
+  .btn small{opacity:.75;font-weight:400}
+  .btn:disabled{opacity:.45;cursor:default}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .next{display:flex;justify-content:flex-end;margin-top:8px}
+  .msg{font-size:.9rem;color:var(--muted)}
+  .msg.err{color:var(--warn)}
+
+  /* ---------- slide editor layout ---------- */
+  .editor{display:grid;grid-template-columns:150px minmax(0,1fr) 280px;gap:16px;align-items:start}
+  @media (max-width:1100px){ .editor{grid-template-columns:130px minmax(0,1fr)} .scriptpanel{grid-column:1/-1} }
+  @media (max-width:820px), (orientation:portrait) and (max-width:1100px){
+    .editor{grid-template-columns:1fr} .strip{flex-direction:row;overflow-x:auto} .strip .thumb{width:130px;flex:none}
+  }
+  .strip{display:flex;flex-direction:column;gap:10px}
+  .thumb{border:0;background:none;padding:0;text-align:left;position:relative}
+  .thumb .lab{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted);margin-bottom:4px;font-weight:600}
+  .thumb .mini{border-radius:6px;outline:1.5px solid var(--line2);overflow:hidden}
+  .thumb.on .mini{outline:3px solid var(--accent)}
+  .thumb.on .lab{color:var(--accent)}
+  .addslide{border:1.5px dashed var(--line2);background:transparent;border-radius:8px;padding:10px 6px;color:var(--muted);font-weight:600;font-size:.85rem}
+
+  .toolbar{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:5px;margin-bottom:12px;overflow-x:auto}
+  .tb{border:0;background:none;border-radius:8px;padding:7px 12px;display:inline-flex;flex-direction:column;align-items:center;gap:2px;font-size:.78rem;font-weight:600;color:#3a404b;min-width:64px}
+  .tb:hover{background:var(--bg)}
+  .tb:active{background:var(--line)}
+  .tb .ja{font-size:.66rem}
+  .tb.spacer{flex:1;min-width:0;padding:0;pointer-events:none}
+  .canvaswrap{background:#e9ebef;border-radius:12px;padding:18px;display:flex;justify-content:center}
+  .canvaswrap .slide{box-shadow:0 1px 2px #0000001f,0 6px 20px #0000001a;border-radius:3px}
+  .emptyslide{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;color:var(--muted);z-index:3}
+  .emptyslide p{margin:0;font-weight:600;font-size:clamp(14px,2cqw,20px)}
+
+  /* the slide (1000 × 562.5 units; font sizes in pt against a 720pt-wide slide) */
+  .slide{position:relative;width:100%;aspect-ratio:16/9;container-type:inline-size;overflow:hidden;background-size:cover;background-position:center;
+    user-select:none;-webkit-user-select:none}
+  .slide.live{touch-action:none}
+  .el{position:absolute}
+  .el.text .tx{width:100%;padding:calc(4 * 100cqw / 1000);line-height:1.2;white-space:pre-wrap;word-break:break-word;outline:none;min-height:1.2em}
+  .el.text .tx.ph{opacity:.42}
+  .el.editing .tx{user-select:text;-webkit-user-select:text;cursor:text}
+  .el.image img{width:100%;height:100%;display:block;object-fit:cover;pointer-events:none;-webkit-user-drag:none}
+  .el.image.circle img,.el.image.circle .imgph{border-radius:50%}
+  .imgph{width:100%;height:100%;border:max(1.5px,.25cqw) dashed #8a93a3;background:#dfe3ea99;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:.6cqw;color:#4d5563;font:600 max(10px,1.6cqw)/1.2 var(--font);text-align:center}
+  .imgph svg{width:4cqw;height:4cqw;stroke:currentColor;fill:none;stroke-width:1.6}
+  .el.shape svg.shp{width:100%;height:100%;display:block;overflow:visible}
+  .nudge{position:absolute;right:0;top:-22px;background:#fff3cd;color:#6b5000;border:1px solid #e8d38c;border-radius:6px;
+    font:600 11px/1.6 var(--font);padding:0 6px;white-space:nowrap;pointer-events:none}
+  .sel{position:absolute;inset:-2px;border:2px solid var(--sel);pointer-events:none}
+  .h{position:absolute;width:22px;height:22px;border-radius:50%;background:#fff;border:2px solid var(--sel);z-index:2;touch-action:none;box-shadow:0 1px 3px #0003}
+  .h.br{right:-12px;bottom:-12px}
+  .h.r{right:-8px;top:calc(50% - 11px);width:14px;border-radius:7px}
+  .h.b{bottom:-8px;left:calc(50% - 11px);height:14px;border-radius:7px}
+  .h.rot{top:-40px;left:calc(50% - 11px)}
+  .h.rot::after{content:"";position:absolute;left:8px;top:20px;height:18px;border-left:2px solid var(--sel)}
+  .guide{position:absolute;background:#ff3b7f;pointer-events:none;display:none;z-index:5}
+  .guide.v{top:0;bottom:0;left:50%;width:1.5px}
+  .guide.hz{left:0;right:0;top:50%;height:1.5px}
+  .guide.show{display:block}
+
+  .ctx{margin-top:12px;min-height:56px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .ctx .hint{color:var(--muted);padding:0 8px;font-size:.92rem}
+  .cb{border:1.5px solid var(--line2);background:#fff;border-radius:8px;min-width:40px;height:40px;padding:0 10px;font-weight:600;font-size:.92rem;
+    display:inline-flex;align-items:center;justify-content:center;gap:6px}
+  .cb.on{background:var(--ink);border-color:var(--ink);color:#fff}
+  .cb.del{color:var(--warn);border-color:#efc2b0}
+  .swatch{width:18px;height:18px;border-radius:4px;border:1px solid #0003;display:inline-block}
+  .sep{width:1px;height:26px;background:var(--line);margin:0 4px}
+  .size{display:inline-flex;align-items:center;border:1.5px solid var(--line2);border-radius:8px;overflow:hidden;height:40px}
+  .size button{border:0;background:#fff;width:36px;height:100%;font-weight:700;font-size:1.1rem}
+  .size span{min-width:34px;text-align:center;font-weight:600;font-variant-numeric:tabular-nums}
+
+  .scriptpanel{position:sticky;top:120px}
+  .scriptpanel h3{font-size:.95rem}
+  .scriptpanel textarea{min-height:150px;font-size:.95rem}
+  .scriptpanel .model{font-size:.88rem}
+
+  /* ---------- sheets ---------- */
+  .shade{position:fixed;inset:0;background:#1a1d2366;display:none;align-items:center;justify-content:center;z-index:40;padding:14px}
+  .shade.show{display:flex}
+  .sheet{background:#fff;border-radius:16px;box-shadow:0 20px 60px #0004;width:100%;max-width:640px;max-height:88vh;overflow:auto;padding:20px}
+  .sheet h3{margin:0 0 12px;font-size:1.15rem}
+  .sheet h4{margin:18px 0 8px;font-size:.92rem;color:#3a404b}
+  .closebar{display:flex;justify-content:flex-end;margin-top:18px}
+  .opts{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(66px,1fr))}
+  .opt{border:1.5px solid var(--line2);background:#fff;border-radius:10px;aspect-ratio:1;display:grid;place-items:center;padding:10px;font-size:1.7rem;color:var(--ink)}
+  .opt:active{transform:scale(.96)}
+  .opt svg{width:100%;height:100%}
+  .layouts{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}
+  .layouts button{border:1.5px solid var(--line2);background:#fff;border-radius:10px;padding:8px;text-align:left;font-weight:600;font-size:.88rem}
+  .layouts button:hover{border-color:var(--accent)}
+  .layouts .mini{border-radius:4px;outline:1px solid var(--line);margin-bottom:6px;overflow:hidden}
+  .colors{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .colors button{width:38px;height:38px;border-radius:8px;border:1px solid #0002}
+  .colors label{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:.9rem}
+  .colors input[type=color]{width:38px;height:38px;border:1px solid var(--line2);border-radius:8px;padding:2px;background:#fff}
+  .grads{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}
+  .grads button{aspect-ratio:16/9;border-radius:8px;border:1px solid #0002;padding:0;overflow:hidden}
+  .grads img{width:100%;height:100%;object-fit:cover;display:block}
+  .fontlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+  .fontlist button{border:1.5px solid var(--line2);background:#fff;border-radius:10px;padding:10px;font-size:1.2rem;text-align:left}
+  .fontlist button small{display:block;font:500 .72rem var(--font);color:var(--muted)}
+  .fontlist button.on{border-color:var(--accent);background:var(--accent-soft)}
+  .search{display:flex;gap:8px}
+  .search input{flex:1;min-width:0}
+  .hidden-input{display:none}
+
+  /* ---------- practice ---------- */
+  .stage{background:#16181d;border-radius:14px;padding:16px;color:#fff}
+  .stage:fullscreen{border-radius:0;display:flex;flex-direction:column;justify-content:center}
+  .stage:-webkit-full-screen{border-radius:0;display:flex;flex-direction:column;justify-content:center;width:100%;height:100%}
+  .stage .slide{max-width:calc((100vh - 170px) * 16 / 9);margin:0 auto;border-radius:4px}
+  .ctl{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:14px}
+  .ctl .btn{background:#262a33;border-color:#363b47;color:#fff;min-width:52px}
+  .pos{min-width:64px;text-align:center;color:#aab1bd;font-variant-numeric:tabular-nums}
+  .timer{font-size:1.35rem;font-variant-numeric:tabular-nums;min-width:70px;text-align:center}
+  .peek{margin:14px auto 0;max-width:820px;background:#fff;color:var(--ink);border-radius:10px;padding:12px 16px;display:none}
+  .peek.show{display:block}
+
+  /* ---------- export ---------- */
+  .checks{list-style:none;padding:0;margin:0}
+  .checks li{padding:5px 0;display:flex;gap:10px}
+  .checks li i{font-style:normal;width:20px;text-align:center;flex:none}
+  .checks li.ok i{color:var(--ok)} .checks li.no i{color:var(--warn)}
+  .outs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:700px){ .outs{grid-template-columns:1fr} }
+  .ready{display:none;gap:8px;flex-wrap:wrap}
+  .ready.show{display:flex}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hrow">
+    <div class="logo">Recommend It!<small>おすすめ発表メーカー</small></div>
+    <div class="saved" id="saved"></div>
+  </div>
+  <nav id="nav">
+    <button data-tab="script" class="on"><b>1</b>Script<span class="ja">台本</span></button>
+    <button data-tab="slides"><b>2</b>Slides<span class="ja">スライド</span></button>
+    <button data-tab="practice"><b>3</b>Practice<span class="ja">練習</span></button>
+    <button data-tab="export"><b>4</b>Save<span class="ja">保存・提出</span></button>
+  </nav>
+</header>
+
+<main>
+<!-- ======================= 1. SCRIPT ======================= -->
+<section class="tab on narrow" id="tab-script">
+  <h2>Write your script <span class="ja">台本を書こう</span></h2>
+  <p class="lead">Write full sentences here. Your slides will only have keywords! <span class="ja">ここでは文章で書きます。スライドはキーワードだけ！</span></p>
+
+  <div class="card">
+    <h3>About you <span class="ja">あなたについて</span></h3>
+    <div class="grid3">
+      <div><label class="f" for="cls">Class <span class="ja">組</span></label><input type="text" id="cls" placeholder="3-1" maxlength="6" data-bind="student.cls"></div>
+      <div><label class="f" for="no">No. <span class="ja">番号</span></label><input type="text" id="no" placeholder="12" maxlength="4" inputmode="numeric" data-bind="student.no"></div>
+      <div><label class="f" for="name">Name <span class="ja">名前（ローマ字）</span></label><input type="text" id="name" placeholder="Taro Yamada" maxlength="30" data-bind="student.name"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>What will you recommend? <span class="ja">何をおすすめする？</span></h3>
+    <div class="chips" id="types"></div>
+    <div style="margin-top:14px">
+      <label class="f" for="title">Title <span class="ja">タイトル（英語でも日本語でもOK）</span></label>
+      <input type="text" id="title" placeholder="e.g. Spirited Away / 千と千尋の神隠し" maxlength="40" data-bind="title">
+    </div>
+  </div>
+
+  <div id="parts"></div>
+  <div class="next"><button class="btn primary" data-go="slides">Next: Make slides <small>スライドへ</small></button></div>
+</section>
+
+<!-- ======================= 2. SLIDES ======================= -->
+<section class="tab" id="tab-slides">
+  <div class="editor">
+    <div class="strip" id="strip" aria-label="Slides"></div>
+
+    <div>
+      <div class="toolbar" role="toolbar" aria-label="Add to slide">
+        <button class="tb" id="tbText"><svg class="ic" viewBox="0 0 24 24"><path d="M5 6V4h14v2M12 4v16M9 20h6"/></svg>Text<span class="ja">文字</span></button>
+        <button class="tb" id="tbPic"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>Picture<span class="ja">画像</span></button>
+        <button class="tb" id="tbShape"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="11" height="11" rx="1"/><circle cx="16" cy="16" r="5"/></svg>Shapes<span class="ja">図形・線</span></button>
+        <button class="tb" id="tbIcon"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>Icons<span class="ja">アイコン</span></button>
+        <button class="tb" id="tbBg"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15l6-6 12 12"/></svg>Background<span class="ja">背景</span></button>
+        <button class="tb" id="tbLayout"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 10h18M10 10v11"/></svg>Layout<span class="ja">レイアウト</span></button>
+        <span class="tb spacer"></span>
+        <button class="tb" id="undo"><svg class="ic" viewBox="0 0 24 24"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 010 12h-3"/></svg>Undo<span class="ja">戻す</span></button>
+        <button class="tb" id="redo"><svg class="ic" viewBox="0 0 24 24"><path d="M15 14l5-5-5-5"/><path d="M20 9H10a6 6 0 000 12h3"/></svg>Redo<span class="ja">やり直す</span></button>
+      </div>
+      <div class="canvaswrap"><div style="width:100%;position:relative" id="canvasHost"></div></div>
+      <div class="ctx" id="ctx"></div>
+    </div>
+
+    <aside class="scriptpanel card" id="scriptPanel"></aside>
+  </div>
+  <div class="next" style="margin-top:16px"><button class="btn primary" data-go="practice">Next: Practice <small>練習へ</small></button></div>
+</section>
+
+<!-- ======================= 3. PRACTICE ======================= -->
+<section class="tab" id="tab-practice">
+  <h2>Practice <span class="ja">練習しよう</span></h2>
+  <p class="lead">Look at each slide and say your part. Stuck? Hold <b>Peek</b> to see your script. <span class="ja">困ったら「Peek」を押している間だけ台本が見えます。</span></p>
+  <div class="stage" id="stage">
+    <div id="pSlide"></div>
+    <div class="peek" id="peek"></div>
+    <div class="ctl">
+      <button class="btn" id="pPrev" aria-label="Previous slide">◀</button>
+      <span class="pos" id="pPos">1 / 4</span>
+      <button class="btn" id="pNext" aria-label="Next slide">▶</button>
+      <button class="btn" id="pPeek">Peek 👀</button>
+      <span class="timer" id="pTime">0:00</span>
+      <button class="btn" id="pTimer">Start timer</button>
+      <button class="btn" id="pReset" aria-label="Reset timer">Reset</button>
+      <button class="btn" id="pFull">Full screen</button>
+    </div>
+  </div>
+  <div class="next"><button class="btn primary" data-go="export">Next: Save <small>保存へ</small></button></div>
+</section>
+
+<!-- ======================= 4. EXPORT ======================= -->
+<section class="tab narrow" id="tab-export">
+  <h2>Save & hand in <span class="ja">保存・提出</span></h2>
+  <p class="lead">Make a Word file (your script) and a PowerPoint file (your slides). <span class="ja">台本はWord、スライドはPowerPointで保存できます。</span></p>
+  <div class="card"><h3>Check <span class="ja">チェック</span></h3><ul class="checks" id="checks"></ul></div>
+  <div class="outs">
+    <div class="card">
+      <h3>Script → Word <span class="ja">台本（.docx）</span></h3>
+      <div class="row"><button class="btn primary" id="mkDocx">Make Word file <small>作成</small></button></div>
+      <div class="ready" id="docxReady" style="margin-top:10px"></div>
+      <div class="msg" id="docxMsg"></div>
+    </div>
+    <div class="card">
+      <h3>Slides → PowerPoint <span class="ja">スライド（.pptx）</span></h3>
+      <div class="row"><button class="btn primary" id="mkPptx">Make PowerPoint file <small>作成</small></button></div>
+      <div class="ready" id="pptxReady" style="margin-top:10px"></div>
+      <div class="msg" id="pptxMsg"></div>
+      <div class="msg">Your script goes into the speaker notes. <span class="ja">台本はノート欄に入ります。</span></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Backup <span class="ja">バックアップ</span></h3>
+    <p class="msg" style="margin:0 0 12px">Your work saves automatically on this iPad. To be extra safe, save a backup file. <span class="ja">作業はこのiPadに自動保存されます。念のためバックアップも保存しよう。</span></p>
+    <div class="row">
+      <button class="btn ghost" id="bkSave">Save backup <small>保存</small></button>
+      <label class="btn ghost" for="bkFile">Open backup <small>開く</small></label>
+      <input type="file" id="bkFile" class="hidden-input" accept=".json,application/json">
+      <button class="btn danger" id="reset" style="margin-left:auto">Start over <small>最初から</small></button>
+    </div>
+    <div class="ready" id="bkReady" style="margin-top:10px"></div>
+    <div class="msg" id="bkMsg"></div>
+  </div>
+</section>
+</main>
+
+<div class="shade" id="shade"><div class="sheet" id="sheet" role="dialog" aria-modal="true"></div></div>
+<input type="file" id="picFile" class="hidden-input" accept="image/*">
+<input type="file" id="bgFile" class="hidden-input" accept="image/*">
+
+<script src="pptxgen.bundle.js"></script>
+<script>
+"use strict";
+/* =====================================================================
+   SCRIPT DATA (Tomoko's 4-part plan)
+   ===================================================================== */
+const TYPES = {
+  movie: {label:"Movie", ja:"映画",   noun:"movie", pp:"seen",    verb:"watch"},
+  anime: {label:"Anime", ja:"アニメ", noun:"anime", pp:"watched", verb:"watch"},
+  drama: {label:"Drama", ja:"ドラマ", noun:"drama", pp:"watched", verb:"watch"},
+  book:  {label:"Book",  ja:"本",     noun:"book",  pp:"read",    verb:"read"},
+  manga: {label:"Manga", ja:"マンガ", noun:"manga", pp:"read",    verb:"read"},
+  game:  {label:"Game",  ja:"ゲーム", noun:"game",  pp:"played",  verb:"play"},
+  music: {label:"Song",  ja:"音楽",   noun:"song",  pp:"heard",   verb:"listen to"},
+  other: {label:"Other", ja:"その他", noun:"thing", pp:"tried",   verb:"try"}
+};
+const PARTS = [
+  { name:"Introduction", ja:"紹介",
+    model: t => `Today, I would like to introduce my favorite <b>${t.noun}</b>.`,
+    starters: t => [`Today, I would like to introduce my favorite ${t.noun}.`, `It is ___.`, `Its title is ___.`],
+    ph: "Today, I would like to introduce my favorite …" },
+  { name:"The Best", ja:"一番の理由",
+    model: t => `This is the best <b>${t.noun}</b> <b>that</b> I've ever <b>${t.pp}</b>.`,
+    starters: t => [`This is the best ${t.noun} that I've ever ${t.pp}.`, `I like it because ___.`, `My favorite character is ___.`, `My favorite scene is ___.`],
+    ph: "This is the best … that I've ever …", tip: true },
+  { name:"Information", ja:"作品の情報",
+    model: () => `Information about the work: <b>when, where, who</b>, etc.`,
+    starters: t => [`It was made in ___.`, t.noun === "book" || t.noun === "manga" ? `It was written by ___.` : `It was made by ___.`, `It is set in ___.`, `It is about ___.`, `It is a story about a ___ who ___.`, `The main character is ___.`, `It is popular with ___.`],
+    ph: "It was made in … It is about …" },
+  { name:"Please!", ja:"おすすめ",
+    model: t => `So, please <b>${t.verb}</b> this when you have time.`,
+    starters: t => [`So, please ${t.verb} this when you have time.`, `I'm sure you will like it.`, `Thank you for listening.`],
+    ph: "So, please … this when you have time." }
+];
+
+/* =====================================================================
+   SLIDE DATA — each slide is 1000 × 562.5 units (= 10 × 5.625 in)
+   ===================================================================== */
+const SW = 1000, SH = 562.5;
+const FONTS = [
+  {key:"sans",    label:"Clean",       css:'Helvetica,Arial,"Hiragino Sans",sans-serif', ppt:"Arial"},
+  {key:"heavy",   label:"Heavy",       css:'"Arial Black","Helvetica Neue",Arial,"Hiragino Sans",sans-serif', weight:900, ppt:"Arial Black"},
+  {key:"modern",  label:"Modern",      css:'Futura,"Century Gothic","Trebuchet MS","Hiragino Sans",sans-serif', ppt:"Futura"},
+  {key:"round",   label:"Rounded",     css:'"Arial Rounded MT Bold","Hiragino Maru Gothic ProN",sans-serif', ppt:"Arial Rounded MT Bold"},
+  {key:"serif",   label:"Serif",       css:'Georgia,"Hiragino Mincho ProN",serif', ppt:"Georgia"},
+  {key:"elegant", label:"Elegant",     css:'Didot,"Bodoni 72","Times New Roman","Hiragino Mincho ProN",serif', ppt:"Didot"},
+  {key:"type",    label:"Typewriter",  css:'"American Typewriter","Courier New",monospace', ppt:"American Typewriter"},
+  {key:"hand",    label:"Handwriting", css:'"Bradley Hand","Segoe Print",cursive', ppt:"Bradley Hand"},
+  {key:"mincho",  label:"明朝 Mincho", css:'"Hiragino Mincho ProN","Yu Mincho","MS Mincho",serif', ppt:"Hiragino Mincho ProN"},
+  {key:"gothic",  label:"ゴシック Gothic", css:'"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif', weight:800, ppt:"Hiragino Sans"}
+];
+const fontOf = k => FONTS.find(f => f.key === k) || FONTS[0];
+const COLORS = ["#ffffff","#f3f1ec","#e6e9ef","#8a93a3","#3d4451","#1a1d23","#000000",
+                "#c8102e","#e4572e","#f2b134","#2f7d32","#2a9d8f","#1f5fbf","#5b3e96","#d6336c","#7a4e2d"];
+const GRADS = {
+  midnight:["#0f2027","#2c5364"], dusk:["#2b1055","#d53369"], ocean:["#1a2a6c","#2a9d8f"], ember:["#3a1c1c","#e4572e"],
+  forest:["#0b3d2e","#5a8f29"], paper:["#fbfaf7","#e9e4d8"], mist:["#eef2f7","#c9d6e8"], gold:["#2b2318","#c9a227"]
+};
+
+// shapes: SVG on screen, native PowerPoint shapes when exported
+function starPts(n, ro, ri){ const p = []; for (let i = 0; i < n * 2; i++){ const r = i % 2 ? ri : ro, a = Math.PI * i / n - Math.PI / 2; p.push((50 + r * Math.cos(a)).toFixed(1) + "," + (50 + r * Math.sin(a)).toFixed(1)); } return p.join(" "); }
+const SHAPES = {
+  rect:     {label:"Box",      ppt:"rect",                svg:'<rect x="0" y="0" width="100" height="100"/>'},
+  round:    {label:"Rounded",  ppt:"roundRect",           svg:'<rect x="0" y="0" width="100" height="100" rx="16" ry="16"/>'},
+  circle:   {label:"Circle",   ppt:"ellipse",             svg:'<ellipse cx="50" cy="50" rx="50" ry="50"/>'},
+  triangle: {label:"Triangle", ppt:"triangle",            svg:'<polygon points="50,0 100,100 0,100"/>'},
+  star:     {label:"Star",     ppt:"star5",               svg:`<polygon points="${starPts(5, 50, 20)}"/>`},
+  arrow:    {label:"Arrow",    ppt:"rightArrow",          svg:'<polygon points="0,28 62,28 62,0 100,50 62,100 62,72 0,72"/>'},
+  bubble:   {label:"Speech",   ppt:"wedgeRoundRectCallout", svg:'<path d="M12 0H88Q100 0 100 12V62Q100 74 88 74H38L18 100L24 74H12Q0 74 0 62V12Q0 0 12 0Z"/>'},
+  line:     {label:"Line",     ppt:"rect",                svg:'<rect x="0" y="0" width="100" height="100"/>'}
+};
+function shapeSvg(e){
+  const fill = e.fill || "none", stroke = e.line || "none";
+  const sw = e.line ? (e.lineW || 3) : 0;
+  return `<svg class="shp" viewBox="0 0 100 100" preserveAspectRatio="none" fill="${fill}" fill-opacity="${e.opacity ?? 1}" stroke="${stroke}" stroke-width="${sw}" vector-effect="non-scaling-stroke"><g vector-effect="non-scaling-stroke">${SHAPES[e.shape].svg.replace("/>", ' vector-effect="non-scaling-stroke"/>')}</g></svg>`;
+}
+const ICONS = ["★","☆","♥","✓","✦","❝","❞","→","➜","♪","♫","☀","☾","⚑","✿","❀","◆","●","■","▲","!","?","#1","No.1"];
+
+// empty layouts students can start from (placeholders are never exported)
+const LAYOUTS = [
+  {key:"title",  label:"Title + picture",  ja:"タイトル＋画像", els:[
+    {type:"text", x:60, y:170, w:460, ph:"Title", size:44, bold:true},
+    {type:"text", x:60, y:320, w:460, ph:"A short line (e.g. your name)", size:20},
+    {type:"image", x:560, y:60, w:380, h:442}]},
+  {key:"picleft",label:"Picture + words",  ja:"画像＋キーワード", els:[
+    {type:"image", x:60, y:60, w:440, h:442},
+    {type:"text", x:540, y:170, w:400, ph:"Keyword", size:44, bold:true},
+    {type:"text", x:540, y:300, w:400, ph:"More keywords", size:22}]},
+  {key:"full",   label:"Big picture",      ja:"大きい画像", els:[
+    {type:"image", x:0, y:0, w:1000, h:562.5},
+    {type:"shape", shape:"rect", x:0, y:430, w:1000, h:132.5, fill:"#000000", opacity:.55},
+    {type:"text", x:60, y:450, w:880, ph:"Caption", size:34, bold:true, color:"#ffffff"}]},
+  {key:"words",  label:"Big words",        ja:"大きい文字", els:[
+    {type:"text", x:100, y:180, w:800, ph:"Big keyword", size:60, bold:true, align:"center"},
+    {type:"text", x:100, y:330, w:800, ph:"Small line", size:24, align:"center"}]},
+  {key:"facts",  label:"Facts list",       ja:"情報リスト", els:[
+    {type:"text", x:60, y:44, w:560, ph:"Heading", size:34, bold:true},
+    {type:"shape", shape:"line", x:66, y:112, w:110, h:6, accent:true},
+    ...[0,1,2,3].flatMap(n => [
+      {type:"text", x:60, y:150 + n * 82, w:190, ph:["When","Who","Where","What"][n], size:22, bold:true, accent:true},
+      {type:"text", x:260, y:150 + n * 82, w:380, ph:"…", size:22}]),
+    {type:"image", x:680, y:140, w:260, h:360}]},
+  {key:"two",    label:"Two pictures",     ja:"画像２枚", els:[
+    {type:"image", x:60, y:50, w:420, h:360},
+    {type:"image", x:520, y:50, w:420, h:360},
+    {type:"text", x:60, y:440, w:880, ph:"Keyword", size:30, bold:true, align:"center"}]},
+  {key:"blank",  label:"Blank",            ja:"白紙", els:[]}
+];
+
+/* =====================================================================
+   STATE  (text data in localStorage, pictures in IndexedDB)
+   ===================================================================== */
+const STORE_KEY = "recommendIt.v2";
+const uid = () => Math.random().toString(36).slice(2, 10);
+function newSlide(part){ return {id:uid(), part, chosen:false, bg:{kind:"color", color:"#ffffff"}, els:[], notes:""}; }
+function blank(){
+  return {v:2, student:{cls:"",no:"",name:""}, type:"anime", title:"", parts:["","","",""],
+    slides:[0,1,2,3].map(newSlide), cur:0};
+}
+let S = loadState();
+let IMG = {};   // id → {src,w,h}
+function loadState(){ try { const d = JSON.parse(localStorage.getItem(STORE_KEY)); if (d && d.v === 2) return Object.assign(blank(), d); } catch(e){} return blank(); }
+
+const idb = {
+  db:null,
+  open(){ return new Promise(res => { try { const r = indexedDB.open("recommendIt", 1);
+    r.onupgradeneeded = () => r.result.createObjectStore("imgs");
+    r.onsuccess = () => { this.db = r.result; res(); }; r.onerror = () => res(); } catch(e){ res(); } }); },
+  tx(mode){ return this.db.transaction("imgs", mode).objectStore("imgs"); },
+  put(k, v){ if (!this.db) return; try { this.tx("readwrite").put(v, k); } catch(e){} },
+  clear(){ if (!this.db) return; try { this.tx("readwrite").clear(); } catch(e){} },
+  all(){ return new Promise(res => { if (!this.db) return res({}); const out = {}, st = this.tx("readonly");
+    const c = st.openCursor(); c.onsuccess = () => { const cur = c.result; if (cur) { out[cur.key] = cur.value; cur.continue(); } else res(out); }; c.onerror = () => res(out); }); }
+};
+function storeImg(im){ const id = uid(); IMG[id] = im; idb.put(id, im); return id; }
+
+let saveTimer = null;
+function save(){
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => {
+    try {
+      localStorage.setItem(STORE_KEY, JSON.stringify(S));
+      $("saved").textContent = "Saved " + new Date().toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"}); $("saved").className = "saved";
+    } catch (e) { $("saved").textContent = "Couldn't auto-save — please save a backup (step 4)"; $("saved").className = "saved err"; }
+  }, 400);
+}
+
+/* =====================================================================
+   HELPERS
+   ===================================================================== */
+const $ = id => document.getElementById(id);
+function h(tag, attrs = {}, ...kids){
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (v == null) continue;
+    if (k === "class") e.className = v; else if (k === "style") e.style.cssText = v;
+    else if (k === "html") e.innerHTML = v; else if (k.startsWith("on")) e.addEventListener(k.slice(2), v);
+    else e.setAttribute(k, v);
+  }
+  for (const k of kids) if (k != null) e.append(k);
+  return e;
+}
+const T = () => TYPES[S.type] || TYPES.other;
+const hasJa = s => /[぀-ヿ㐀-鿿]/.test(s);
+const words = s => (s.match(/[A-Za-z][A-Za-z'’-]*/g) || []).length;
+const getPath = p => p.split(".").reduce((o, k) => o[k], S);
+const setPath = (p, v) => { const ks = p.split("."); const last = ks.pop(); ks.reduce((o, k) => o[k], S)[last] = v; };
+const cur = () => S.slides[S.cur];
+const getEl = id => cur().els.find(e => e.id === id);
+function bgBase(bg){ return bg.kind === "color" ? bg.color : bg.base || "#ffffff"; }
+function isDark(c){ const n = parseInt(c.slice(1), 16); return ((n >> 16) * 299 + (n >> 8 & 255) * 587 + (n & 255) * 114) / 1000 < 140; }
+function slideLabel(sl){ return sl.part != null ? `${sl.part + 1}. ${PARTS[sl.part].name}` : "Extra"; }
+
+/* =====================================================================
+   TABS
+   ===================================================================== */
+function showTab(name){
+  if (editingId) stopEditing();
+  document.querySelectorAll("#nav button").forEach(b => b.classList.toggle("on", b.dataset.tab === name));
+  document.querySelectorAll(".tab").forEach(t => t.classList.toggle("on", t.id === "tab-" + name));
+  if (name === "script") renderParts();
+  if (name === "slides") renderEditor();
+  if (name === "practice") { pIdx = Math.min(pIdx, S.slides.length - 1); renderPractice(); }
+  if (name === "export") renderChecks();
+  window.scrollTo({top:0});
+}
+document.querySelectorAll("#nav button").forEach(b => b.onclick = () => showTab(b.dataset.tab));
+document.querySelectorAll("[data-go]").forEach(b => b.onclick = () => showTab(b.dataset.go));
+
+/* =====================================================================
+   1. SCRIPT TAB
+   ===================================================================== */
+document.querySelectorAll("[data-bind]").forEach(inp => {
+  inp.value = getPath(inp.dataset.bind);
+  inp.addEventListener("input", () => { setPath(inp.dataset.bind, inp.value); save(); });
+});
+function renderTypes(){
+  const box = $("types"); box.innerHTML = "";
+  for (const [key, t] of Object.entries(TYPES))
+    box.append(h("button", {class:"chip" + (S.type === key ? " on" : ""), type:"button",
+      onclick:() => { S.type = key; save(); renderTypes(); renderParts(); }}, t.label + " ", h("span", {class:"ja"}, t.ja)));
+}
+function insertAtCursor(ta, text){
+  const start = ta.selectionStart ?? ta.value.length, end = ta.selectionEnd ?? ta.value.length;
+  const before = ta.value.slice(0, start), pad = before && !/\s$/.test(before) ? " " : "";
+  ta.setRangeText(pad + text, start, end, "end");
+  ta.dispatchEvent(new Event("input"));
+  const blankAt = ta.value.indexOf("___", start);
+  ta.focus();
+  if (blankAt !== -1 && blankAt < start + pad.length + text.length) ta.setSelectionRange(blankAt, blankAt + 3);
+}
+function checkPart(i, text){
+  const m = [];
+  if (i === 1 && /\b(best|first|only|last)\b[^.!?]{0,30}\bwhich\b/i.test(text))
+    m.push("After “the best …”, use <b>that</b>, not <b>which</b>. 最上級のあとは which ではなく <b>that</b>！");
+  if (hasJa(text)) m.push("Please write in English (titles are OK in Japanese). 英語で書こう（タイトルは日本語でもOK）。");
+  if (/___/.test(text)) m.push("Fill in the blanks ( ___ ). 空欄をうめよう。");
+  return m;
+}
+// one part's writing box (used in the Script tab and next to the slide)
+function partEditor(i, compact){
+  const t = T(), p = PARTS[i];
+  const ta = h("textarea", {placeholder:p.ph, "aria-label":`Part ${i + 1}: ${p.name}`}); ta.value = S.parts[i];
+  const warn = h("div", {class:"warn"}), count = h("span");
+  const update = () => { const m = checkPart(i, ta.value); warn.innerHTML = m.join("<br>"); warn.classList.toggle("show", m.length > 0); count.textContent = words(ta.value) + " words"; };
+  ta.addEventListener("input", () => { S.parts[i] = ta.value; save(); update(); updateTotal(); });
+  const starters = h("div", {class:"starters"}, h("span", {class:"lbl"}, "Tap to add:"));
+  p.starters(t).forEach(s => starters.append(h("button", {class:"st", type:"button", onclick:() => insertAtCursor(ta, s)}, s)));
+  update();
+  return [h("p", {class:"model", html:"Model: " + p.model(t)}), ta, warn, starters,
+    p.tip && !compact ? h("div", {class:"tip", html:"<b>Grammar point:</b> the best ___ <b>that</b> I've ever ___ &nbsp;✔ that &nbsp;✘ which<br><span class='ja'>the best / the first / the only などのあとは、which ではなく that を使います。</span>"}) : null,
+    h("div", {class:"meta"}, h("span", {}, compact ? "" : "Part " + (i + 1) + " of 4"), count)].filter(Boolean);
+}
+function renderParts(){
+  const box = $("parts"); box.innerHTML = "";
+  PARTS.forEach((p, i) => box.append(h("div", {class:"card"},
+    h("h3", {}, h("span", {class:"num"}, String(i + 1)), p.name + " ", h("span", {class:"ja"}, p.ja)), ...partEditor(i))));
+  box.append(h("p", {class:"meta", id:"total", style:"justify-content:flex-end;font-size:.95rem"}));
+  updateTotal();
+}
+function updateTotal(){ const n = S.parts.reduce((a, p) => a + words(p), 0), t = $("total"); if (t) t.textContent = `Total: ${n} words 合計 ${n} 語`; }
+
+/* =====================================================================
+   SLIDE RENDERER (editor, thumbnails, layout previews, practice)
+   ===================================================================== */
+let selId = null, editingId = null;
+function bgStyle(node, bg){
+  node.style.backgroundColor = bg.kind === "color" ? bg.color : bgBase(bg);
+  node.style.backgroundImage = bg.kind === "image" && IMG[bg.img] ? `url(${IMG[bg.img].src})` : "none";
+}
+function placeBox(node, e){
+  Object.assign(node.style, {left:e.x / SW * 100 + "%", top:e.y / SH * 100 + "%", width:e.w / SW * 100 + "%",
+    height:e.type === "text" ? "auto" : e.h / SH * 100 + "%", transform:e.rot ? `rotate(${e.rot}deg)` : ""});
+}
+function buildEl(e, mode){   // mode: "live" | "thumb" | "show"
+  const node = h("div", {class:"el " + e.type + (e.circle ? " circle" : "") + (editingId === e.id ? " editing" : ""), "data-id":e.id});
+  placeBox(node, e);
+  if (e.type === "text") {
+    const f = fontOf(e.font), empty = !e.text;
+    if (empty && mode === "show") return null;
+    const tx = h("div", {class:"tx" + (empty && editingId !== e.id ? " ph" : "")});
+    tx.textContent = empty && editingId !== e.id ? e.ph || "Text" : e.text;
+    Object.assign(tx.style, {fontFamily:f.css, fontWeight:e.bold ? (f.weight || 700) : 400, fontStyle:e.italic ? "italic" : "normal",
+      color:e.color, textAlign:e.align, fontSize:`calc(${e.size} * 100cqw / 720)`, background:e.fill || "transparent"});
+    if (editingId === e.id) tx.contentEditable = "true";
+    node.append(tx);
+    if (mode === "live" && words(e.text) > 7 && editingId !== e.id) node.append(h("span", {class:"nudge"}, "Keywords only? キーワードだけ"));
+  }
+  if (e.type === "image") {
+    if (e.img && IMG[e.img]) node.append(h("img", {src:IMG[e.img].src, alt:""}));
+    else if (mode === "show") return null;
+    else node.append(h("div", {class:"imgph", html:'<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>' + (mode === "live" ? "Tap to add a picture<br><span style='font-weight:400;opacity:.8'>タップして画像を追加</span>" : "")}));
+  }
+  if (e.type === "shape") node.innerHTML = shapeSvg(e);
+  if (mode === "live" && selId === e.id) {
+    node.append(h("div", {class:"sel"}), h("div", {class:"h rot", "data-h":"rot", "aria-label":"Rotate"}), h("div", {class:"h br", "data-h":"br", "aria-label":"Resize"}));
+    if (e.type !== "text") node.append(h("div", {class:"h b", "data-h":"b"}));
+    node.append(h("div", {class:"h r", "data-h":"r"}));
+  }
+  return node;
+}
+function renderSlide(sl, mode){
+  const d = h("div", {class:"slide" + (mode === "live" ? " live" : ""), role:mode === "live" ? null : "img", "aria-label":mode === "live" ? "Your slide" : slideLabel(sl)});
+  bgStyle(d, sl.bg);
+  sl.els.forEach(e => { const n = buildEl(e, mode); if (n) d.append(n); });
+  return d;
+}
+
+/* =====================================================================
+   2. SLIDE EDITOR
+   ===================================================================== */
+let slideEl = null;
+const undoStack = [], redoStack = [];
+const snap = () => JSON.stringify({slides:S.slides, cur:S.cur});
+function commit(before){
+  if (before !== snap()) { undoStack.push(before); if (undoStack.length > 80) undoStack.shift(); redoStack.length = 0; }
+  save(); updateUndo(); renderStrip();
+}
+function updateUndo(){ $("undo").disabled = !undoStack.length; $("redo").disabled = !redoStack.length; }
+function restore(s){ const o = JSON.parse(s); S.slides = o.slides; S.cur = Math.min(o.cur, S.slides.length - 1); selId = null; save(); renderEditor(); updateUndo(); }
+$("undo").onclick = () => { if (editingId) stopEditing(); if (!undoStack.length) return; redoStack.push(snap()); restore(undoStack.pop()); };
+$("redo").onclick = () => { if (!redoStack.length) return; undoStack.push(snap()); restore(redoStack.pop()); };
+function change(fn){ const before = snap(); fn(); renderCanvas(); commit(before); }
+
+function renderEditor(){ renderStrip(); renderCanvas(); renderScriptPanel(); updateUndo(); }
+
+function renderStrip(){
+  const box = $("strip"); box.innerHTML = "";
+  S.slides.forEach((sl, i) => {
+    const mini = h("div", {class:"mini"}, renderSlide(sl, "thumb"));
+    box.append(h("button", {class:"thumb" + (i === S.cur ? " on" : ""), "aria-label":"Slide " + (i + 1),
+      onclick:() => { if (editingId) stopEditing(); S.cur = i; selId = null; save(); renderEditor(); }},
+      h("div", {class:"lab"}, h("span", {}, (i + 1) + ". " + (sl.part != null ? PARTS[sl.part].name : "Extra")),
+        sl.part == null ? h("span", {style:"cursor:pointer", "aria-label":"Delete slide", onclick:ev => { ev.stopPropagation(); deleteSlide(i); }}, "✕") : null),
+      mini));
+  });
+  box.append(h("button", {class:"addslide", onclick:addSlide}, "+ Add slide", h("br"), h("span", {class:"ja"}, "スライドを追加")));
+}
+function addSlide(){
+  const before = snap();
+  const sl = newSlide(null); sl.bg = JSON.parse(JSON.stringify(cur().bg));
+  S.slides.splice(S.cur + 1, 0, sl); S.cur++; selId = null;
+  commit(before); renderEditor(); openLayouts();
+}
+function deleteSlide(i){
+  if (S.slides[i].els.length && !confirm("Delete this extra slide?\nこのスライドを削除しますか？")) return;
+  const before = snap(); S.slides.splice(i, 1); if (S.cur >= S.slides.length) S.cur = S.slides.length - 1; selId = null;
+  commit(before); renderEditor();
+}
+
+function renderCanvas(){
+  const host = $("canvasHost"); host.innerHTML = "";
+  slideEl = renderSlide(cur(), "live");
+  slideEl.append(h("div", {class:"guide v", id:"gv"}), h("div", {class:"guide hz", id:"gh"}));
+  if (!cur().chosen && !cur().els.length)
+    slideEl.append(h("div", {class:"emptyslide"}, h("p", {}, "Choose a layout to start this slide"), h("p", {class:"ja", style:"font-size:clamp(12px,1.5cqw,15px)"}, "レイアウトを選んでスタート"),
+      h("button", {class:"btn primary", onclick:openLayouts}, "Choose a layout")));
+  host.append(slideEl);
+  attachPointer(slideEl);
+  measureTexts();
+  renderCtx();
+}
+function refreshOne(e){ const old = slideEl.querySelector(`.el[data-id="${e.id}"]`), n = buildEl(e, "live"); if (old && n) old.replaceWith(n); measureTexts(); }
+function measureTexts(){
+  if (!slideEl) return; const ppu = slideEl.getBoundingClientRect().width / SW; if (!ppu) return;
+  slideEl.querySelectorAll(".el.text").forEach(n => { const e = getEl(n.dataset.id); if (e) e.h = n.offsetHeight / ppu; });
+}
+window.addEventListener("resize", measureTexts);
+
+/* ---------- script beside the slide ---------- */
+function renderScriptPanel(){
+  const p = $("scriptPanel"), sl = cur(); p.innerHTML = "";
+  if (sl.part != null) {
+    p.append(h("h3", {}, h("span", {class:"num"}, String(sl.part + 1)), "Your script ", h("span", {class:"ja"}, "台本")), ...partEditor(sl.part, true),
+      h("p", {class:"msg", style:"margin:8px 0 0"}, "Put only keywords on the slide. Say the sentences from memory. スライドにはキーワードだけ。"));
+  } else {
+    const ta = h("textarea", {placeholder:"What will you say on this slide? (optional)"}); ta.value = sl.notes || "";
+    ta.addEventListener("input", () => { sl.notes = ta.value; save(); });
+    p.append(h("h3", {}, "Notes for this slide ", h("span", {class:"ja"}, "メモ（任意）")), ta);
+  }
+}
+
+/* ---------- direct manipulation ---------- */
+let drag = null;
+function attachPointer(sEl){
+  sEl.addEventListener("pointerdown", ev => {
+    const node = ev.target.closest(".el");
+    if (ev.target.closest(".emptyslide")) return;
+    if (!node) { if (editingId) stopEditing(); if (selId) { selId = null; renderCanvas(); } return; }
+    const e = getEl(node.dataset.id);
+    if (editingId === e.id) return;
+    if (editingId) stopEditing();
+    const wasSelected = selId === e.id;
+    if (!wasSelected) { selId = e.id; renderCanvas(); }
+    ev.preventDefault();
+    const r = slideEl.getBoundingClientRect(), ppu = r.width / SW;
+    const cx = r.left + (e.x + e.w / 2) * ppu, cy = r.top + (e.y + e.h / 2) * ppu;
+    drag = {id:e.id, handle:ev.target.dataset.h || "move", sx:ev.clientX, sy:ev.clientY, ppu, cx, cy, start:{...e}, before:snap(),
+      moved:false, wasSelected, d0:Math.hypot(ev.clientX - cx, ev.clientY - cy)};
+    slideEl.setPointerCapture(ev.pointerId);
+  });
+  sEl.addEventListener("pointermove", ev => {
+    if (!drag) return;
+    const e = getEl(drag.id), s = drag.start, dx = ev.clientX - drag.sx, dy = ev.clientY - drag.sy;
+    if (!drag.moved && Math.hypot(dx, dy) < 5) return;
+    drag.moved = true;
+    const du = dx / drag.ppu, dv = dy / drag.ppu;
+    if (drag.handle === "move") {
+      e.x = s.x + du; e.y = s.y + dv;
+      const sx = Math.abs(e.x + e.w / 2 - SW / 2) < 10, sy = Math.abs(e.y + e.h / 2 - SH / 2) < 10;
+      if (sx) e.x = SW / 2 - e.w / 2; if (sy) e.y = SH / 2 - e.h / 2;
+      $("gv").classList.toggle("show", sx); $("gh").classList.toggle("show", sy);
+    } else if (drag.handle === "rot") {
+      let a = Math.atan2(ev.clientY - drag.cy, ev.clientX - drag.cx) * 180 / Math.PI + 90;
+      a = ((a % 360) + 360) % 360;
+      for (const t of [0, 90, 180, 270, 360]) if (Math.abs(a - t) < 6) a = t % 360;
+      e.rot = Math.round(a);
+    } else if (drag.handle === "br") {
+      const k = Math.max(.1, Math.hypot(ev.clientX - drag.cx, ev.clientY - drag.cy) / Math.max(drag.d0, 1));
+      const ccx = s.x + s.w / 2, ccy = s.y + s.h / 2;
+      e.w = Math.max(24, s.w * k);
+      if (e.type === "text") e.size = Math.max(8, Math.min(180, Math.round(s.size * k)));
+      else e.h = Math.max(4, s.h * k);
+      e.x = ccx - e.w / 2; e.y = ccy - (e.type === "text" ? s.h * k : e.h) / 2;
+    } else {
+      const rad = (s.rot || 0) * Math.PI / 180, lx = du * Math.cos(rad) + dv * Math.sin(rad), ly = -du * Math.sin(rad) + dv * Math.cos(rad);
+      const ccx = s.x + s.w / 2, ccy = s.y + s.h / 2;
+      if (drag.handle === "r") { const nw = Math.max(24, s.w + lx), dw = nw - s.w; e.w = nw; e.x = ccx + Math.cos(rad) * dw / 2 - nw / 2; e.y = ccy + Math.sin(rad) * dw / 2 - s.h / 2; }
+      else { const nh = Math.max(4, s.h + ly), dh = nh - s.h; e.h = nh; e.x = ccx - Math.sin(rad) * dh / 2 - s.w / 2; e.y = ccy + Math.cos(rad) * dh / 2 - nh / 2; }
+      if (e.circle) e.circle = false;
+    }
+    refreshOne(e);
+  });
+  const end = () => {
+    if (!drag) return;
+    const d = drag; drag = null;
+    $("gv").classList.remove("show"); $("gh").classList.remove("show");
+    const e = getEl(d.id);
+    if (!d.moved && d.handle === "move") {
+      if (e.type === "image" && !e.img) return openPic(e.id);                 // tap an empty picture box
+      if (e.type === "text" && (d.wasSelected || !e.text)) return startEditing(e.id);
+      return;
+    }
+    if (d.moved) { measureTexts(); commit(d.before); renderCtx(); }
+  };
+  sEl.addEventListener("pointerup", end);
+  sEl.addEventListener("pointercancel", end);
+}
+
+/* ---------- text editing ---------- */
+let editBefore = null;
+function startEditing(id){
+  editingId = id; editBefore = snap(); selId = id;
+  const e = getEl(id); renderCanvas();
+  const tx = slideEl.querySelector(`.el[data-id="${id}"] .tx`);
+  tx.focus();
+  if (e.text) { const r = document.createRange(); r.selectNodeContents(tx); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+  tx.addEventListener("input", () => { e.text = tx.innerText.replace(/\n$/, ""); measureTexts(); });
+  tx.addEventListener("paste", ev => { ev.preventDefault(); document.execCommand("insertText", false, ev.clipboardData.getData("text/plain")); });
+  tx.addEventListener("blur", () => setTimeout(() => { if (editingId === id) stopEditing(); }, 0));
+}
+function stopEditing(){
+  const id = editingId; if (!id) return;
+  editingId = null;
+  const e = getEl(id);
+  if (e && !e.text.trim()) { e.text = ""; if (!e.ph) { cur().els = cur().els.filter(x => x.id !== id); selId = null; } }
+  renderCanvas(); commit(editBefore);
+}
+
+/* ---------- context bar ---------- */
+function renderCtx(){
+  const bar = $("ctx"); bar.innerHTML = "";
+  const e = selId && getEl(selId);
+  if (!e) {
+    bar.append(h("span", {class:"hint"}, "Tap something on the slide to change it, or add text and pictures above. ", h("span", {class:"ja"}, "スライドの中をタップして編集")));
+    return;
+  }
+  if (e.type === "text") {
+    bar.append(h("button", {class:"cb", onclick:() => startEditing(e.id)}, "Edit text"));
+    bar.append(h("button", {class:"cb", style:`font-family:${fontOf(e.font).css}`, onclick:() => openFonts(e)}, fontOf(e.font).label + " ▾"));
+    bar.append(h("span", {class:"size"},
+      h("button", {"aria-label":"Smaller", onclick:() => change(() => e.size = Math.max(8, e.size - 4))}, "−"),
+      h("span", {}, String(e.size)),
+      h("button", {"aria-label":"Bigger", onclick:() => change(() => e.size = Math.min(180, e.size + 4))}, "+")));
+    bar.append(h("button", {class:"cb" + (e.bold ? " on" : ""), "aria-label":"Bold", onclick:() => change(() => e.bold = !e.bold)}, h("b", {}, "B")));
+    bar.append(h("button", {class:"cb" + (e.italic ? " on" : ""), "aria-label":"Italic", onclick:() => change(() => e.italic = !e.italic)}, h("i", {style:"font-family:Georgia,serif"}, "I")));
+    bar.append(h("button", {class:"cb", onclick:() => change(() => e.align = {left:"center", center:"right", right:"left"}[e.align])}, {left:"Left", center:"Center", right:"Right"}[e.align]));
+    bar.append(h("button", {class:"cb", onclick:() => openColors("Text color 文字の色", e.color, c => change(() => e.color = c))}, h("span", {class:"swatch", style:`background:${e.color}`}), "Color"));
+    bar.append(h("button", {class:"cb", onclick:() => openColors("Text box fill 背景の色", e.fill, c => change(() => e.fill = c), true)},
+      h("span", {class:"swatch", style:`background:${e.fill || "#fff"}`}), "Fill"));
+  }
+  if (e.type === "image") {
+    bar.append(h("button", {class:"cb", onclick:() => openPic(e.id)}, e.img ? "Replace picture" : "Add picture"));
+    if (e.img) bar.append(h("button", {class:"cb" + (e.circle ? " on" : ""), onclick:() => change(() => {
+      e.circle = !e.circle;
+      if (e.circle) { const s = Math.min(e.w, e.h), cx = e.x + e.w / 2, cy = e.y + e.h / 2; e.w = e.h = s; e.x = cx - s / 2; e.y = cy - s / 2; }
+    })}, "Circle"));
+    if (e.img) bar.append(h("button", {class:"cb", onclick:() => change(() => {
+      const im = IMG[e.img], cx = e.x + e.w / 2, cy = e.y + e.h / 2; e.circle = false; e.h = e.w * im.h / im.w; e.x = cx - e.w / 2; e.y = cy - e.h / 2;
+    })}, "Original shape"));
+  }
+  if (e.type === "shape") {
+    bar.append(h("button", {class:"cb", onclick:() => openColors("Fill color 塗りの色", e.fill, c => change(() => e.fill = c), true)},
+      h("span", {class:"swatch", style:`background:${e.fill || "#fff"}`}), "Fill"));
+    if (e.shape !== "line") bar.append(h("button", {class:"cb", onclick:() => openColors("Outline 線の色", e.line, c => change(() => e.line = c), true)},
+      h("span", {class:"swatch", style:`background:${e.line || "#fff"}`}), "Outline"));
+    bar.append(h("button", {class:"cb", onclick:() => change(() => e.opacity = {1:.7, .7:.4, .4:1}[e.opacity ?? 1] ?? 1)}, "Opacity " + Math.round((e.opacity ?? 1) * 100) + "%"));
+  }
+  bar.append(h("span", {class:"sep"}));
+  bar.append(h("button", {class:"cb", onclick:() => change(() => { cur().els = cur().els.filter(x => x !== e); cur().els.push(e); })}, "Front"));
+  bar.append(h("button", {class:"cb", onclick:() => change(() => { cur().els = cur().els.filter(x => x !== e); cur().els.unshift(e); })}, "Back"));
+  bar.append(h("button", {class:"cb", onclick:() => change(() => { const c = {...e, id:uid(), x:e.x + 20, y:e.y + 20}; cur().els.push(c); selId = c.id; })}, "Copy"));
+  bar.append(h("button", {class:"cb del", onclick:() => change(() => { cur().els = cur().els.filter(x => x !== e); selId = null; })}, "Delete"));
+}
+
+/* ---------- sheets ---------- */
+function openSheet(...kids){
+  $("sheet").replaceChildren(...kids, h("div", {class:"closebar"}, h("button", {class:"btn ghost", onclick:closeSheet}, "Close 閉じる")));
+  $("shade").classList.add("show");
+}
+function closeSheet(){ $("shade").classList.remove("show"); }
+$("shade").addEventListener("click", ev => { if (ev.target === $("shade")) closeSheet(); });
+
+function openColors(title, current, pick, allowNone){
+  const row = h("div", {class:"colors"});
+  if (allowNone) row.append(h("button", {"aria-label":"None", title:"None", style:"background:#fff linear-gradient(135deg,transparent 46%,#b4441a 46%,#b4441a 54%,transparent 54%)", onclick:() => { pick(null); closeSheet(); }}));
+  COLORS.forEach(c => row.append(h("button", {"aria-label":c, style:`background:${c}`, onclick:() => { pick(c); closeSheet(); }})));
+  const custom = h("input", {type:"color", value:current || "#1f5fbf", "aria-label":"Any color"});
+  custom.addEventListener("change", () => { pick(custom.value); closeSheet(); });
+  row.append(h("label", {}, custom, "Any color"));
+  openSheet(h("h3", {}, title), row);
+}
+function openFonts(e){
+  const list = h("div", {class:"fontlist"});
+  FONTS.forEach(f => list.append(h("button", {class:e.font === f.key ? "on" : "", style:`font-family:${f.css};font-weight:${f.weight || 700}`,
+    onclick:() => { change(() => e.font = f.key); closeSheet(); }}, (e.text || e.ph || "Abc").slice(0, 14), h("small", {}, f.label))));
+  openSheet(h("h3", {}, "Font フォント"), list, h("p", {class:"msg"}, "Fonts look best when the PowerPoint is opened on an iPad. iPadで開くと一番きれいに見えます。"));
+}
+
+/* ---------- add things ---------- */
+let cascade = 0;
+const spot = (w, hh) => { cascade = (cascade + 1) % 5; return {x:SW / 2 - w / 2 + cascade * 16 - 32, y:SH / 2 - hh / 2 + cascade * 16 - 32}; };
+const textColor = () => isDark(bgBase(cur().bg)) ? "#ffffff" : "#1a1d23";
+function addEl(e){ const before = snap(); cur().chosen = true; cur().els.push(e); selId = e.id; renderCanvas(); commit(before); }
+
+$("tbText").onclick = () => {
+  addEl({id:uid(), type:"text", ...spot(420, 70), w:420, h:70, rot:0, text:"", ph:"Your keyword", font:"sans", size:36, bold:true, italic:false,
+    color:textColor(), align:"center", fill:null});
+  startEditing(selId);
+};
+$("tbShape").onclick = () => {
+  const g = h("div", {class:"opts"});
+  for (const [k, s] of Object.entries(SHAPES))
+    g.append(h("button", {class:"opt", "aria-label":s.label, title:s.label, html:`<svg viewBox="-4 -4 108 108" preserveAspectRatio="${k === "line" ? "none" : "xMidYMid meet"}">${k === "line" ? '<rect x="0" y="46" width="100" height="8" fill="#1a1d23"/>' : `<g fill="#1a1d23">${s.svg}</g>`}</svg>`, onclick:() => {
+      closeSheet();
+      const dims = {arrow:[220, 110], bubble:[300, 200], line:[300, 6]}[k] || [180, 180];
+      addEl({id:uid(), type:"shape", shape:k, ...spot(dims[0], dims[1]), w:dims[0], h:dims[1], rot:0,
+        fill: k === "line" ? textColor() : "#1f5fbf", line:null, opacity:1});
+    }}));
+  openSheet(h("h3", {}, "Shapes & lines 図形・線"), g, h("p", {class:"msg"}, "Tip: set Fill to none and add an Outline to make a frame. 塗りなし＋線でフレームになります。"));
+};
+$("tbIcon").onclick = () => {
+  const g = h("div", {class:"opts"});
+  ICONS.forEach(ic => g.append(h("button", {class:"opt", style:"font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:" + (ic.length > 2 ? "1.1rem" : "1.7rem"), onclick:() => {
+    closeSheet();
+    addEl({id:uid(), type:"text", ...spot(140, 100), w:ic.length > 2 ? 200 : 120, h:100, rot:0, text:ic, ph:"", font:"sans", size:ic.length > 2 ? 48 : 60, bold:true, italic:false,
+      color:"#f2b134", align:"center", fill:null});
+  }}, ic)));
+  openSheet(h("h3", {}, "Icons アイコン"), g, h("p", {class:"msg"}, "Icons work like text: change their color and size. 文字と同じように色や大きさを変えられます。"));
+};
+
+/* ---------- layouts ---------- */
+$("tbLayout").onclick = () => openLayouts();
+function layoutEls(L, sl){
+  const ink = isDark(bgBase(sl.bg)) ? "#ffffff" : "#1a1d23", accent = isDark(bgBase(sl.bg)) ? "#f2b134" : "#1f5fbf";
+  return L.els.map(t => {
+    const e = {id:uid(), rot:0, ...t};
+    if (t.type === "text") Object.assign(e, {text:"", font:"sans", bold:!!t.bold, italic:false, align:t.align || "left", fill:null,
+      h:t.size * 1.6, color:t.color || (t.accent ? accent : ink), fixed:!!t.color});
+    if (t.type === "image") Object.assign(e, {img:null, circle:false});
+    if (t.type === "shape") Object.assign(e, {fill:t.fill || (t.accent ? accent : ink), line:null, opacity:t.opacity ?? 1});
+    delete e.accent;
+    return e;
+  });
+}
+function openLayouts(){
+  const g = h("div", {class:"layouts"});
+  LAYOUTS.forEach(L => {
+    const preview = {bg:cur().bg, els:layoutEls(L, cur())};
+    g.append(h("button", {onclick:() => {
+      const sl = cur();
+      if (sl.els.some(e => (e.type === "text" && e.text) || (e.type === "image" && e.img)) &&
+          !confirm("Replace everything on this slide with the new layout?\nこのスライドの内容を新しいレイアウトに置き換えますか？")) return;
+      const before = snap(); sl.els = layoutEls(L, sl); sl.chosen = true; selId = null;
+      closeSheet(); renderCanvas(); commit(before);
+    }}, h("div", {class:"mini"}, renderSlide(preview, "thumb")), L.label + " ", h("span", {class:"ja"}, L.ja)));
+  });
+  openSheet(h("h3", {}, "Choose a layout レイアウトを選ぶ"), h("p", {class:"msg", style:"margin:-6px 0 14px"}, "Everything starts empty. You can move, resize and change anything afterwards. 中身は空です。あとで自由に動かせます。"), g);
+}
+
+/* ---------- pictures: Bing search → Save to Photos → choose ---------- */
+let picTarget = null;
+function shrinkFile(file, maxSide){
+  return new Promise((res, rej) => {
+    const url = URL.createObjectURL(file), img = new Image();
+    img.onload = () => {
+      const s = Math.min(1, maxSide / Math.max(img.naturalWidth, img.naturalHeight));
+      const c = document.createElement("canvas"); c.width = Math.round(img.naturalWidth * s); c.height = Math.round(img.naturalHeight * s);
+      const ctx = c.getContext("2d"); ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, c.width, c.height); ctx.drawImage(img, 0, 0, c.width, c.height);
+      URL.revokeObjectURL(url); res({src:c.toDataURL("image/jpeg", .85), w:c.width, h:c.height});
+    };
+    img.onerror = () => rej(new Error("Can't open that file"));
+    img.src = url;
+  });
+}
+function bingForm(value){
+  const q = h("input", {type:"text", placeholder:"e.g. Gojo Satoru", autocomplete:"off", enterkeyhint:"search"}); q.value = value || "";
+  return h("form", {class:"search", onsubmit:ev => { ev.preventDefault(); if (!q.value.trim()) return q.focus();
+    window.open("https://www.bing.com/images/search?adlt=strict&q=" + encodeURIComponent(q.value.trim()), "_blank"); }},
+    q, h("button", {class:"btn primary", type:"submit"}, "Search"));
+}
+function openPic(targetId){
+  picTarget = targetId || null;
+  openSheet(h("h3", {}, "Add a picture 画像を追加"),
+    h("h4", {}, "1. Search the internet  インターネットで探す"), bingForm(S.title),
+    h("p", {class:"msg"}, "Bing opens in a new tab. Press and hold a picture → Save to Photos, then come back. 画像を長押し →「“写真”に保存」→ ここに戻る"),
+    h("h4", {}, "2. Choose it from Photos  写真から選ぶ"),
+    h("label", {class:"btn dark", for:"picFile"}, "Choose from Photos ", h("small", {}, "写真を選ぶ")));
+}
+$("tbPic").onclick = () => openPic(null);
+$("picFile").onchange = async ev => {
+  const f = ev.target.files[0]; ev.target.value = ""; if (!f) return;
+  closeSheet();
+  try {
+    const im = await shrinkFile(f, 1400), id = storeImg(im);
+    const target = picTarget && getEl(picTarget);
+    if (target) change(() => { target.img = id; target.circle = false; selId = target.id; cur().chosen = true; });   // fills the box (cropped to fit)
+    else { const k = Math.min(440 / im.w, 400 / im.h), w = im.w * k, hh = im.h * k; addEl({id:uid(), type:"image", ...spot(w, hh), w, h:hh, rot:0, img:id, circle:false}); }
+  } catch (e) { alert("Sorry, that picture didn't work. 別の写真を試してね。"); }
+};
+
+/* ---------- background ---------- */
+function gradImg(key){
+  const id = "grad-" + key;
+  if (!IMG[id]) {
+    const [a, b] = GRADS[key], c = document.createElement("canvas"); c.width = 1600; c.height = 900;
+    const ctx = c.getContext("2d"), g = ctx.createLinearGradient(0, 0, 1600, 900); g.addColorStop(0, a); g.addColorStop(1, b);
+    ctx.fillStyle = g; ctx.fillRect(0, 0, 1600, 900);
+    IMG[id] = {src:c.toDataURL("image/jpeg", .92), w:1600, h:900}; idb.put(id, IMG[id]);
+  }
+  return id;
+}
+function mixHex(a, b){ const p = x => [1, 3, 5].map(i => parseInt(x.slice(i, i + 2), 16)); const A = p(a), B = p(b); return "#" + A.map((v, i) => Math.round((v + B[i]) / 2).toString(16).padStart(2, "0")).join(""); }
+// when a slide goes from light to dark (or back), flip the default text colours so words stay readable
+const FLIP = {"#1a1d23":"#ffffff", "#ffffff":"#1a1d23", "#1f5fbf":"#f2b134", "#f2b134":"#1f5fbf"};
+function applyBg(sl, bg){
+  const wasDark = isDark(bgBase(sl.bg)), nowDark = isDark(bgBase(bg));
+  sl.bg = {...bg};
+  if (wasDark === nowDark) return;
+  sl.els.forEach(e => {
+    const from = nowDark ? ["#1a1d23", "#1f5fbf"] : ["#ffffff", "#f2b134"];
+    if (e.fixed) return;   // e.g. white caption on a dark bar
+    if (e.type === "text" && !e.fill && from.includes(e.color)) e.color = FLIP[e.color];
+    if (e.type === "shape" && e.shape === "line" && from.includes(e.fill)) e.fill = FLIP[e.fill];
+  });
+}
+function setBg(bg, all){
+  const before = snap();
+  if (all) S.slides.forEach(sl => applyBg(sl, bg)); else applyBg(cur(), bg);
+  renderCanvas(); commit(before);
+}
+$("tbBg").onclick = () => {
+  let all = false;
+  const allBox = h("input", {type:"checkbox", id:"bgAll"}); allBox.onchange = () => all = allBox.checked;
+  const colors = h("div", {class:"colors"});
+  COLORS.forEach(c => colors.append(h("button", {"aria-label":c, style:`background:${c}`, onclick:() => { setBg({kind:"color", color:c}, all); closeSheet(); }})));
+  const grads = h("div", {class:"grads"});
+  for (const [k, [a, b]] of Object.entries(GRADS))
+    grads.append(h("button", {"aria-label":k, style:`background:linear-gradient(135deg,${a},${b})`, onclick:() => {
+      setBg({kind:"image", img:gradImg(k), base:mixHex(a, b)}, all); closeSheet(); }}));
+  openSheet(h("h3", {}, "Background 背景"),
+    h("label", {class:"row", style:"font-weight:600;gap:8px"}, allBox, "Use on all slides  全部のスライドに使う"),
+    h("h4", {}, "Color 色"), colors,
+    h("h4", {}, "Gradient グラデーション"), grads,
+    h("h4", {}, "Your own picture 写真"),
+    h("div", {class:"row"}, h("label", {class:"btn dark", for:"bgFile", onclick:() => bgAllPending = all}, "Choose from Photos ", h("small", {}, "写真を選ぶ")),
+      h("span", {class:"msg"}, "It gets a little darker so your words are easy to read. 文字が読みやすいように少し暗くなります。")));
+};
+let bgAllPending = false;
+$("bgFile").onchange = async ev => {
+  const f = ev.target.files[0]; ev.target.value = ""; if (!f) return;
+  closeSheet();
+  try {
+    const im = await shrinkFile(f, 2000), img = new Image();
+    img.onload = () => {
+      const c = document.createElement("canvas"); c.width = 1600; c.height = 900; const ctx = c.getContext("2d");
+      const k = Math.max(1600 / img.width, 900 / img.height), w = img.width * k, hh = img.height * k;
+      ctx.drawImage(img, (1600 - w) / 2, (900 - hh) / 2, w, hh);
+      ctx.fillStyle = "rgba(0,0,0,.4)"; ctx.fillRect(0, 0, 1600, 900);   // darken for readable text
+      const id = storeImg({src:c.toDataURL("image/jpeg", .85), w:1600, h:900});
+      setBg({kind:"image", img:id, base:"#222222"}, bgAllPending);
+    };
+    img.src = im.src;
+  } catch (e) { alert("Sorry, that picture didn't work. 別の写真を試してね。"); }
+};
+
+/* ---------- keys ---------- */
+document.addEventListener("keydown", ev => {
+  if (!$("tab-slides").classList.contains("on")) return;
+  if (editingId) { if (ev.key === "Escape") stopEditing(); return; }
+  if (/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) return;
+  if ((ev.metaKey || ev.ctrlKey) && ev.key.toLowerCase() === "z") { ev.preventDefault(); (ev.shiftKey ? $("redo") : $("undo")).click(); return; }
+  const e = selId && getEl(selId); if (!e) return;
+  if (ev.key === "Delete" || ev.key === "Backspace") { ev.preventDefault(); change(() => { cur().els = cur().els.filter(x => x !== e); selId = null; }); }
+  const n = {ArrowLeft:[-5,0], ArrowRight:[5,0], ArrowUp:[0,-5], ArrowDown:[0,5]}[ev.key];
+  if (n) { ev.preventDefault(); change(() => { e.x += n[0]; e.y += n[1]; }); }
+});
+
+/* =====================================================================
+   3. PRACTICE
+   ===================================================================== */
+let pIdx = 0;
+const scriptFor = sl => (sl.part != null ? S.parts[sl.part] : sl.notes || "").trim();
+function renderPractice(){
+  const sl = S.slides[pIdx];
+  $("pSlide").replaceChildren(renderSlide(sl, "show"));
+  $("pPos").textContent = `${pIdx + 1} / ${S.slides.length}`;
+  $("peek").textContent = scriptFor(sl) || "(No script for this slide. 台本がありません)";
+  $("pPrev").disabled = pIdx === 0; $("pNext").disabled = pIdx === S.slides.length - 1;
+}
+const go = d => { pIdx = Math.max(0, Math.min(S.slides.length - 1, pIdx + d)); renderPractice(); };
+$("pPrev").onclick = () => go(-1);
+$("pNext").onclick = () => go(1);
+document.addEventListener("keydown", ev => {
+  if (!$("tab-practice").classList.contains("on")) return;
+  if (ev.key === "ArrowRight" || ev.key === " ") { ev.preventDefault(); go(1); }
+  if (ev.key === "ArrowLeft") go(-1);
+});
+let sx = null;
+$("pSlide").addEventListener("pointerdown", e => sx = e.clientX);
+$("pSlide").addEventListener("pointerup", e => { if (sx !== null && Math.abs(e.clientX - sx) > 50) go(e.clientX < sx ? 1 : -1); sx = null; });
+$("pPeek").addEventListener("pointerdown", e => { e.preventDefault(); $("peek").classList.add("show"); });
+["pointerup","pointerleave","pointercancel"].forEach(ev => $("pPeek").addEventListener(ev, () => $("peek").classList.remove("show")));
+$("pPeek").addEventListener("contextmenu", e => e.preventDefault());
+let tStart = 0, tAcc = 0, tInt = null;
+const fmt = ms => { const s = Math.floor(ms / 1000); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
+$("pTimer").onclick = () => {
+  if (tInt) { tAcc += Date.now() - tStart; clearInterval(tInt); tInt = null; $("pTimer").textContent = "Start timer"; }
+  else { tStart = Date.now(); tInt = setInterval(() => $("pTime").textContent = fmt(tAcc + Date.now() - tStart), 250); $("pTimer").textContent = "Stop timer"; }
+};
+$("pReset").onclick = () => { if (tInt) { clearInterval(tInt); tInt = null; $("pTimer").textContent = "Start timer"; } tAcc = 0; $("pTime").textContent = "0:00"; };
+$("pFull").onclick = () => {
+  const st = $("stage");
+  if (document.fullscreenElement || document.webkitFullscreenElement) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+  else if (st.requestFullscreen) st.requestFullscreen().catch(() => {});
+  else if (st.webkitRequestFullscreen) st.webkitRequestFullscreen();
+};
+
+/* =====================================================================
+   4. EXPORT
+   ===================================================================== */
+const hasContent = sl => sl.els.some(e => (e.type === "text" && e.text) || (e.type === "image" && e.img) || e.type === "shape");
+function renderChecks(){
+  const c = [
+    [!!S.student.name, "Your name 名前"],
+    [!!S.title, "Title タイトル"],
+    [S.parts.every(p => p.trim()), "All 4 parts of the script 台本（4つ全部）"],
+    [!S.parts.some(p => /___/.test(p)), "No blanks ( ___ ) left 空欄なし"],
+    [S.slides.filter(s => s.part != null).every(hasContent), "Slides 1–4 all have something on them スライド1〜4に内容がある"],
+    [S.slides.some(s => s.els.some(e => e.type === "image" && e.img)), "At least one picture 画像（1枚以上）"]
+  ];
+  $("checks").replaceChildren(...c.map(([ok, txt]) => h("li", {class:ok ? "ok" : "no"}, h("i", {}, ok ? "✓" : "✗"), txt)));
+}
+const safeName = s => s.replace(/[\\/:*?"<>|\n\r\t]/g, "").trim();
+function baseName(){ const s = S.student, pre = [s.cls, s.no].filter(Boolean).join("-"); return safeName([pre, s.name, S.title].filter(Boolean).join(" ")) || "my-presentation"; }
+function offerFile(box, msg, blob, filename){
+  const file = new File([blob], filename, {type:blob.type}), url = URL.createObjectURL(blob);
+  box.replaceChildren(h("a", {class:"btn dark", href:url, download:filename}, "Download ", h("small", {}, "ダウンロード")));
+  if (navigator.canShare && navigator.canShare({files:[file]}))
+    box.append(h("button", {class:"btn ghost", type:"button", onclick:async () => { try { await navigator.share({files:[file], title:filename}); } catch (e) {} }}, "Share / Open in… ", h("small", {}, "共有")));
+  box.classList.add("show"); msg.className = "msg"; msg.textContent = "Ready: " + filename;
+}
+function fail(msg, e){ console.error(e); msg.className = "msg err"; msg.textContent = "Something went wrong. Please try again. もう一度試してね。 (" + e.message + ")"; }
+
+/* ---------- PowerPoint ---------- */
+function cropTo(src, aspect){
+  return new Promise(res => {
+    const img = new Image();
+    img.onload = () => {
+      const ia = img.width / img.height;
+      if (Math.abs(ia - aspect) / aspect < .01) return res(src);
+      const sw = ia > aspect ? img.height * aspect : img.width, sh = ia > aspect ? img.height : img.width / aspect;
+      const c = document.createElement("canvas"); c.width = Math.round(sw); c.height = Math.round(sh);
+      c.getContext("2d").drawImage(img, (img.width - sw) / 2, (img.height - sh) / 2, sw, sh, 0, 0, c.width, c.height);
+      res(c.toDataURL("image/jpeg", .9));
+    };
+    img.src = src;
+  });
+}
+async function makePptx(){
+  const pptx = new PptxGenJS(); pptx.layout = "LAYOUT_16x9";
+  pptx.title = S.title || "My Recommendation"; pptx.author = S.student.name || "";
+  const IN = 100, PT = .72;   // 100 units = 1 inch; 1 unit = 0.72 pt
+  for (const d of S.slides) {
+    const sl = pptx.addSlide();
+    if (d.bg.kind === "image" && IMG[d.bg.img]) sl.background = {data:IMG[d.bg.img].src.replace(/^data:/, "")};
+    else sl.background = {color:(d.bg.color || "#ffffff").slice(1)};
+    for (const e of d.els) {
+      const box = {x:e.x / IN, y:e.y / IN, w:e.w / IN, h:e.h / IN, rotate:e.rot || 0};
+      if (e.type === "text" && e.text) {
+        const f = fontOf(e.font);
+        sl.addText(e.text, {...box, fontFace:f.ppt, fontSize:e.size, color:e.color.slice(1), bold:!!e.bold, italic:!!e.italic, align:e.align,
+          valign:"top", margin:4 * PT, fill:e.fill ? {color:e.fill.slice(1)} : undefined});
+      }
+      if (e.type === "image" && e.img && IMG[e.img]) {
+        const src = await cropTo(IMG[e.img].src, e.w / e.h);
+        sl.addImage({...box, data:src.replace(/^data:/, ""), rounding:!!e.circle});
+      }
+      if (e.type === "shape") {
+        const tr = Math.round((1 - (e.opacity ?? 1)) * 100);
+        sl.addShape(SHAPES[e.shape].ppt, {...box,
+          fill:e.fill ? {color:e.fill.slice(1), transparency:tr} : {type:"none"},
+          line:e.line ? {color:e.line.slice(1), width:2.25} : {type:"none"}});
+      }
+    }
+    const notes = scriptFor(d); if (notes) sl.addNotes(notes);
+  }
+  return await pptx.write({outputType:"blob"});
+}
+$("mkPptx").onclick = async () => {
+  const b = $("mkPptx"); b.disabled = true; $("pptxMsg").className = "msg"; $("pptxMsg").textContent = "Making… 作成中…";
+  try { offerFile($("pptxReady"), $("pptxMsg"), await makePptx(), baseName() + ".pptx"); } catch (e) { fail($("pptxMsg"), e); }
+  b.disabled = false;
+};
+
+/* ---------- Word (.docx built with JSZip, which comes with PptxGenJS) ---------- */
+const xe = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+function para(text, o = {}){
+  const rpr = (o.color ? `<w:color w:val="${o.color}"/>` : "");
+  const ppr = (o.style ? `<w:pStyle w:val="${o.style}"/>` : "") + (o.after != null ? `<w:spacing w:after="${o.after}"/>` : "");
+  return `<w:p>${ppr ? `<w:pPr>${ppr}</w:pPr>` : ""}<w:r>${rpr ? `<w:rPr>${rpr}</w:rPr>` : ""}<w:t xml:space="preserve">${xe(text)}</w:t></w:r></w:p>`;
+}
+async function makeDocx(){
+  const t = T(), body = [];
+  body.push(para(S.title || "My Recommendation", {style:"Title"}));
+  const who = [S.student.cls && "Class " + S.student.cls, S.student.no && "No. " + S.student.no, S.student.name].filter(Boolean).join("   ");
+  body.push(para([`My favorite ${t.noun}`, who].filter(Boolean).join("   |   "), {color:"68707D", after:240}));
+  PARTS.forEach((p, i) => {
+    body.push(para(`${i + 1}. ${p.name}`, {style:"Heading1"}));
+    const lines = S.parts[i].split(/\n+/).map(s => s.trim()).filter(Boolean);
+    if (!lines.length) body.push(para("(not written yet)", {color:"9CA3AF"}));
+    lines.forEach(l => body.push(para(l)));
+  });
+  const extras = S.slides.filter(s => s.part == null && (s.notes || "").trim());
+  if (extras.length) { body.push(para("Extra slides", {style:"Heading1"})); extras.forEach(s => s.notes.split(/\n+/).filter(Boolean).forEach(l => body.push(para(l)))); }
+  const n = S.parts.reduce((a, p) => a + words(p), 0);
+  body.push(para(`Total: ${n} words`, {color:"68707D"}));
+  const W = 'xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"';
+  const zip = new JSZip();
+  zip.file("[Content_Types].xml", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/></Types>`);
+  zip.file("_rels/.rels", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>`);
+  zip.file("word/_rels/document.xml.rels", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`);
+  zip.file("word/document.xml", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document ${W}><w:body>${body.join("")}<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="708" w:footer="708" w:gutter="0"/></w:sectPr></w:body></w:document>`);
+  zip.file("word/styles.xml", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:styles ${W}><w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:eastAsia="Yu Gothic" w:cs="Arial"/><w:sz w:val="28"/><w:szCs w:val="28"/><w:lang w:val="en-US" w:eastAsia="ja-JP"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:spacing w:after="120" w:line="400" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults><w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/></w:style><w:style w:type="paragraph" w:styleId="Title"><w:name w:val="Title"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:pPr><w:spacing w:after="60"/></w:pPr><w:rPr><w:b/><w:sz w:val="48"/><w:szCs w:val="48"/></w:rPr></w:style><w:style w:type="paragraph" w:styleId="Heading1"><w:name w:val="heading 1"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:pPr><w:keepNext/><w:spacing w:before="280" w:after="80"/><w:outlineLvl w:val="0"/></w:pPr><w:rPr><w:b/><w:color w:val="1F5FBF"/><w:sz w:val="30"/><w:szCs w:val="30"/></w:rPr></w:style></w:styles>`);
+  return await zip.generateAsync({type:"blob", mimeType:"application/vnd.openxmlformats-officedocument.wordprocessingml.document"});
+}
+$("mkDocx").onclick = async () => {
+  const b = $("mkDocx"); b.disabled = true; $("docxMsg").className = "msg"; $("docxMsg").textContent = "Making… 作成中…";
+  try { offerFile($("docxReady"), $("docxMsg"), await makeDocx(), baseName() + ".docx"); } catch (e) { fail($("docxMsg"), e); }
+  b.disabled = false;
+};
+
+/* ---------- backup ---------- */
+$("bkSave").onclick = () => {
+  const used = new Set(); S.slides.forEach(sl => { if (sl.bg.img) used.add(sl.bg.img); sl.els.forEach(e => e.img && used.add(e.img)); });
+  const imgs = {}; used.forEach(id => { if (IMG[id]) imgs[id] = IMG[id]; });
+  offerFile($("bkReady"), $("bkMsg"), new Blob([JSON.stringify({app:"recommend-it", state:S, imgs})], {type:"application/json"}), baseName() + " (backup).json");
+};
+$("bkFile").onchange = ev => {
+  const f = ev.target.files[0]; ev.target.value = ""; if (!f) return;
+  const fr = new FileReader();
+  fr.onload = () => {
+    try {
+      const d = JSON.parse(fr.result);
+      if (d.app !== "recommend-it" || !d.state || d.state.v !== 2) throw new Error("not a backup");
+      S = Object.assign(blank(), d.state);
+      for (const [k, v] of Object.entries(d.imgs || {})) { IMG[k] = v; idb.put(k, v); }
+      undoStack.length = redoStack.length = 0; save(); refreshAll();
+      $("bkMsg").className = "msg"; $("bkMsg").textContent = "Backup opened. バックアップを開きました。";
+    } catch (err) { $("bkMsg").className = "msg err"; $("bkMsg").textContent = "That isn't a backup file from this tool. このツールのバックアップではありません。"; }
+  };
+  fr.readAsText(f);
+};
+$("reset").onclick = () => {
+  if (!confirm("Delete everything and start over?\n全部消して最初からやり直しますか？")) return;
+  S = blank(); IMG = {}; idb.clear(); undoStack.length = redoStack.length = 0; save(); refreshAll(); showTab("script");
+};
+function refreshAll(){
+  document.querySelectorAll("[data-bind]").forEach(inp => inp.value = getPath(inp.dataset.bind));
+  renderTypes(); renderParts(); renderChecks();
+}
+
+/* start */
+renderTypes(); renderParts();
+idb.open().then(() => idb.all()).then(all => { Object.assign(IMG, all); if ($("tab-slides").classList.contains("on")) renderEditor(); });
+</script>
+</body>
+</html>
