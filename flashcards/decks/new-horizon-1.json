@@ -4,6 +4,1792 @@
  "grade": "中1",
  "sections": [
   {
+   "id": "es-numbers",
+   "title": "Numbers",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "one",
+     "ja": "1"
+    },
+    {
+     "en": "two",
+     "ja": "2"
+    },
+    {
+     "en": "three",
+     "ja": "3"
+    },
+    {
+     "en": "four",
+     "ja": "4"
+    },
+    {
+     "en": "five",
+     "ja": "5"
+    },
+    {
+     "en": "six",
+     "ja": "6"
+    },
+    {
+     "en": "seven",
+     "ja": "7"
+    },
+    {
+     "en": "eight",
+     "ja": "8"
+    },
+    {
+     "en": "nine",
+     "ja": "9"
+    },
+    {
+     "en": "eleven",
+     "ja": "11"
+    },
+    {
+     "en": "twelve",
+     "ja": "12"
+    },
+    {
+     "en": "thirteen",
+     "ja": "13"
+    },
+    {
+     "en": "fourteen",
+     "ja": "14"
+    },
+    {
+     "en": "fifteen",
+     "ja": "15"
+    },
+    {
+     "en": "sixteen",
+     "ja": "16"
+    },
+    {
+     "en": "seventeen",
+     "ja": "17"
+    },
+    {
+     "en": "eighteen",
+     "ja": "18"
+    },
+    {
+     "en": "nineteen",
+     "ja": "19"
+    },
+    {
+     "en": "twenty",
+     "ja": "20"
+    },
+    {
+     "en": "thirty",
+     "ja": "30"
+    },
+    {
+     "en": "forty",
+     "ja": "40"
+    },
+    {
+     "en": "fifty",
+     "ja": "50"
+    },
+    {
+     "en": "sixty",
+     "ja": "60"
+    },
+    {
+     "en": "seventy",
+     "ja": "70"
+    },
+    {
+     "en": "eighty",
+     "ja": "80"
+    },
+    {
+     "en": "ninety",
+     "ja": "90"
+    },
+    {
+     "en": "hundred",
+     "ja": "100"
+    }
+   ]
+  },
+  {
+   "id": "es-dates",
+   "title": "Days, Months & Dates",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "Sunday",
+     "ja": "日曜日"
+    },
+    {
+     "en": "Monday",
+     "ja": "月曜日"
+    },
+    {
+     "en": "Tuesday",
+     "ja": "火曜日"
+    },
+    {
+     "en": "Wednesday",
+     "ja": "水曜日"
+    },
+    {
+     "en": "Thursday",
+     "ja": "木曜日"
+    },
+    {
+     "en": "Friday",
+     "ja": "金曜日"
+    },
+    {
+     "en": "Saturday",
+     "ja": "土曜日"
+    },
+    {
+     "en": "January",
+     "ja": "1月"
+    },
+    {
+     "en": "February",
+     "ja": "2月"
+    },
+    {
+     "en": "March",
+     "ja": "3月"
+    },
+    {
+     "en": "April",
+     "ja": "4月"
+    },
+    {
+     "en": "May",
+     "ja": "5月"
+    },
+    {
+     "en": "June",
+     "ja": "6月"
+    },
+    {
+     "en": "July",
+     "ja": "7月"
+    },
+    {
+     "en": "August",
+     "ja": "8月"
+    },
+    {
+     "en": "September",
+     "ja": "9月"
+    },
+    {
+     "en": "October",
+     "ja": "10月"
+    },
+    {
+     "en": "November",
+     "ja": "11月"
+    },
+    {
+     "en": "December",
+     "ja": "12月"
+    },
+    {
+     "en": "first",
+     "ja": "1番目の、1日（ついたち）"
+    },
+    {
+     "en": "second",
+     "ja": "2番目の、2日"
+    },
+    {
+     "en": "third",
+     "ja": "3番目の、3日"
+    },
+    {
+     "en": "birthday",
+     "ja": "誕生日"
+    },
+    {
+     "en": "day",
+     "ja": "日"
+    },
+    {
+     "en": "week",
+     "ja": "週"
+    },
+    {
+     "en": "month",
+     "ja": "月（つき）"
+    },
+    {
+     "en": "year",
+     "ja": "年"
+    },
+    {
+     "en": "today",
+     "ja": "今日"
+    }
+   ]
+  },
+  {
+   "id": "es-time",
+   "title": "Time & Daily Life",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "time",
+     "ja": "時間"
+    },
+    {
+     "en": "afternoon",
+     "ja": "午後"
+    },
+    {
+     "en": "evening",
+     "ja": "夕方"
+    },
+    {
+     "en": "night",
+     "ja": "夜"
+    },
+    {
+     "en": "breakfast",
+     "ja": "朝食"
+    },
+    {
+     "en": "lunch",
+     "ja": "昼食"
+    },
+    {
+     "en": "dinner",
+     "ja": "夕食"
+    },
+    {
+     "en": "get up",
+     "ja": "起きる"
+    },
+    {
+     "en": "go to bed",
+     "ja": "寝る"
+    },
+    {
+     "en": "go to school",
+     "ja": "学校に行く"
+    },
+    {
+     "en": "go home",
+     "ja": "家に帰る"
+    },
+    {
+     "en": "wash",
+     "ja": "洗う"
+    },
+    {
+     "en": "brush my teeth",
+     "ja": "歯をみがく"
+    },
+    {
+     "en": "do my homework",
+     "ja": "宿題をする"
+    },
+    {
+     "en": "take a bath",
+     "ja": "お風呂に入る"
+    },
+    {
+     "en": "always",
+     "ja": "いつも"
+    },
+    {
+     "en": "usually",
+     "ja": "ふつう、たいてい"
+    },
+    {
+     "en": "sometimes",
+     "ja": "ときどき"
+    },
+    {
+     "en": "never",
+     "ja": "決して～ない"
+    }
+   ]
+  },
+  {
+   "id": "es-colors",
+   "title": "Colors & Shapes",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "color",
+     "ja": "色"
+    },
+    {
+     "en": "red",
+     "ja": "赤"
+    },
+    {
+     "en": "blue",
+     "ja": "青"
+    },
+    {
+     "en": "yellow",
+     "ja": "黄色"
+    },
+    {
+     "en": "green",
+     "ja": "緑"
+    },
+    {
+     "en": "white",
+     "ja": "白"
+    },
+    {
+     "en": "black",
+     "ja": "黒"
+    },
+    {
+     "en": "pink",
+     "ja": "ピンク"
+    },
+    {
+     "en": "orange",
+     "ja": "オレンジ（色・果物）"
+    },
+    {
+     "en": "purple",
+     "ja": "むらさき"
+    },
+    {
+     "en": "brown",
+     "ja": "茶色"
+    },
+    {
+     "en": "gray",
+     "ja": "灰色"
+    },
+    {
+     "en": "circle",
+     "ja": "丸"
+    },
+    {
+     "en": "square",
+     "ja": "四角"
+    },
+    {
+     "en": "triangle",
+     "ja": "三角"
+    },
+    {
+     "en": "star",
+     "ja": "星"
+    }
+   ]
+  },
+  {
+   "id": "es-weather",
+   "title": "Weather & Seasons",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "weather",
+     "ja": "天気"
+    },
+    {
+     "en": "sunny",
+     "ja": "晴れた"
+    },
+    {
+     "en": "rainy",
+     "ja": "雨の"
+    },
+    {
+     "en": "cloudy",
+     "ja": "くもりの"
+    },
+    {
+     "en": "snowy",
+     "ja": "雪の"
+    },
+    {
+     "en": "windy",
+     "ja": "風の強い"
+    },
+    {
+     "en": "cold",
+     "ja": "寒い、冷たい"
+    },
+    {
+     "en": "warm",
+     "ja": "暖かい"
+    },
+    {
+     "en": "cool",
+     "ja": "涼しい、かっこいい"
+    },
+    {
+     "en": "spring",
+     "ja": "春"
+    },
+    {
+     "en": "summer",
+     "ja": "夏"
+    },
+    {
+     "en": "fall",
+     "ja": "秋"
+    },
+    {
+     "en": "winter",
+     "ja": "冬"
+    }
+   ]
+  },
+  {
+   "id": "es-family",
+   "title": "Family & People",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "family",
+     "ja": "家族"
+    },
+    {
+     "en": "mother",
+     "ja": "母"
+    },
+    {
+     "en": "father",
+     "ja": "父"
+    },
+    {
+     "en": "sister",
+     "ja": "姉、妹"
+    },
+    {
+     "en": "brother",
+     "ja": "兄、弟"
+    },
+    {
+     "en": "grandmother",
+     "ja": "祖母"
+    },
+    {
+     "en": "grandfather",
+     "ja": "祖父"
+    },
+    {
+     "en": "friend",
+     "ja": "友だち"
+    },
+    {
+     "en": "teacher",
+     "ja": "先生"
+    },
+    {
+     "en": "baby",
+     "ja": "赤ちゃん"
+    },
+    {
+     "en": "boy",
+     "ja": "男の子"
+    },
+    {
+     "en": "girl",
+     "ja": "女の子"
+    },
+    {
+     "en": "man",
+     "ja": "男の人"
+    },
+    {
+     "en": "woman",
+     "ja": "女の人"
+    },
+    {
+     "en": "he",
+     "ja": "彼は"
+    },
+    {
+     "en": "she",
+     "ja": "彼女は"
+    },
+    {
+     "en": "we",
+     "ja": "私たちは"
+    }
+   ]
+  },
+  {
+   "id": "es-body",
+   "title": "Body",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "head",
+     "ja": "頭"
+    },
+    {
+     "en": "face",
+     "ja": "顔"
+    },
+    {
+     "en": "eye",
+     "ja": "目",
+     "forms": [
+      "eyes"
+     ]
+    },
+    {
+     "en": "ear",
+     "ja": "耳",
+     "forms": [
+      "ears"
+     ]
+    },
+    {
+     "en": "nose",
+     "ja": "鼻"
+    },
+    {
+     "en": "mouth",
+     "ja": "口"
+    },
+    {
+     "en": "hair",
+     "ja": "髪"
+    },
+    {
+     "en": "hand",
+     "ja": "手",
+     "forms": [
+      "hands"
+     ]
+    },
+    {
+     "en": "arm",
+     "ja": "腕"
+    },
+    {
+     "en": "finger",
+     "ja": "指"
+    },
+    {
+     "en": "shoulder",
+     "ja": "肩"
+    },
+    {
+     "en": "knee",
+     "ja": "ひざ"
+    },
+    {
+     "en": "leg",
+     "ja": "脚"
+    },
+    {
+     "en": "foot",
+     "ja": "足",
+     "forms": [
+      "feet"
+     ]
+    },
+    {
+     "en": "toe",
+     "ja": "つま先"
+    }
+   ]
+  },
+  {
+   "id": "es-animals",
+   "title": "Animals",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "animal",
+     "ja": "動物"
+    },
+    {
+     "en": "dog",
+     "ja": "犬"
+    },
+    {
+     "en": "cat",
+     "ja": "ねこ"
+    },
+    {
+     "en": "bird",
+     "ja": "鳥"
+    },
+    {
+     "en": "fish",
+     "ja": "魚"
+    },
+    {
+     "en": "rabbit",
+     "ja": "うさぎ"
+    },
+    {
+     "en": "mouse",
+     "ja": "ねずみ"
+    },
+    {
+     "en": "horse",
+     "ja": "馬"
+    },
+    {
+     "en": "cow",
+     "ja": "牛"
+    },
+    {
+     "en": "pig",
+     "ja": "ぶた"
+    },
+    {
+     "en": "chicken",
+     "ja": "にわとり"
+    },
+    {
+     "en": "monkey",
+     "ja": "さる"
+    },
+    {
+     "en": "tiger",
+     "ja": "トラ"
+    },
+    {
+     "en": "lion",
+     "ja": "ライオン"
+    },
+    {
+     "en": "elephant",
+     "ja": "ゾウ"
+    },
+    {
+     "en": "bear",
+     "ja": "クマ"
+    },
+    {
+     "en": "panda",
+     "ja": "パンダ"
+    },
+    {
+     "en": "koala",
+     "ja": "コアラ"
+    },
+    {
+     "en": "giraffe",
+     "ja": "キリン"
+    },
+    {
+     "en": "zebra",
+     "ja": "シマウマ"
+    },
+    {
+     "en": "penguin",
+     "ja": "ペンギン"
+    },
+    {
+     "en": "dolphin",
+     "ja": "イルカ"
+    },
+    {
+     "en": "frog",
+     "ja": "カエル"
+    },
+    {
+     "en": "snake",
+     "ja": "ヘビ"
+    }
+   ]
+  },
+  {
+   "id": "es-fruits",
+   "title": "Fruits & Vegetables",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "apple",
+     "ja": "りんご"
+    },
+    {
+     "en": "banana",
+     "ja": "バナナ"
+    },
+    {
+     "en": "grapes",
+     "ja": "ぶどう"
+    },
+    {
+     "en": "strawberry",
+     "ja": "いちご"
+    },
+    {
+     "en": "peach",
+     "ja": "もも"
+    },
+    {
+     "en": "lemon",
+     "ja": "レモン"
+    },
+    {
+     "en": "melon",
+     "ja": "メロン"
+    },
+    {
+     "en": "cherry",
+     "ja": "さくらんぼ"
+    },
+    {
+     "en": "pineapple",
+     "ja": "パイナップル"
+    },
+    {
+     "en": "kiwi fruit",
+     "ja": "キウイフルーツ"
+    },
+    {
+     "en": "watermelon",
+     "ja": "すいか"
+    },
+    {
+     "en": "tomato",
+     "ja": "トマト"
+    },
+    {
+     "en": "potato",
+     "ja": "じゃがいも"
+    },
+    {
+     "en": "carrot",
+     "ja": "にんじん"
+    },
+    {
+     "en": "onion",
+     "ja": "たまねぎ"
+    },
+    {
+     "en": "cabbage",
+     "ja": "キャベツ"
+    },
+    {
+     "en": "cucumber",
+     "ja": "きゅうり"
+    },
+    {
+     "en": "corn",
+     "ja": "とうもろこし"
+    },
+    {
+     "en": "green pepper",
+     "ja": "ピーマン"
+    },
+    {
+     "en": "mushroom",
+     "ja": "きのこ"
+    }
+   ]
+  },
+  {
+   "id": "es-food",
+   "title": "Food & Drinks",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "food",
+     "ja": "食べ物"
+    },
+    {
+     "en": "rice",
+     "ja": "ごはん、米"
+    },
+    {
+     "en": "bread",
+     "ja": "パン"
+    },
+    {
+     "en": "egg",
+     "ja": "卵"
+    },
+    {
+     "en": "meat",
+     "ja": "肉"
+    },
+    {
+     "en": "pizza",
+     "ja": "ピザ"
+    },
+    {
+     "en": "hamburger",
+     "ja": "ハンバーガー"
+    },
+    {
+     "en": "sandwich",
+     "ja": "サンドイッチ"
+    },
+    {
+     "en": "salad",
+     "ja": "サラダ"
+    },
+    {
+     "en": "soup",
+     "ja": "スープ"
+    },
+    {
+     "en": "spaghetti",
+     "ja": "スパゲッティ"
+    },
+    {
+     "en": "steak",
+     "ja": "ステーキ"
+    },
+    {
+     "en": "French fries",
+     "ja": "フライドポテト"
+    },
+    {
+     "en": "curry and rice",
+     "ja": "カレーライス"
+    },
+    {
+     "en": "fried chicken",
+     "ja": "からあげ、フライドチキン"
+    },
+    {
+     "en": "noodles",
+     "ja": "めん類"
+    },
+    {
+     "en": "cake",
+     "ja": "ケーキ"
+    },
+    {
+     "en": "ice cream",
+     "ja": "アイスクリーム"
+    },
+    {
+     "en": "chocolate",
+     "ja": "チョコレート"
+    },
+    {
+     "en": "pudding",
+     "ja": "プリン"
+    },
+    {
+     "en": "juice",
+     "ja": "ジュース"
+    },
+    {
+     "en": "tea",
+     "ja": "お茶、紅茶"
+    },
+    {
+     "en": "water",
+     "ja": "水"
+    },
+    {
+     "en": "delicious",
+     "ja": "とてもおいしい"
+    },
+    {
+     "en": "sweet",
+     "ja": "あまい"
+    }
+   ]
+  },
+  {
+   "id": "es-sports",
+   "title": "Sports & Music",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "sport",
+     "ja": "スポーツ",
+     "forms": [
+      "sports"
+     ]
+    },
+    {
+     "en": "baseball",
+     "ja": "野球"
+    },
+    {
+     "en": "soccer",
+     "ja": "サッカー"
+    },
+    {
+     "en": "basketball",
+     "ja": "バスケットボール"
+    },
+    {
+     "en": "volleyball",
+     "ja": "バレーボール"
+    },
+    {
+     "en": "softball",
+     "ja": "ソフトボール"
+    },
+    {
+     "en": "badminton",
+     "ja": "バドミントン"
+    },
+    {
+     "en": "table tennis",
+     "ja": "卓球"
+    },
+    {
+     "en": "dodgeball",
+     "ja": "ドッジボール"
+    },
+    {
+     "en": "swimming",
+     "ja": "水泳"
+    },
+    {
+     "en": "rugby",
+     "ja": "ラグビー"
+    },
+    {
+     "en": "music",
+     "ja": "音楽"
+    },
+    {
+     "en": "piano",
+     "ja": "ピアノ"
+    },
+    {
+     "en": "guitar",
+     "ja": "ギター"
+    },
+    {
+     "en": "recorder",
+     "ja": "リコーダー"
+    },
+    {
+     "en": "drum",
+     "ja": "ドラム、太鼓",
+     "forms": [
+      "drums"
+     ]
+    },
+    {
+     "en": "violin",
+     "ja": "バイオリン"
+    },
+    {
+     "en": "trumpet",
+     "ja": "トランペット"
+    },
+    {
+     "en": "flute",
+     "ja": "フルート"
+    }
+   ]
+  },
+  {
+   "id": "es-subjects",
+   "title": "School Subjects",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "subject",
+     "ja": "教科"
+    },
+    {
+     "en": "Japanese",
+     "ja": "国語、日本語"
+    },
+    {
+     "en": "English",
+     "ja": "英語"
+    },
+    {
+     "en": "math",
+     "ja": "算数、数学"
+    },
+    {
+     "en": "science",
+     "ja": "理科"
+    },
+    {
+     "en": "social studies",
+     "ja": "社会"
+    },
+    {
+     "en": "P.E.",
+     "ja": "体育"
+    },
+    {
+     "en": "arts and crafts",
+     "ja": "図画工作"
+    },
+    {
+     "en": "home economics",
+     "ja": "家庭科"
+    },
+    {
+     "en": "calligraphy",
+     "ja": "書写"
+    },
+    {
+     "en": "moral education",
+     "ja": "道徳"
+    }
+   ]
+  },
+  {
+   "id": "es-school",
+   "title": "School Things",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "school",
+     "ja": "学校"
+    },
+    {
+     "en": "classroom",
+     "ja": "教室"
+    },
+    {
+     "en": "homework",
+     "ja": "宿題"
+    },
+    {
+     "en": "test",
+     "ja": "テスト"
+    },
+    {
+     "en": "pencil",
+     "ja": "えんぴつ"
+    },
+    {
+     "en": "eraser",
+     "ja": "消しゴム"
+    },
+    {
+     "en": "ruler",
+     "ja": "定規"
+    },
+    {
+     "en": "notebook",
+     "ja": "ノート"
+    },
+    {
+     "en": "textbook",
+     "ja": "教科書"
+    },
+    {
+     "en": "pencil case",
+     "ja": "筆箱"
+    },
+    {
+     "en": "crayon",
+     "ja": "クレヨン"
+    },
+    {
+     "en": "glue",
+     "ja": "のり"
+    },
+    {
+     "en": "scissors",
+     "ja": "はさみ"
+    },
+    {
+     "en": "stapler",
+     "ja": "ホッチキス"
+    },
+    {
+     "en": "calendar",
+     "ja": "カレンダー"
+    },
+    {
+     "en": "clock",
+     "ja": "時計"
+    },
+    {
+     "en": "computer",
+     "ja": "コンピューター"
+    }
+   ]
+  },
+  {
+   "id": "es-places",
+   "title": "Places in Town",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "town",
+     "ja": "町"
+    },
+    {
+     "en": "house",
+     "ja": "家"
+    },
+    {
+     "en": "park",
+     "ja": "公園"
+    },
+    {
+     "en": "station",
+     "ja": "駅"
+    },
+    {
+     "en": "hospital",
+     "ja": "病院"
+    },
+    {
+     "en": "library",
+     "ja": "図書館"
+    },
+    {
+     "en": "museum",
+     "ja": "博物館、美術館"
+    },
+    {
+     "en": "zoo",
+     "ja": "動物園"
+    },
+    {
+     "en": "aquarium",
+     "ja": "水族館"
+    },
+    {
+     "en": "amusement park",
+     "ja": "遊園地"
+    },
+    {
+     "en": "post office",
+     "ja": "郵便局"
+    },
+    {
+     "en": "police station",
+     "ja": "警察署"
+    },
+    {
+     "en": "fire station",
+     "ja": "消防署"
+    },
+    {
+     "en": "supermarket",
+     "ja": "スーパーマーケット"
+    },
+    {
+     "en": "convenience store",
+     "ja": "コンビニ"
+    },
+    {
+     "en": "restaurant",
+     "ja": "レストラン"
+    },
+    {
+     "en": "bookstore",
+     "ja": "本屋"
+    },
+    {
+     "en": "bakery",
+     "ja": "パン屋"
+    },
+    {
+     "en": "castle",
+     "ja": "城"
+    },
+    {
+     "en": "temple",
+     "ja": "寺"
+    },
+    {
+     "en": "shrine",
+     "ja": "神社"
+    },
+    {
+     "en": "bridge",
+     "ja": "橋"
+    },
+    {
+     "en": "river",
+     "ja": "川"
+    },
+    {
+     "en": "mountain",
+     "ja": "山"
+    },
+    {
+     "en": "sea",
+     "ja": "海"
+    },
+    {
+     "en": "lake",
+     "ja": "湖"
+    },
+    {
+     "en": "beach",
+     "ja": "浜辺"
+    }
+   ]
+  },
+  {
+   "id": "es-jobs",
+   "title": "Jobs",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "job",
+     "ja": "仕事"
+    },
+    {
+     "en": "doctor",
+     "ja": "医者"
+    },
+    {
+     "en": "nurse",
+     "ja": "看護師"
+    },
+    {
+     "en": "cook",
+     "ja": "料理人、料理する"
+    },
+    {
+     "en": "farmer",
+     "ja": "農家"
+    },
+    {
+     "en": "pilot",
+     "ja": "パイロット"
+    },
+    {
+     "en": "singer",
+     "ja": "歌手"
+    },
+    {
+     "en": "dancer",
+     "ja": "ダンサー"
+    },
+    {
+     "en": "police officer",
+     "ja": "警察官"
+    },
+    {
+     "en": "firefighter",
+     "ja": "消防士"
+    },
+    {
+     "en": "vet",
+     "ja": "獣医"
+    },
+    {
+     "en": "florist",
+     "ja": "花屋さん"
+    },
+    {
+     "en": "baker",
+     "ja": "パン屋さん"
+    },
+    {
+     "en": "astronaut",
+     "ja": "宇宙飛行士"
+    },
+    {
+     "en": "scientist",
+     "ja": "科学者"
+    },
+    {
+     "en": "artist",
+     "ja": "芸術家"
+    },
+    {
+     "en": "zookeeper",
+     "ja": "動物園の飼育員"
+    },
+    {
+     "en": "comedian",
+     "ja": "お笑い芸人"
+    },
+    {
+     "en": "soccer player",
+     "ja": "サッカー選手"
+    }
+   ]
+  },
+  {
+   "id": "es-verbs",
+   "title": "Action Words",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "go",
+     "ja": "行く"
+    },
+    {
+     "en": "come",
+     "ja": "来る"
+    },
+    {
+     "en": "eat",
+     "ja": "食べる"
+    },
+    {
+     "en": "drink",
+     "ja": "飲む"
+    },
+    {
+     "en": "see",
+     "ja": "見える、見る"
+    },
+    {
+     "en": "watch",
+     "ja": "（じっと）見る"
+    },
+    {
+     "en": "look",
+     "ja": "見る"
+    },
+    {
+     "en": "listen",
+     "ja": "聞く"
+    },
+    {
+     "en": "read",
+     "ja": "読む"
+    },
+    {
+     "en": "speak",
+     "ja": "話す"
+    },
+    {
+     "en": "play",
+     "ja": "（スポーツを）する、演奏する、遊ぶ"
+    },
+    {
+     "en": "have",
+     "ja": "持っている、食べる"
+    },
+    {
+     "en": "want",
+     "ja": "ほしい"
+    },
+    {
+     "en": "make",
+     "ja": "作る"
+    },
+    {
+     "en": "swim",
+     "ja": "泳ぐ"
+    },
+    {
+     "en": "jump",
+     "ja": "跳ぶ"
+    },
+    {
+     "en": "walk",
+     "ja": "歩く"
+    },
+    {
+     "en": "sing",
+     "ja": "歌う"
+    },
+    {
+     "en": "dance",
+     "ja": "おどる"
+    },
+    {
+     "en": "study",
+     "ja": "勉強する"
+    },
+    {
+     "en": "ride",
+     "ja": "乗る"
+    },
+    {
+     "en": "sleep",
+     "ja": "眠る"
+    },
+    {
+     "en": "buy",
+     "ja": "買う"
+    },
+    {
+     "en": "open",
+     "ja": "開ける"
+    },
+    {
+     "en": "stand up",
+     "ja": "立つ"
+    },
+    {
+     "en": "sit down",
+     "ja": "すわる"
+    },
+    {
+     "en": "turn",
+     "ja": "曲がる"
+    },
+    {
+     "en": "help",
+     "ja": "手伝う、助ける"
+    },
+    {
+     "en": "enjoy",
+     "ja": "楽しむ"
+    },
+    {
+     "en": "visit",
+     "ja": "訪れる"
+    },
+    {
+     "en": "live",
+     "ja": "住む"
+    },
+    {
+     "en": "know",
+     "ja": "知っている"
+    },
+    {
+     "en": "want to",
+     "ja": "～したい"
+    }
+   ]
+  },
+  {
+   "id": "es-adjectives",
+   "title": "Describing Words",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "big",
+     "ja": "大きい"
+    },
+    {
+     "en": "small",
+     "ja": "小さい"
+    },
+    {
+     "en": "long",
+     "ja": "長い"
+    },
+    {
+     "en": "short",
+     "ja": "短い、背が低い"
+    },
+    {
+     "en": "tall",
+     "ja": "背が高い"
+    },
+    {
+     "en": "new",
+     "ja": "新しい"
+    },
+    {
+     "en": "old",
+     "ja": "古い、年をとった"
+    },
+    {
+     "en": "young",
+     "ja": "若い"
+    },
+    {
+     "en": "happy",
+     "ja": "幸せな、うれしい"
+    },
+    {
+     "en": "sad",
+     "ja": "悲しい"
+    },
+    {
+     "en": "tired",
+     "ja": "疲れた"
+    },
+    {
+     "en": "hungry",
+     "ja": "おなかがすいた"
+    },
+    {
+     "en": "thirsty",
+     "ja": "のどがかわいた"
+    },
+    {
+     "en": "sleepy",
+     "ja": "ねむい"
+    },
+    {
+     "en": "fine",
+     "ja": "元気な"
+    },
+    {
+     "en": "great",
+     "ja": "すばらしい"
+    },
+    {
+     "en": "fun",
+     "ja": "楽しいこと"
+    },
+    {
+     "en": "cute",
+     "ja": "かわいい"
+    },
+    {
+     "en": "kind",
+     "ja": "親切な"
+    },
+    {
+     "en": "funny",
+     "ja": "おもしろい"
+    },
+    {
+     "en": "strong",
+     "ja": "強い"
+    },
+    {
+     "en": "brave",
+     "ja": "勇敢な"
+    },
+    {
+     "en": "friendly",
+     "ja": "親しみやすい"
+    },
+    {
+     "en": "popular",
+     "ja": "人気のある"
+    },
+    {
+     "en": "easy",
+     "ja": "簡単な"
+    },
+    {
+     "en": "difficult",
+     "ja": "難しい"
+    },
+    {
+     "en": "fast",
+     "ja": "速い、速く"
+    },
+    {
+     "en": "slow",
+     "ja": "遅い"
+    }
+   ]
+  },
+  {
+   "id": "es-clothes",
+   "title": "Clothes",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "clothes",
+     "ja": "服"
+    },
+    {
+     "en": "shirt",
+     "ja": "シャツ"
+    },
+    {
+     "en": "T-shirt",
+     "ja": "Tシャツ"
+    },
+    {
+     "en": "sweater",
+     "ja": "セーター"
+    },
+    {
+     "en": "jacket",
+     "ja": "ジャケット"
+    },
+    {
+     "en": "pants",
+     "ja": "ズボン"
+    },
+    {
+     "en": "shorts",
+     "ja": "半ズボン"
+    },
+    {
+     "en": "skirt",
+     "ja": "スカート"
+    },
+    {
+     "en": "shoes",
+     "ja": "くつ"
+    },
+    {
+     "en": "socks",
+     "ja": "くつした"
+    },
+    {
+     "en": "gloves",
+     "ja": "手袋"
+    },
+    {
+     "en": "scarf",
+     "ja": "マフラー"
+    }
+   ]
+  },
+  {
+   "id": "es-questions",
+   "title": "Question & Little Words",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "what",
+     "ja": "何"
+    },
+    {
+     "en": "who",
+     "ja": "誰"
+    },
+    {
+     "en": "where",
+     "ja": "どこ"
+    },
+    {
+     "en": "when",
+     "ja": "いつ"
+    },
+    {
+     "en": "why",
+     "ja": "なぜ"
+    },
+    {
+     "en": "how",
+     "ja": "どう、どのように"
+    },
+    {
+     "en": "how many",
+     "ja": "いくつ"
+    },
+    {
+     "en": "what time",
+     "ja": "何時"
+    },
+    {
+     "en": "this",
+     "ja": "これ、この"
+    },
+    {
+     "en": "that",
+     "ja": "あれ、あの"
+    },
+    {
+     "en": "it",
+     "ja": "それ"
+    },
+    {
+     "en": "in",
+     "ja": "～の中に"
+    },
+    {
+     "en": "on",
+     "ja": "～の上に"
+    },
+    {
+     "en": "under",
+     "ja": "～の下に"
+    },
+    {
+     "en": "by",
+     "ja": "～のそばに"
+    },
+    {
+     "en": "at",
+     "ja": "～で、～に"
+    },
+    {
+     "en": "from",
+     "ja": "～から"
+    },
+    {
+     "en": "and",
+     "ja": "そして、～と"
+    },
+    {
+     "en": "very",
+     "ja": "とても"
+    },
+    {
+     "en": "too",
+     "ja": "～も"
+    },
+    {
+     "en": "no",
+     "ja": "いいえ"
+    },
+    {
+     "en": "please",
+     "ja": "どうぞ、お願いします"
+    },
+    {
+     "en": "thank you",
+     "ja": "ありがとう"
+    },
+    {
+     "en": "sorry",
+     "ja": "ごめんなさい"
+    }
+   ]
+  },
+  {
+   "id": "es-countries",
+   "title": "Countries",
+   "group": "Elementary Words ・ 小学校の単語",
+   "words": [
+    {
+     "en": "country",
+     "ja": "国"
+    },
+    {
+     "en": "Japan",
+     "ja": "日本"
+    },
+    {
+     "en": "Australia",
+     "ja": "オーストラリア"
+    },
+    {
+     "en": "Brazil",
+     "ja": "ブラジル"
+    },
+    {
+     "en": "France",
+     "ja": "フランス"
+    },
+    {
+     "en": "Germany",
+     "ja": "ドイツ"
+    },
+    {
+     "en": "India",
+     "ja": "インド"
+    },
+    {
+     "en": "Italy",
+     "ja": "イタリア"
+    },
+    {
+     "en": "Korea",
+     "ja": "韓国"
+    },
+    {
+     "en": "Spain",
+     "ja": "スペイン"
+    },
+    {
+     "en": "Egypt",
+     "ja": "エジプト"
+    },
+    {
+     "en": "the U.S.A.",
+     "ja": "アメリカ合衆国"
+    },
+    {
+     "en": "world",
+     "ja": "世界"
+    }
+   ]
+  },
+  {
    "id": "elementary",
    "title": "Elementary Review",
    "words": [
@@ -75,7 +1861,8 @@
      "en": "yes",
      "ja": "はい"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "phonics",
@@ -153,7 +1940,8 @@
      "en": "bed",
      "ja": "ベッド"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "unit1",
@@ -214,7 +2002,8 @@
       "lessons"
      ]
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "unit2",
@@ -275,7 +2064,8 @@
      "en": "welcome",
      "ja": "ようこそ"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "unit3",
@@ -337,7 +2127,8 @@
      "en": "near",
      "ja": "～の近くに"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "unit4",
@@ -421,7 +2212,8 @@
      "en": "right",
      "ja": "正しい、右"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "stage1",
@@ -459,7 +2251,8 @@
      "en": "tell",
      "ja": "伝える、話す"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "unit5",
@@ -534,7 +2327,8 @@
      "en": "life",
      "ja": "生活"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "unit6",
@@ -672,7 +2466,8 @@
      "en": "collection",
      "ja": "コレクション"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "unit7",
@@ -786,7 +2581,8 @@
      "en": "building",
      "ja": "建物"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "unit8",
@@ -877,7 +2673,8 @@
      "en": "course",
      "ja": "（of course もちろん）"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "rl4",
@@ -903,7 +2700,8 @@
      "en": "full",
      "ja": "おなかがいっぱいの"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "stage2",
@@ -944,7 +2742,8 @@
      "en": "again",
      "ja": "再び"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "unit9",
@@ -988,7 +2787,8 @@
      "en": "ice hockey",
      "ja": "アイスホッケー"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "rl5",
@@ -1037,7 +2837,8 @@
      "en": "care",
      "ja": "気をつけること（Take care.）"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "unit10",
@@ -1151,7 +2952,8 @@
      "en": "campfire",
      "ja": "キャンプファイヤー"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "rl6",
@@ -1197,7 +2999,8 @@
      "en": "food poisoning",
      "ja": "食中毒"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "stage3",
@@ -1227,7 +3030,8 @@
      "en": "sports day",
      "ja": "運動会"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   },
   {
    "id": "read",
@@ -1355,7 +3159,8 @@
      "en": "say to oneself",
      "ja": "心の中で思う、ひとりごとを言う"
     }
-   ]
+   ],
+   "group": "New Horizon 1"
   }
  ]
 }

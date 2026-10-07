@@ -80,6 +80,49 @@
     .tool .t-name { font-size: 1.5rem; font-weight: 700; line-height: 1.1; }
     .tool .t-jp { font-family: "M PLUS Rounded 1c", sans-serif; font-size: 1rem; opacity: 0.7; }
 
+    /* ---------- Flashcards (flashcard books) ---------- */
+    .section-sub {
+      max-width: 1200px; margin: -8px auto 14px; color: white; opacity: 0.85;
+      font-family: "M PLUS Rounded 1c", sans-serif; font-size: 1.05rem;
+    }
+    .books {
+      max-width: 1200px;
+      margin: 0 auto 36px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .book {
+      position: relative;
+      display: flex;
+      background: white;
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 7px 0 var(--ocean-dark);
+      transition: transform 0.15s ease;
+      min-height: 150px;
+    }
+    .book:hover { transform: translateY(-4px) rotate(-0.5deg); }
+    .book .spine {
+      width: 64px; flex: none; display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 2rem;
+      background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.12) 0 3px, transparent 3px 14px);
+    }
+    .book .b-body { padding: 14px 16px 14px; display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 0; }
+    .book .b-title { font-size: 1.45rem; font-weight: 700; line-height: 1.1; }
+    .book .b-meta { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+    .book .b-count { font-family: "M PLUS Rounded 1c", sans-serif; font-size: 0.95rem; opacity: 0.65; font-weight: 700; }
+    .book .b-bar { height: 10px; border-radius: 99px; background: #eef1f5; overflow: hidden; display: flex; margin-top: auto; }
+    .book .b-bar .m { background: #3cb371; }
+    .book .b-bar .l { background: #ffc531; }
+    .book .b-status { font-family: "M PLUS Rounded 1c", sans-serif; font-size: 0.95rem; font-weight: 700; }
+    .book .b-status.due { color: #d9661c; }
+    .book .b-status.ok { color: #2a8a55; }
+    .book .b-status.start { color: #2f5bd1; }
+    .book.soon { opacity: 0.6; pointer-events: none; }
+
     /* ---------- Grade picker ---------- */
     .picker {
       max-width: 1200px;
@@ -252,12 +295,72 @@
     </a>
   </section>
 
+  <h2 class="section-title">🃏 Flashcards ・ フラッシュカード</h2>
+  <p class="section-sub">Pick your textbook and practice a little every day! ・ 教科書を選んで、毎日すこしずつ練習しよう！</p>
+  <section class="books" id="books"></section>
+
   <h2 class="section-title">🎮 Games ・ ゲーム</h2>
   <nav class="picker" id="picker"></nav>
   <h2 class="current" id="current"></h2>
   <main class="games" id="games"></main>
 
   <script>
+    // =====================================================================
+    //  YOUR FLASHCARD BOOKS
+    //  To add a textbook: put its deck file in flashcards/decks/, add it to
+    //  the DECKS list in flashcards/index.html, then add a block here.
+    //    deck:  the deck file name without .json (e.g. "new-horizon-1")
+    //    grade: "es1"-"es6" or "jhs1"-"jhs3"
+    //    color: the book's spine color
+    //    soon:  true = show it greyed out as "Coming soon"
+    // =====================================================================
+    const BOOKS = [
+      { title: "New Horizon 1", deck: "new-horizon-1", grade: "jhs1", color: "#2f9e8f" },
+      { title: "Here We Go! 3", deck: "here-we-go-3", grade: "jhs3", color: "#e0583c" },
+    ];
+
+    function renderBooks() {
+      const box = document.getElementById("books");
+      let saved = {};
+      try { saved = JSON.parse(localStorage.getItem("rs-wordcards-v1")) || {}; } catch (e) {}
+      const cards = saved.cards || {};
+      const d = new Date();
+      const today = Math.floor((d.getTime() - d.getTimezoneOffset() * 60000) / 86400000);
+
+      box.innerHTML = BOOKS.map(b => `
+        <a class="book ${b.soon ? "soon" : ""}" href="/flashcards/?deck=${b.deck}" data-deck="${b.deck}">
+          <div class="spine" style="background-color:${b.color}">🃏</div>
+          <div class="b-body">
+            <div class="b-title">${b.title}</div>
+            <div class="b-meta">${gradeTag(b.grade)}<span class="b-count" data-count></span></div>
+            <div class="b-bar"><div class="m" style="width:0"></div><div class="l" style="width:0"></div></div>
+            <div class="b-status start" data-status>${b.soon ? "Coming soon ・ 準備中" : "Start ・ はじめよう！"}</div>
+          </div>
+        </a>`).join("");
+
+      // Fill in word counts and this device's progress for each book.
+      BOOKS.filter(b => !b.soon).forEach(async b => {
+        try {
+          const deck = await (await fetch(`/flashcards/decks/${b.deck}.json`)).json();
+          let total = 0, mastered = 0, learning = 0, due = 0;
+          deck.sections.forEach(s => s.words.forEach(w => {
+            total++;
+            const st = cards[`${b.deck}::${s.id}::${w.en}`];
+            if (!st) return;
+            if (st.box >= 4) mastered++; else learning++;
+            if (st.due <= today) due++;
+          }));
+          const el = box.querySelector(`[data-deck="${b.deck}"]`);
+          el.querySelector("[data-count]").textContent = `${total} words`;
+          el.querySelector(".m").style.width = `${mastered / total * 100}%`;
+          el.querySelector(".l").style.width = `${learning / total * 100}%`;
+          const status = el.querySelector("[data-status]");
+          if (due) { status.className = "b-status due"; status.textContent = `${due} to review ・ 復習`; }
+          else if (mastered + learning) { status.className = "b-status ok"; status.textContent = `★ ${mastered} mastered ・ 覚えた`; }
+        } catch (e) {}
+      });
+    }
+
     // =====================================================================
     //  YOUR GAMES — this is the only part you need to edit.
     //  To add a game, copy one { ... } block, paste it after the last one,
@@ -410,6 +513,7 @@
       `).join("");
     }
 
+    renderBooks();
     buildPicker();
     render();
     window.addEventListener("hashchange", render);

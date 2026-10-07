@@ -1,0 +1,2780 @@
+{
+ "id": "here-we-go-3",
+ "title": "Here We Go! 3",
+ "grade": "中3",
+ "sections": [
+  {
+   "id": "unit1",
+   "title": "Unit 1",
+   "group": "Here We Go! 3",
+   "words": [
+    {
+     "en": "the Republic of South Africa",
+     "ja": "南アフリカ共和国"
+    },
+    {
+     "en": "southern",
+     "ja": "南の"
+    },
+    {
+     "en": "tip",
+     "ja": "先端"
+    },
+    {
+     "en": "African",
+     "ja": "アフリカの"
+    },
+    {
+     "en": "continent",
+     "ja": "大陸"
+    },
+    {
+     "en": "rainbow",
+     "ja": "虹"
+    },
+    {
+     "en": "nation",
+     "ja": "国家、国民"
+    },
+    {
+     "en": "cultural",
+     "ja": "文化的な"
+    },
+    {
+     "en": "speak",
+     "ja": "話す",
+     "forms": [
+      "spoken"
+     ]
+    },
+    {
+     "en": "official",
+     "ja": "公式の"
+    },
+    {
+     "en": "national",
+     "ja": "国の、国立の"
+    },
+    {
+     "en": "diverse",
+     "ja": "多様な"
+    },
+    {
+     "en": "wildlife",
+     "ja": "野生生物"
+    },
+    {
+     "en": "through",
+     "ja": "～を通して"
+    },
+    {
+     "en": "real time",
+     "ja": "リアルタイム"
+    },
+    {
+     "en": "internet",
+     "ja": "インターネット"
+    },
+    {
+     "en": "elephant",
+     "ja": "ゾウ"
+    },
+    {
+     "en": "footprint",
+     "ja": "足あと"
+    },
+    {
+     "en": "bathe",
+     "ja": "水浴びをする",
+     "forms": [
+      "bathing"
+     ]
+    },
+    {
+     "en": "mud",
+     "ja": "泥"
+    },
+    {
+     "en": "themselves",
+     "ja": "彼ら自身"
+    },
+    {
+     "en": "carry",
+     "ja": "運ぶ"
+    },
+    {
+     "en": "learn",
+     "ja": "学ぶ"
+    },
+    {
+     "en": "look for",
+     "ja": "～を探す"
+    },
+    {
+     "en": "practice",
+     "ja": "練習する"
+    },
+    {
+     "en": "blackboard",
+     "ja": "黒板"
+    },
+    {
+     "en": "mat",
+     "ja": "マット",
+     "forms": [
+      "mats"
+     ]
+    },
+    {
+     "en": "conservation",
+     "ja": "保護"
+    },
+    {
+     "en": "monitor",
+     "ja": "監視する"
+    },
+    {
+     "en": "illegal",
+     "ja": "違法の"
+    },
+    {
+     "en": "kill",
+     "ja": "殺す"
+    },
+    {
+     "en": "rhino",
+     "ja": "サイ",
+     "forms": [
+      "rhinos"
+     ]
+    },
+    {
+     "en": "horn",
+     "ja": "角",
+     "forms": [
+      "horns"
+     ]
+    },
+    {
+     "en": "terrible",
+     "ja": "ひどい"
+    },
+    {
+     "en": "safely",
+     "ja": "安全に"
+    },
+    {
+     "en": "savanna",
+     "ja": "サバンナ"
+    },
+    {
+     "en": "ecosystem",
+     "ja": "生態系"
+    },
+    {
+     "en": "living thing",
+     "ja": "生き物",
+     "forms": [
+      "living things"
+     ]
+    },
+    {
+     "en": "connect",
+     "ja": "つなぐ",
+     "forms": [
+      "connected"
+     ]
+    },
+    {
+     "en": "circle",
+     "ja": "円、輪"
+    },
+    {
+     "en": "human",
+     "ja": "人間",
+     "forms": [
+      "humans"
+     ]
+    },
+    {
+     "en": "cut off",
+     "ja": "切り離す"
+    },
+    {
+     "en": "so that",
+     "ja": "～するように"
+    },
+    {
+     "en": "decrease",
+     "ja": "減少する"
+    },
+    {
+     "en": "increase",
+     "ja": "増加する"
+    },
+    {
+     "en": "less than",
+     "ja": "～より少ない"
+    },
+    {
+     "en": "more than",
+     "ja": "～より多い"
+    },
+    {
+     "en": "less",
+     "ja": "より少ない"
+    },
+    {
+     "en": "shocking",
+     "ja": "衝撃的な"
+    },
+    {
+     "en": "panda",
+     "ja": "パンダ",
+     "forms": [
+      "pandas"
+     ]
+    },
+    {
+     "en": "endangered",
+     "ja": "絶滅の危機にある"
+    },
+    {
+     "en": "news",
+     "ja": "ニュース、知らせ"
+    },
+    {
+     "en": "remove",
+     "ja": "取り除く",
+     "forms": [
+      "removed"
+     ]
+    },
+    {
+     "en": "species",
+     "ja": "種（しゅ）"
+    },
+    {
+     "en": "destruction",
+     "ja": "破壊"
+    },
+    {
+     "en": "bamboo",
+     "ja": "竹"
+    },
+    {
+     "en": "forest",
+     "ja": "森",
+     "forms": [
+      "forests"
+     ]
+    },
+    {
+     "en": "breed",
+     "ja": "繁殖させる"
+    },
+    {
+     "en": "remain",
+     "ja": "残る"
+    },
+    {
+     "en": "wild",
+     "ja": "野生の"
+    },
+    {
+     "en": "however",
+     "ja": "しかしながら"
+    },
+    {
+     "en": "yet",
+     "ja": "まだ（否定文）、もう（疑問文）"
+    },
+    {
+     "en": "technology",
+     "ja": "科学技術"
+    },
+    {
+     "en": "digital",
+     "ja": "デジタルの"
+    },
+    {
+     "en": "system",
+     "ja": "システム、仕組み"
+    },
+    {
+     "en": "habitat",
+     "ja": "生息地",
+     "forms": [
+      "habitats"
+     ]
+    },
+    {
+     "en": "wildfire",
+     "ja": "山火事",
+     "forms": [
+      "wildfires"
+     ]
+    },
+    {
+     "en": "deep",
+     "ja": "深い"
+    },
+    {
+     "en": "success",
+     "ja": "成功"
+    },
+    {
+     "en": "no longer",
+     "ja": "もはや～ない"
+    }
+   ]
+  },
+  {
+   "id": "unit2",
+   "title": "Unit 2",
+   "group": "Here We Go! 3",
+   "words": [
+    {
+     "en": "hill",
+     "ja": "丘"
+    },
+    {
+     "en": "reach",
+     "ja": "到着する",
+     "forms": [
+      "reached"
+     ]
+    },
+    {
+     "en": "breathtaking",
+     "ja": "息をのむような"
+    },
+    {
+     "en": "whole",
+     "ja": "全体の"
+    },
+    {
+     "en": "travel back in time",
+     "ja": "時間をさかのぼる"
+    },
+    {
+     "en": "This way.",
+     "ja": "こちらです。"
+    },
+    {
+     "en": "we've",
+     "ja": "we have の短縮形"
+    },
+    {
+     "en": "amusement park",
+     "ja": "遊園地"
+    },
+    {
+     "en": "busy",
+     "ja": "忙しい"
+    },
+    {
+     "en": "I've",
+     "ja": "I have の短縮形"
+    },
+    {
+     "en": "hotel",
+     "ja": "ホテル"
+    },
+    {
+     "en": "wait",
+     "ja": "待つ"
+    },
+    {
+     "en": "leave",
+     "ja": "出発する、去る",
+     "forms": [
+      "left"
+     ]
+    },
+    {
+     "en": "hurry",
+     "ja": "急ぐ"
+    },
+    {
+     "en": "Wait a minute.",
+     "ja": "ちょっと待って。"
+    },
+    {
+     "en": "What's wrong?",
+     "ja": "どうしたの？"
+    },
+    {
+     "en": "Hurry up.",
+     "ja": "急いで。"
+    },
+    {
+     "en": "Be careful.",
+     "ja": "気をつけて。"
+    },
+    {
+     "en": "haven't",
+     "ja": "have not の短縮形"
+    },
+    {
+     "en": "hasn't",
+     "ja": "has not の短縮形"
+    },
+    {
+     "en": "handout",
+     "ja": "プリント",
+     "forms": [
+      "handouts"
+     ]
+    },
+    {
+     "en": "brush",
+     "ja": "みがく"
+    },
+    {
+     "en": "tooth",
+     "ja": "歯",
+     "forms": [
+      "teeth"
+     ]
+    },
+    {
+     "en": "already",
+     "ja": "すでに、もう"
+    },
+    {
+     "en": "do",
+     "ja": "する",
+     "forms": [
+      "done"
+     ]
+    },
+    {
+     "en": "ever",
+     "ja": "今までに"
+    },
+    {
+     "en": "see",
+     "ja": "見る",
+     "forms": [
+      "seen"
+     ]
+    },
+    {
+     "en": "recently",
+     "ja": "最近"
+    },
+    {
+     "en": "reason",
+     "ja": "理由"
+    },
+    {
+     "en": "return",
+     "ja": "戻る、返す",
+     "forms": [
+      "returns"
+     ]
+    },
+    {
+     "en": "such",
+     "ja": "そのような"
+    },
+    {
+     "en": "like that",
+     "ja": "そのような"
+    },
+    {
+     "en": "catch up with",
+     "ja": "～に追いつく"
+    },
+    {
+     "en": "such a",
+     "ja": "そんな"
+    },
+    {
+     "en": "just once",
+     "ja": "一度だけ"
+    },
+    {
+     "en": "twice",
+     "ja": "2回"
+    },
+    {
+     "en": "seafood",
+     "ja": "海産物"
+    },
+    {
+     "en": "he's",
+     "ja": "he has の短縮形"
+    },
+    {
+     "en": "photo shoot",
+     "ja": "撮影"
+    },
+    {
+     "en": "agree",
+     "ja": "賛成する"
+    },
+    {
+     "en": "correct",
+     "ja": "正しい"
+    }
+   ]
+  },
+  {
+   "id": "unit3",
+   "title": "Unit 3",
+   "group": "Here We Go! 3",
+   "words": [
+    {
+     "en": "monument",
+     "ja": "記念碑"
+    },
+    {
+     "en": "atomic bomb",
+     "ja": "原子爆弾"
+    },
+    {
+     "en": "dome",
+     "ja": "ドーム"
+    },
+    {
+     "en": "remind",
+     "ja": "思い出させる",
+     "forms": [
+      "reminds"
+     ]
+    },
+    {
+     "en": "reminder",
+     "ja": "思い出させるもの"
+    },
+    {
+     "en": "mission",
+     "ja": "使命"
+    },
+    {
+     "en": "peace",
+     "ja": "平和"
+    },
+    {
+     "en": "since",
+     "ja": "～以来"
+    },
+    {
+     "en": "remind ~ of ...",
+     "ja": "～に…を思い出させる"
+    },
+    {
+     "en": "how long",
+     "ja": "どれくらいの間"
+    },
+    {
+     "en": "childhood",
+     "ja": "子ども時代"
+    },
+    {
+     "en": "know",
+     "ja": "知っている",
+     "forms": [
+      "known"
+     ]
+    },
+    {
+     "en": "daughter",
+     "ja": "娘"
+    },
+    {
+     "en": "realize",
+     "ja": "気づく",
+     "forms": [
+      "realized"
+     ]
+    },
+    {
+     "en": "bombing",
+     "ja": "爆撃"
+    },
+    {
+     "en": "determined",
+     "ja": "決心した"
+    },
+    {
+     "en": "tragic",
+     "ja": "悲劇的な"
+    },
+    {
+     "en": "promote",
+     "ja": "促進する"
+    },
+    {
+     "en": "be determined to",
+     "ja": "～しようと決心している"
+    },
+    {
+     "en": "boyfriend",
+     "ja": "恋人（男性）"
+    },
+    {
+     "en": "paint",
+     "ja": "絵の具で描く"
+    },
+    {
+     "en": "textbook",
+     "ja": "教科書"
+    },
+    {
+     "en": "in line",
+     "ja": "列に並んで"
+    },
+    {
+     "en": "report",
+     "ja": "報告、レポート"
+    },
+    {
+     "en": "valuable",
+     "ja": "貴重な"
+    },
+    {
+     "en": "though",
+     "ja": "～だけれども"
+    },
+    {
+     "en": "victim",
+     "ja": "犠牲者"
+    },
+    {
+     "en": "survivor",
+     "ja": "生存者",
+     "forms": [
+      "survivors"
+     ]
+    },
+    {
+     "en": "generation",
+     "ja": "世代"
+    },
+    {
+     "en": "war",
+     "ja": "戦争"
+    },
+    {
+     "en": "past",
+     "ja": "過去"
+    },
+    {
+     "en": "get older",
+     "ja": "年をとる"
+    },
+    {
+     "en": "year by year",
+     "ja": "年々"
+    },
+    {
+     "en": "pass ~ on to ...",
+     "ja": "～を…に伝える"
+    },
+    {
+     "en": "fold",
+     "ja": "折る"
+    },
+    {
+     "en": "paper",
+     "ja": "紙"
+    },
+    {
+     "en": "crane",
+     "ja": "鶴"
+    },
+    {
+     "en": "serve",
+     "ja": "（食事を）出す"
+    },
+    {
+     "en": "pickle",
+     "ja": "ピクルス、漬物",
+     "forms": [
+      "pickles"
+     ]
+    },
+    {
+     "en": "machine",
+     "ja": "機械"
+    },
+    {
+     "en": "washing machine",
+     "ja": "洗濯機"
+    },
+    {
+     "en": "I found that ...",
+     "ja": "～ということがわかりました"
+    },
+    {
+     "en": "I think ...",
+     "ja": "～と思います"
+    },
+    {
+     "en": "I want to ...",
+     "ja": "～したいです"
+    },
+    {
+     "en": "It's important for us to ...",
+     "ja": "私たちが～することは大切です"
+    },
+    {
+     "en": "We have to ...",
+     "ja": "私たちは～しなければなりません"
+    }
+   ]
+  },
+  {
+   "id": "ag1",
+   "title": "Active Grammar 1",
+   "group": "Here We Go! 3",
+   "words": [
+    {
+     "en": "I've",
+     "ja": "I have の短縮形"
+    },
+    {
+     "en": "we've",
+     "ja": "we have の短縮形"
+    },
+    {
+     "en": "you've",
+     "ja": "you have の短縮形"
+    },
+    {
+     "en": "he's",
+     "ja": "he has の短縮形"
+    },
+    {
+     "en": "she's",
+     "ja": "she has の短縮形"
+    },
+    {
+     "en": "it's",
+     "ja": "it has の短縮形"
+    },
+    {
+     "en": "they've",
+     "ja": "they have の短縮形"
+    },
+    {
+     "en": "haven't",
+     "ja": "have not の短縮形"
+    },
+    {
+     "en": "hasn't",
+     "ja": "has not の短縮形"
+    },
+    {
+     "en": "before",
+     "ja": "以前に"
+    },
+    {
+     "en": "once",
+     "ja": "1回、かつて"
+    },
+    {
+     "en": "twice",
+     "ja": "2回"
+    },
+    {
+     "en": "ever",
+     "ja": "今までに"
+    },
+    {
+     "en": "never",
+     "ja": "一度も～ない"
+    },
+    {
+     "en": "for",
+     "ja": "～の間"
+    },
+    {
+     "en": "since",
+     "ja": "～以来"
+    },
+    {
+     "en": "just",
+     "ja": "ちょうど"
+    },
+    {
+     "en": "already",
+     "ja": "すでに"
+    },
+    {
+     "en": "yet",
+     "ja": "まだ（否定文）、もう（疑問文）"
+    }
+   ]
+  },
+  {
+   "id": "read1",
+   "title": "Let's Read 1",
+   "group": "Here We Go! 3",
+   "words": [
+    {
+     "en": "visa",
+     "ja": "ビザ",
+     "forms": [
+      "visas"
+     ]
+    },
+    {
+     "en": "outside",
+     "ja": "外に"
+    },
+    {
+     "en": "wife",
+     "ja": "妻"
+    },
+    {
+     "en": "escape",
+     "ja": "逃げる",
+     "forms": [
+      "escaped"
+     ]
+    },
+    {
+     "en": "issue",
+     "ja": "発行する"
+    },
+    {
+     "en": "permission",
+     "ja": "許可"
+    },
+    {
+     "en": "refuse",
+     "ja": "断る",
+     "forms": [
+      "refused"
+     ]
+    },
+    {
+     "en": "foreign",
+     "ja": "外国の"
+    },
+    {
+     "en": "know",
+     "ja": "知っている",
+     "forms": [
+      "knew"
+     ]
+    },
+    {
+     "en": "risk",
+     "ja": "危険",
+     "forms": [
+      "risks"
+     ]
+    },
+    {
+     "en": "short",
+     "ja": "短い"
+    },
+    {
+     "en": "silence",
+     "ja": "沈黙"
+    },
+    {
+     "en": "pass through",
+     "ja": "通り抜ける"
+    },
+    {
+     "en": "ask for",
+     "ja": "～を求める"
+    },
+    {
+     "en": "write",
+     "ja": "書く",
+     "forms": [
+      "wrote"
+     ]
+    },
+    {
+     "en": "wheel",
+     "ja": "車輪"
+    },
+    {
+     "en": "fight",
+     "ja": "戦う"
+    },
+    {
+     "en": "telegram",
+     "ja": "電報"
+    },
+    {
+     "en": "platform",
+     "ja": "（駅の）ホーム"
+    },
+    {
+     "en": "even",
+     "ja": "～でさえ"
+    },
+    {
+     "en": "forgive",
+     "ja": "許す"
+    },
+    {
+     "en": "pray",
+     "ja": "祈る"
+    },
+    {
+     "en": "end",
+     "ja": "終わる",
+     "forms": [
+      "ended"
+     ]
+    },
+    {
+     "en": "trader",
+     "ja": "商人"
+    },
+    {
+     "en": "by hand",
+     "ja": "手で"
+    },
+    {
+     "en": "join hands",
+     "ja": "手を取り合う"
+    },
+    {
+     "en": "even as ~",
+     "ja": "～するときでさえ"
+    },
+    {
+     "en": "get on ~",
+     "ja": "～に乗る"
+    },
+    {
+     "en": "hand ~ out",
+     "ja": "～を配る"
+    },
+    {
+     "en": "with tears in one's eyes",
+     "ja": "目に涙を浮かべて"
+    },
+    {
+     "en": "shouldn't",
+     "ja": "should not（～すべきではない）"
+    },
+    {
+     "en": "diplomat",
+     "ja": "外交官"
+    },
+    {
+     "en": "forget",
+     "ja": "忘れる",
+     "forms": [
+      "forgotten"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "unit4",
+   "title": "Unit 4",
+   "group": "Here We Go! 3",
+   "words": [
+    {
+     "en": "AI",
+     "ja": "人工知能"
+    },
+    {
+     "en": "device",
+     "ja": "装置、機器",
+     "forms": [
+      "devices"
+     ]
+    },
+    {
+     "en": "daily",
+     "ja": "毎日の"
+    },
+    {
+     "en": "lately",
+     "ja": "最近"
+    },
+    {
+     "en": "search",
+     "ja": "検索する"
+    },
+    {
+     "en": "engine",
+     "ja": "エンジン",
+     "forms": [
+      "engines"
+     ]
+    },
+    {
+     "en": "search engine",
+     "ja": "検索エンジン"
+    },
+    {
+     "en": "respond",
+     "ja": "応答する"
+    },
+    {
+     "en": "command",
+     "ja": "命令",
+     "forms": [
+      "commands"
+     ]
+    },
+    {
+     "en": "common",
+     "ja": "よくある、共通の"
+    },
+    {
+     "en": "robot",
+     "ja": "ロボット",
+     "forms": [
+      "robots"
+     ]
+    },
+    {
+     "en": "automatically",
+     "ja": "自動的に"
+    },
+    {
+     "en": "translation",
+     "ja": "翻訳"
+    },
+    {
+     "en": "software",
+     "ja": "ソフトウェア"
+    },
+    {
+     "en": "quite",
+     "ja": "かなり"
+    },
+    {
+     "en": "easily",
+     "ja": "簡単に"
+    },
+    {
+     "en": "a part of ~",
+     "ja": "～の一部"
+    },
+    {
+     "en": "in the near future",
+     "ja": "近い将来"
+    },
+    {
+     "en": "shape",
+     "ja": "形作る",
+     "forms": [
+      "shaped"
+     ]
+    },
+    {
+     "en": "handy",
+     "ja": "便利な"
+    },
+    {
+     "en": "discussion",
+     "ja": "話し合い"
+    },
+    {
+     "en": "customer",
+     "ja": "客",
+     "forms": [
+      "customers"
+     ]
+    },
+    {
+     "en": "rely",
+     "ja": "頼る"
+    },
+    {
+     "en": "in my opinion",
+     "ja": "私の意見では"
+    },
+    {
+     "en": "rely on ~",
+     "ja": "～に頼る"
+    },
+    {
+     "en": "cleaning robot",
+     "ja": "掃除ロボット",
+     "forms": [
+      "cleaning robots"
+     ]
+    },
+    {
+     "en": "weekday",
+     "ja": "平日",
+     "forms": [
+      "weekdays"
+     ]
+    },
+    {
+     "en": "ahead",
+     "ja": "前へ"
+    },
+    {
+     "en": "broaden",
+     "ja": "広げる"
+    },
+    {
+     "en": "understanding",
+     "ja": "理解"
+    },
+    {
+     "en": "Go ahead.",
+     "ja": "どうぞ。"
+    },
+    {
+     "en": "On the other hand",
+     "ja": "一方で"
+    },
+    {
+     "en": "magic",
+     "ja": "魔法の"
+    },
+    {
+     "en": "carpet",
+     "ja": "じゅうたん"
+    },
+    {
+     "en": "cape",
+     "ja": "マント"
+    },
+    {
+     "en": "disappear",
+     "ja": "消える"
+    },
+    {
+     "en": "somewhere",
+     "ja": "どこかに"
+    },
+    {
+     "en": "I think ~ because ...",
+     "ja": "～だと思います。なぜなら…"
+    },
+    {
+     "en": "There are two reasons.",
+     "ja": "理由は2つあります。"
+    },
+    {
+     "en": "First, ... Second, ...",
+     "ja": "まず…、次に…"
+    },
+    {
+     "en": "For example, ...",
+     "ja": "たとえば…"
+    }
+   ]
+  },
+  {
+   "id": "read2",
+   "title": "Let's Read 2",
+   "group": "Here We Go! 3",
+   "words": [
+    {
+     "en": "imagine",
+     "ja": "想像する"
+    },
+    {
+     "en": "human-like",
+     "ja": "人間のような"
+    },
+    {
+     "en": "scientist",
+     "ja": "科学者",
+     "forms": [
+      "scientists"
+     ]
+    },
+    {
+     "en": "relationship",
+     "ja": "関係"
+    },
+    {
+     "en": "cyborg-type",
+     "ja": "サイボーグ型の"
+    },
+    {
+     "en": "itself",
+     "ja": "それ自身"
+    },
+    {
+     "en": "injury",
+     "ja": "けが"
+    },
+    {
+     "en": "facility",
+     "ja": "施設",
+     "forms": [
+      "facilities"
+     ]
+    },
+    {
+     "en": "care facility",
+     "ja": "介護施設"
+    },
+    {
+     "en": "transfer",
+     "ja": "移す"
+    },
+    {
+     "en": "elderly",
+     "ja": "年配の"
+    },
+    {
+     "en": "addition",
+     "ja": "追加"
+    },
+    {
+     "en": "maintain",
+     "ja": "維持する",
+     "forms": [
+      "maintains"
+     ]
+    },
+    {
+     "en": "physical",
+     "ja": "身体の"
+    },
+    {
+     "en": "function",
+     "ja": "機能",
+     "forms": [
+      "functions"
+     ]
+    },
+    {
+     "en": "widen",
+     "ja": "広げる"
+    },
+    {
+     "en": "possibility",
+     "ja": "可能性",
+     "forms": [
+      "possibilities"
+     ]
+    },
+    {
+     "en": "avatar",
+     "ja": "アバター"
+    },
+    {
+     "en": "real",
+     "ja": "本物の"
+    },
+    {
+     "en": "user",
+     "ja": "使用者",
+     "forms": [
+      "users"
+     ]
+    },
+    {
+     "en": "illness",
+     "ja": "病気"
+    },
+    {
+     "en": "control",
+     "ja": "操作する",
+     "forms": [
+      "controlled"
+     ]
+    },
+    {
+     "en": "movement",
+     "ja": "動き",
+     "forms": [
+      "movements"
+     ]
+    },
+    {
+     "en": "finger",
+     "ja": "指",
+     "forms": [
+      "fingers"
+     ]
+    },
+    {
+     "en": "send",
+     "ja": "送る",
+     "forms": [
+      "sent"
+     ]
+    },
+    {
+     "en": "microphone",
+     "ja": "マイク"
+    },
+    {
+     "en": "in addition",
+     "ja": "さらに"
+    },
+    {
+     "en": "that way",
+     "ja": "そうすれば"
+    },
+    {
+     "en": "sociable",
+     "ja": "社交的な"
+    },
+    {
+     "en": "somebody",
+     "ja": "誰か"
+    },
+    {
+     "en": "useless",
+     "ja": "役に立たない"
+    },
+    {
+     "en": "helpless",
+     "ja": "無力な"
+    },
+    {
+     "en": "notice",
+     "ja": "気づく"
+    },
+    {
+     "en": "happily",
+     "ja": "幸せに"
+    },
+    {
+     "en": "develop",
+     "ja": "開発する",
+     "forms": [
+      "developed"
+     ]
+    },
+    {
+     "en": "recognize",
+     "ja": "認識する"
+    },
+    {
+     "en": "value",
+     "ja": "価値"
+    },
+    {
+     "en": "cooperation",
+     "ja": "協力"
+    },
+    {
+     "en": "expect",
+     "ja": "期待する"
+    },
+    {
+     "en": "imperfect",
+     "ja": "不完全な"
+    },
+    {
+     "en": "importance",
+     "ja": "重要性"
+    },
+    {
+     "en": "okay",
+     "ja": "大丈夫な"
+    },
+    {
+     "en": "cooperate",
+     "ja": "協力する"
+    },
+    {
+     "en": "article",
+     "ja": "記事"
+    }
+   ]
+  },
+  {
+   "id": "dls3",
+   "title": "Daily Life Scene 3",
+   "group": "Here We Go! 3",
+   "words": [
+    {
+     "en": "candy",
+     "ja": "あめ"
+    },
+    {
+     "en": "recipe",
+     "ja": "レシピ"
+    },
+    {
+     "en": "sugar",
+     "ja": "砂糖"
+    },
+    {
+     "en": "syrup",
+     "ja": "シロップ"
+    },
+    {
+     "en": "coloring",
+     "ja": "着色料"
+    },
+    {
+     "en": "stem",
+     "ja": "茎、柄",
+     "forms": [
+      "stems"
+     ]
+    },
+    {
+     "en": "insert",
+     "ja": "差し込む"
+    },
+    {
+     "en": "stir",
+     "ja": "かき混ぜる"
+    },
+    {
+     "en": "boil",
+     "ja": "沸騰させる"
+    },
+    {
+     "en": "add",
+     "ja": "加える",
+     "forms": [
+      "adding"
+     ]
+    },
+    {
+     "en": "dip",
+     "ja": "浸す"
+    },
+    {
+     "en": "roll",
+     "ja": "転がす"
+    },
+    {
+     "en": "baking sheet",
+     "ja": "天板"
+    },
+    {
+     "en": "Could you tell me how to ~?",
+     "ja": "～の仕方を教えていただけますか。"
+    }
+   ]
+  },
+  {
+   "id": "unit5",
+   "title": "Unit 5",
+   "group": "Here We Go! 3",
+   "words": [
+    {
+     "en": "presentation",
+     "ja": "発表"
+    },
+    {
+     "en": "suggestion",
+     "ja": "提案"
+    },
+    {
+     "en": "T-shirt",
+     "ja": "Tシャツ",
+     "forms": [
+      "T-shirts"
+     ]
+    },
+    {
+     "en": "contest",
+     "ja": "コンテスト"
+    },
+    {
+     "en": "fair",
+     "ja": "公正な"
+    },
+    {
+     "en": "trade",
+     "ja": "貿易"
+    },
+    {
+     "en": "fair trade",
+     "ja": "フェアトレード"
+    },
+    {
+     "en": "product",
+     "ja": "製品",
+     "forms": [
+      "products"
+     ]
+    },
+    {
+     "en": "explain",
+     "ja": "説明する"
+    },
+    {
+     "en": "cotton",
+     "ja": "綿"
+    },
+    {
+     "en": "developing",
+     "ja": "発展途上の"
+    },
+    {
+     "en": "farmer",
+     "ja": "農家",
+     "forms": [
+      "farmers"
+     ]
+    },
+    {
+     "en": "income",
+     "ja": "収入"
+    },
+    {
+     "en": "company",
+     "ja": "会社",
+     "forms": [
+      "companies"
+     ]
+    },
+    {
+     "en": "low",
+     "ja": "低い"
+    },
+    {
+     "en": "cheaply",
+     "ja": "安く"
+    },
+    {
+     "en": "solve",
+     "ja": "解決する"
+    },
+    {
+     "en": "earn",
+     "ja": "稼ぐ"
+    },
+    {
+     "en": "enough",
+     "ja": "十分な"
+    },
+    {
+     "en": "sustainable",
+     "ja": "持続可能な"
+    },
+    {
+     "en": "production",
+     "ja": "生産"
+    },
+    {
+     "en": "make a suggestion",
+     "ja": "提案する"
+    },
+    {
+     "en": "enough ~ to ...",
+     "ja": "…するのに十分な～"
+    },
+    {
+     "en": "in this way",
+     "ja": "このようにして"
+    },
+    {
+     "en": "make a choice",
+     "ja": "選択する"
+    },
+    {
+     "en": "cushion",
+     "ja": "クッション"
+    },
+    {
+     "en": "accessory",
+     "ja": "アクセサリー",
+     "forms": [
+      "accessories"
+     ]
+    },
+    {
+     "en": "affect",
+     "ja": "影響を与える",
+     "forms": [
+      "affects"
+     ]
+    },
+    {
+     "en": "producer",
+     "ja": "生産者",
+     "forms": [
+      "producers"
+     ]
+    },
+    {
+     "en": "distant",
+     "ja": "遠い"
+    },
+    {
+     "en": "challenging",
+     "ja": "難しいがやりがいのある"
+    },
+    {
+     "en": "rewarding",
+     "ja": "やりがいのある"
+    },
+    {
+     "en": "admire",
+     "ja": "感心する、尊敬する"
+    },
+    {
+     "en": "come true",
+     "ja": "実現する"
+    },
+    {
+     "en": "recommend",
+     "ja": "すすめる"
+    },
+    {
+     "en": "adventure",
+     "ja": "冒険"
+    },
+    {
+     "en": "pirate",
+     "ja": "海賊",
+     "forms": [
+      "pirates"
+     ]
+    },
+    {
+     "en": "sail",
+     "ja": "航海する"
+    },
+    {
+     "en": "memorable",
+     "ja": "記憶に残る"
+    },
+    {
+     "en": "particular",
+     "ja": "特定の"
+    },
+    {
+     "en": "eye-opener",
+     "ja": "目を見張るようなこと"
+    },
+    {
+     "en": "viewpoint",
+     "ja": "視点"
+    },
+    {
+     "en": "responsibility",
+     "ja": "責任"
+    },
+    {
+     "en": "across",
+     "ja": "～を横切って"
+    },
+    {
+     "en": "interest",
+     "ja": "興味"
+    },
+    {
+     "en": "career",
+     "ja": "職業、経歴"
+    },
+    {
+     "en": "in the past ~ years",
+     "ja": "過去～年間で"
+    },
+    {
+     "en": "in particular",
+     "ja": "特に"
+    },
+    {
+     "en": "get to know ~",
+     "ja": "～と知り合う"
+    },
+    {
+     "en": "care for ~",
+     "ja": "～の世話をする"
+    },
+    {
+     "en": "come across",
+     "ja": "～に偶然出会う"
+    },
+    {
+     "en": "lead to",
+     "ja": "～につながる"
+    },
+    {
+     "en": "central",
+     "ja": "中央の"
+    },
+    {
+     "en": "southeast",
+     "ja": "南東"
+    },
+    {
+     "en": "million",
+     "ja": "100万"
+    },
+    {
+     "en": "throughout",
+     "ja": "～の至るところで"
+    },
+    {
+     "en": "electricity",
+     "ja": "電気"
+    },
+    {
+     "en": "plus",
+     "ja": "～に加えて"
+    },
+    {
+     "en": "have access to ~",
+     "ja": "～を利用できる"
+    },
+    {
+     "en": "education",
+     "ja": "教育"
+    },
+    {
+     "en": "poverty",
+     "ja": "貧困"
+    },
+    {
+     "en": "instead",
+     "ja": "代わりに"
+    },
+    {
+     "en": "housework",
+     "ja": "家事"
+    },
+    {
+     "en": "graph",
+     "ja": "グラフ"
+    },
+    {
+     "en": "percentage",
+     "ja": "割合",
+     "forms": [
+      "percentages"
+     ]
+    },
+    {
+     "en": "region",
+     "ja": "地域"
+    },
+    {
+     "en": "marriage",
+     "ja": "結婚"
+    },
+    {
+     "en": "marry",
+     "ja": "結婚する"
+    },
+    {
+     "en": "instead of ~",
+     "ja": "～の代わりに"
+    }
+   ]
+  },
+  {
+   "id": "unit6",
+   "title": "Unit 6",
+   "group": "Here We Go! 3",
+   "words": [
+    {
+     "en": "trouble",
+     "ja": "困難"
+    },
+    {
+     "en": "twist",
+     "ja": "ひねる",
+     "forms": [
+      "twisted"
+     ]
+    },
+    {
+     "en": "wrist",
+     "ja": "手首"
+    },
+    {
+     "en": "be in trouble",
+     "ja": "困っている"
+    },
+    {
+     "en": "trick",
+     "ja": "手品、いたずら",
+     "forms": [
+      "tricks"
+     ]
+    },
+    {
+     "en": "magic trick",
+     "ja": "手品"
+    },
+    {
+     "en": "magician",
+     "ja": "手品師"
+    },
+    {
+     "en": "channel",
+     "ja": "チャンネル"
+    },
+    {
+     "en": "heal",
+     "ja": "癒やす"
+    },
+    {
+     "en": "conductor",
+     "ja": "指揮者"
+    },
+    {
+     "en": "solo",
+     "ja": "独唱、ソロ"
+    },
+    {
+     "en": "hurt",
+     "ja": "傷つける、痛む"
+    },
+    {
+     "en": "series",
+     "ja": "シリーズ"
+    },
+    {
+     "en": "hear of ~",
+     "ja": "～のことを耳にする"
+    },
+    {
+     "en": "unbelievable",
+     "ja": "信じられない"
+    },
+    {
+     "en": "win",
+     "ja": "勝つ",
+     "forms": [
+      "won"
+     ]
+    },
+    {
+     "en": "strange",
+     "ja": "奇妙な"
+    },
+    {
+     "en": "London",
+     "ja": "ロンドン"
+    },
+    {
+     "en": "beginning",
+     "ja": "始まり"
+    },
+    {
+     "en": "at the beginning of ~",
+     "ja": "～の初めに"
+    },
+    {
+     "en": "tale",
+     "ja": "物語"
+    },
+    {
+     "en": "animated",
+     "ja": "アニメの"
+    },
+    {
+     "en": "animated movie",
+     "ja": "アニメ映画"
+    },
+    {
+     "en": "direct",
+     "ja": "監督する",
+     "forms": [
+      "directed"
+     ]
+    },
+    {
+     "en": "heartwarming",
+     "ja": "心温まる"
+    }
+   ]
+  },
+  {
+   "id": "ycdi2",
+   "title": "You Can Do It! 2",
+   "group": "Here We Go! 3",
+   "words": [
+    {
+     "en": "agricultural",
+     "ja": "農業の"
+    },
+    {
+     "en": "cultivate",
+     "ja": "耕す"
+    },
+    {
+     "en": "crops",
+     "ja": "作物"
+    },
+    {
+     "en": "grow",
+     "ja": "育てる",
+     "forms": [
+      "grew"
+     ]
+    },
+    {
+     "en": "seed",
+     "ja": "種",
+     "forms": [
+      "seeds"
+     ]
+    },
+    {
+     "en": "harvest",
+     "ja": "収穫"
+    },
+    {
+     "en": "kilogram",
+     "ja": "キログラム",
+     "forms": [
+      "kilograms"
+     ]
+    },
+    {
+     "en": "manual",
+     "ja": "手作業の"
+    },
+    {
+     "en": "locally",
+     "ja": "地元で"
+    },
+    {
+     "en": "eco-",
+     "ja": "環境に優しい～"
+    },
+    {
+     "en": "warrior",
+     "ja": "戦士",
+     "forms": [
+      "warriors"
+     ]
+    },
+    {
+     "en": "land",
+     "ja": "土地"
+    },
+    {
+     "en": "native",
+     "ja": "原産の、土着の"
+    },
+    {
+     "en": "reduce",
+     "ja": "減らす",
+     "forms": [
+      "reduced"
+     ]
+    },
+    {
+     "en": "nature reserve",
+     "ja": "自然保護区"
+    }
+   ]
+  },
+  {
+   "id": "unit7",
+   "title": "Unit 7",
+   "group": "Here We Go! 3",
+   "words": [
+    {
+     "en": "suddenly",
+     "ja": "突然"
+    },
+    {
+     "en": "panic",
+     "ja": "パニック"
+    },
+    {
+     "en": "full",
+     "ja": "いっぱいの"
+    },
+    {
+     "en": "anxiety",
+     "ja": "不安"
+    },
+    {
+     "en": "graduate",
+     "ja": "卒業する"
+    },
+    {
+     "en": "possible",
+     "ja": "可能な"
+    },
+    {
+     "en": "shock",
+     "ja": "衝撃"
+    },
+    {
+     "en": "culture shock",
+     "ja": "カルチャーショック"
+    },
+    {
+     "en": "in a panic",
+     "ja": "あわてて"
+    },
+    {
+     "en": "be full of",
+     "ja": "～でいっぱいである"
+    },
+    {
+     "en": "graduate from ~",
+     "ja": "～を卒業する"
+    },
+    {
+     "en": "speak to ~",
+     "ja": "～に話しかける"
+    },
+    {
+     "en": "billionaire",
+     "ja": "億万長者"
+    },
+    {
+     "en": "period",
+     "ja": "期間"
+    },
+    {
+     "en": "go back to ~",
+     "ja": "～に戻る"
+    },
+    {
+     "en": "meet",
+     "ja": "会う"
+    },
+    {
+     "en": "buy",
+     "ja": "買う"
+    },
+    {
+     "en": "truth",
+     "ja": "真実"
+    },
+    {
+     "en": "basically",
+     "ja": "基本的に"
+    },
+    {
+     "en": "everywhere",
+     "ja": "どこでも"
+    },
+    {
+     "en": "lonely",
+     "ja": "さびしい"
+    },
+    {
+     "en": "unforgettable",
+     "ja": "忘れられない"
+    },
+    {
+     "en": "be different from ~",
+     "ja": "～と違う"
+    },
+    {
+     "en": "find ~ out",
+     "ja": "～を見つけ出す"
+    },
+    {
+     "en": "come back",
+     "ja": "戻ってくる"
+    },
+    {
+     "en": "The truth is ...",
+     "ja": "実は…"
+    },
+    {
+     "en": "I have no worries.",
+     "ja": "心配はありません。"
+    },
+    {
+     "en": "round",
+     "ja": "丸い"
+    }
+   ]
+  },
+  {
+   "id": "read3",
+   "title": "Let's Read 3",
+   "group": "Here We Go! 3",
+   "words": [
+    {
+     "en": "extinct",
+     "ja": "絶滅した"
+    },
+    {
+     "en": "waste",
+     "ja": "無駄にする"
+    },
+    {
+     "en": "realize",
+     "ja": "気づく"
+    },
+    {
+     "en": "act",
+     "ja": "行動する"
+    },
+    {
+     "en": "starving",
+     "ja": "飢えている"
+    },
+    {
+     "en": "dying",
+     "ja": "死にかけている"
+    },
+    {
+     "en": "planet",
+     "ja": "惑星"
+    },
+    {
+     "en": "afraid",
+     "ja": "怖がって"
+    },
+    {
+     "en": "hole",
+     "ja": "穴",
+     "forms": [
+      "holes"
+     ]
+    },
+    {
+     "en": "breathe",
+     "ja": "呼吸する"
+    },
+    {
+     "en": "air",
+     "ja": "空気"
+    },
+    {
+     "en": "chemical",
+     "ja": "化学物質",
+     "forms": [
+      "chemicals"
+     ]
+    },
+    {
+     "en": "vanish",
+     "ja": "消える",
+     "forms": [
+      "vanishing"
+     ]
+    },
+    {
+     "en": "solution",
+     "ja": "解決策",
+     "forms": [
+      "solutions"
+     ]
+    },
+    {
+     "en": "neither",
+     "ja": "どちらも～ない"
+    },
+    {
+     "en": "salmon",
+     "ja": "サケ"
+    },
+    {
+     "en": "dead",
+     "ja": "死んだ"
+    },
+    {
+     "en": "stream",
+     "ja": "小川"
+    },
+    {
+     "en": "desert",
+     "ja": "砂漠"
+    },
+    {
+     "en": "delegate",
+     "ja": "代表者",
+     "forms": [
+      "delegates"
+     ]
+    },
+    {
+     "en": "government",
+     "ja": "政府",
+     "forms": [
+      "governments"
+     ]
+    },
+    {
+     "en": "business",
+     "ja": "仕事、商売"
+    },
+    {
+     "en": "organizer",
+     "ja": "主催者",
+     "forms": [
+      "organizers"
+     ]
+    },
+    {
+     "en": "reporter",
+     "ja": "記者",
+     "forms": [
+      "reporters"
+     ]
+    },
+    {
+     "en": "politician",
+     "ja": "政治家",
+     "forms": [
+      "politicians"
+     ]
+    },
+    {
+     "en": "single",
+     "ja": "たった一つの"
+    },
+    {
+     "en": "and yet",
+     "ja": "それなのに"
+    },
+    {
+     "en": "as if ~",
+     "ja": "まるで～かのように"
+    },
+    {
+     "en": "bring back ~",
+     "ja": "～を取り戻す"
+    },
+    {
+     "en": "again and again",
+     "ja": "何度も"
+    },
+    {
+     "en": "throw",
+     "ja": "投げる"
+    },
+    {
+     "en": "northern",
+     "ja": "北の"
+    },
+    {
+     "en": "needy",
+     "ja": "貧しい"
+    },
+    {
+     "en": "the needy",
+     "ja": "貧しい人々"
+    },
+    {
+     "en": "wealth",
+     "ja": "富"
+    },
+    {
+     "en": "spend",
+     "ja": "使う、過ごす",
+     "forms": [
+      "spent"
+     ]
+    },
+    {
+     "en": "rich",
+     "ja": "金持ちの"
+    },
+    {
+     "en": "medicine",
+     "ja": "薬"
+    },
+    {
+     "en": "affection",
+     "ja": "愛情"
+    },
+    {
+     "en": "willing",
+     "ja": "いとわない"
+    },
+    {
+     "en": "be willing to",
+     "ja": "進んで～する"
+    },
+    {
+     "en": "greedy",
+     "ja": "欲ばりな"
+    },
+    {
+     "en": "kindergarten",
+     "ja": "幼稚園"
+    },
+    {
+     "en": "behave",
+     "ja": "ふるまう"
+    },
+    {
+     "en": "mess",
+     "ja": "散らかった状態"
+    },
+    {
+     "en": "creature",
+     "ja": "生き物",
+     "forms": [
+      "creatures"
+     ]
+    },
+    {
+     "en": "throw away",
+     "ja": "捨てる"
+    },
+    {
+     "en": "teach ~ not to ...",
+     "ja": "～に…しないように教える"
+    },
+    {
+     "en": "work ~ out",
+     "ja": "（問題を）解決する"
+    },
+    {
+     "en": "comfort",
+     "ja": "なぐさめる"
+    },
+    {
+     "en": "grow",
+     "ja": "成長する",
+     "forms": [
+      "grown"
+     ]
+    },
+    {
+     "en": "grown-ups",
+     "ja": "大人"
+    },
+    {
+     "en": "reflect",
+     "ja": "よく考える"
+    }
+   ]
+  },
+  {
+   "id": "unit8",
+   "title": "Unit 8",
+   "group": "Here We Go! 3",
+   "words": [
+    {
+     "en": "gather",
+     "ja": "集まる"
+    },
+    {
+     "en": "usual",
+     "ja": "いつもの"
+    },
+    {
+     "en": "within",
+     "ja": "～以内に"
+    },
+    {
+     "en": "letter",
+     "ja": "手紙"
+    },
+    {
+     "en": "touch",
+     "ja": "連絡（keep in touch）、触れる"
+    },
+    {
+     "en": "Have a safe trip!",
+     "ja": "気をつけて行ってらっしゃい！"
+    },
+    {
+     "en": "Me, neither!",
+     "ja": "私も（～ない）です！"
+    },
+    {
+     "en": "enter",
+     "ja": "入る",
+     "forms": [
+      "entered"
+     ]
+    },
+    {
+     "en": "blossom",
+     "ja": "花",
+     "forms": [
+      "blossoms"
+     ]
+    },
+    {
+     "en": "cherry blossom",
+     "ja": "桜の花"
+    },
+    {
+     "en": "plain",
+     "ja": "明らかな"
+    },
+    {
+     "en": "swear",
+     "ja": "誓う"
+    },
+    {
+     "en": "be plain to see",
+     "ja": "一目瞭然だ"
+    },
+    {
+     "en": "go one's own way",
+     "ja": "自分の道を行く"
+    },
+    {
+     "en": "get together",
+     "ja": "集まる"
+    },
+    {
+     "en": "hospitality",
+     "ja": "おもてなし"
+    },
+    {
+     "en": "regard",
+     "ja": "よろしくという挨拶",
+     "forms": [
+      "regards"
+     ]
+    },
+    {
+     "en": "sincerely",
+     "ja": "心から（手紙の結び）"
+    },
+    {
+     "en": "cheerful",
+     "ja": "明るい"
+    },
+    {
+     "en": "laugh",
+     "ja": "笑う"
+    },
+    {
+     "en": "advice",
+     "ja": "助言"
+    },
+    {
+     "en": "honest",
+     "ja": "正直な"
+    },
+    {
+     "en": "indeed",
+     "ja": "本当に"
+    },
+    {
+     "en": "in need",
+     "ja": "困っている"
+    },
+    {
+     "en": "go wrong",
+     "ja": "うまくいかない"
+    },
+    {
+     "en": "take it easy",
+     "ja": "気楽にやる"
+    }
+   ]
+  },
+  {
+   "id": "readmore1",
+   "title": "Let's Read More 1",
+   "group": "Here We Go! 3",
+   "words": [
+    {
+     "en": "election",
+     "ja": "選挙",
+     "forms": [
+      "elections"
+     ]
+    },
+    {
+     "en": "capital",
+     "ja": "首都"
+    },
+    {
+     "en": "hut",
+     "ja": "小屋",
+     "forms": [
+      "huts"
+     ]
+    },
+    {
+     "en": "political",
+     "ja": "政治の"
+    },
+    {
+     "en": "political party",
+     "ja": "政党",
+     "forms": [
+      "political parties"
+     ]
+    },
+    {
+     "en": "appeal",
+     "ja": "訴える"
+    },
+    {
+     "en": "the public",
+     "ja": "一般の人々"
+    },
+    {
+     "en": "leader",
+     "ja": "指導者",
+     "forms": [
+      "leaders"
+     ]
+    },
+    {
+     "en": "citizen",
+     "ja": "市民",
+     "forms": [
+      "citizens"
+     ]
+    },
+    {
+     "en": "casually",
+     "ja": "気軽に"
+    },
+    {
+     "en": "candidate",
+     "ja": "候補者",
+     "forms": [
+      "candidates"
+     ]
+    },
+    {
+     "en": "discuss",
+     "ja": "話し合う"
+    },
+    {
+     "en": "policy",
+     "ja": "政策",
+     "forms": [
+      "policies"
+     ]
+    },
+    {
+     "en": "crowd",
+     "ja": "群衆",
+     "forms": [
+      "crowds"
+     ]
+    },
+    {
+     "en": "seem",
+     "ja": "～のように見える"
+    },
+    {
+     "en": "assignment",
+     "ja": "課題"
+    },
+    {
+     "en": "schooling system",
+     "ja": "教育制度"
+    },
+    {
+     "en": "opening",
+     "ja": "空き、就職口",
+     "forms": [
+      "openings"
+     ]
+    },
+    {
+     "en": "give",
+     "ja": "与える",
+     "forms": [
+      "given"
+     ]
+    },
+    {
+     "en": "charge",
+     "ja": "責任、管理"
+    },
+    {
+     "en": "refugee",
+     "ja": "難民",
+     "forms": [
+      "refugees"
+     ]
+    },
+    {
+     "en": "adult",
+     "ja": "大人",
+     "forms": [
+      "adults"
+     ]
+    },
+    {
+     "en": "tend to",
+     "ja": "～する傾向がある"
+    },
+    {
+     "en": "pension",
+     "ja": "年金",
+     "forms": [
+      "pensions"
+     ]
+    },
+    {
+     "en": "tax",
+     "ja": "税金",
+     "forms": [
+      "taxes"
+     ]
+    },
+    {
+     "en": "similar",
+     "ja": "似ている"
+    },
+    {
+     "en": "nobody",
+     "ja": "誰も～ない"
+    },
+    {
+     "en": "express",
+     "ja": "表現する"
+    },
+    {
+     "en": "even better",
+     "ja": "さらによい"
+    },
+    {
+     "en": "in addition to ~",
+     "ja": "～に加えて"
+    },
+    {
+     "en": "in charge of ~",
+     "ja": "～を担当して"
+    },
+    {
+     "en": "for a long time",
+     "ja": "長い間"
+    }
+   ]
+  },
+  {
+   "id": "readmore2",
+   "title": "Let's Read More 2",
+   "group": "Here We Go! 3",
+   "words": [
+    {
+     "en": "equality",
+     "ja": "平等"
+    },
+    {
+     "en": "treat",
+     "ja": "扱う",
+     "forms": [
+      "treated"
+     ]
+    },
+    {
+     "en": "unfairly",
+     "ja": "不公平に"
+    },
+    {
+     "en": "fight",
+     "ja": "戦う",
+     "forms": [
+      "fought"
+     ]
+    },
+    {
+     "en": "separate",
+     "ja": "分ける、別々の"
+    },
+    {
+     "en": "transportation",
+     "ja": "交通機関"
+    },
+    {
+     "en": "gradually",
+     "ja": "しだいに"
+    },
+    {
+     "en": "crowded",
+     "ja": "混雑した"
+    },
+    {
+     "en": "passenger",
+     "ja": "乗客"
+    },
+    {
+     "en": "right",
+     "ja": "権利"
+    },
+    {
+     "en": "slave",
+     "ja": "奴隷",
+     "forms": [
+      "slaves"
+     ]
+    },
+    {
+     "en": "enslaved people",
+     "ja": "奴隷にされた人々"
+    },
+    {
+     "en": "society",
+     "ja": "社会"
+    },
+    {
+     "en": "as usual",
+     "ja": "いつものように"
+    },
+    {
+     "en": "make room for ~",
+     "ja": "～のために場所をあける"
+    },
+    {
+     "en": "give up",
+     "ja": "あきらめる、ゆずる"
+    },
+    {
+     "en": "at the same time",
+     "ja": "同時に"
+    },
+    {
+     "en": "arrest",
+     "ja": "逮捕する",
+     "forms": [
+      "arrested"
+     ]
+    },
+    {
+     "en": "cry",
+     "ja": "泣く、叫ぶ"
+    },
+    {
+     "en": "jail",
+     "ja": "刑務所"
+    },
+    {
+     "en": "shortly",
+     "ja": "まもなく"
+    },
+    {
+     "en": "release",
+     "ja": "解放する"
+    },
+    {
+     "en": "civil rights",
+     "ja": "公民権"
+    },
+    {
+     "en": "lead",
+     "ja": "導く",
+     "forms": [
+      "led"
+     ]
+    },
+    {
+     "en": "erase",
+     "ja": "消す",
+     "forms": [
+      "erased"
+     ]
+    },
+    {
+     "en": "officially",
+     "ja": "公式に"
+    },
+    {
+     "en": "innocent",
+     "ja": "無実の"
+    },
+    {
+     "en": "courage",
+     "ja": "勇気"
+    },
+    {
+     "en": "speak out",
+     "ja": "はっきり意見を言う"
+    }
+   ]
+  }
+ ]
+}

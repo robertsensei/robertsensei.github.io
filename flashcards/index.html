@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Word Cards | 単語カード</title>
+<title>Flashcards | フラッシュカード</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap" rel="stylesheet">
@@ -51,6 +51,11 @@
     display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 26px;
     box-shadow: 0 5px 0 var(--accent-dark); transform: rotate(-6deg);
   }
+  .home-link {
+    width: 44px; height: 44px; border-radius: 12px; border: 2px solid var(--line); background: var(--card);
+    display: grid; place-items: center; text-decoration: none; color: var(--muted); font-size: 22px; font-weight: 700;
+  }
+  .home-link:hover { color: var(--ink); }
   .logo h1 { margin: 0; font-size: 30px; line-height: 1; }
   .logo .sub { color: var(--muted); font-size: 15px; margin-top: 4px; }
   .chips { display: flex; gap: 8px; }
@@ -80,6 +85,11 @@
   .link { background: none; border: 0; color: var(--blue); font-weight: 600; font-size: 16px; padding: 4px; }
 
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+  .group-head {
+    grid-column: 1 / -1; display: flex; align-items: baseline; justify-content: space-between;
+    font-weight: 700; font-size: 19px; padding: 10px 2px 0; border-top: 2px dashed var(--line);
+  }
+  .group-head:first-child { border-top: 0; padding-top: 0; }
   .tile {
     position: relative; text-align: left; background: #fffdf8; border: 3px solid var(--line);
     border-radius: 18px; padding: 14px 14px 12px; color: var(--ink);
@@ -204,10 +214,11 @@
 <div class="wrap" id="home">
   <header>
     <div class="logo">
+      <a class="home-link" href="/" title="Home ・ ホーム">←</a>
       <div class="logo-mark">Aa</div>
       <div>
-        <h1>Word Cards</h1>
-        <div class="sub ja">単語カード ・ 毎日すこしずつ！</div>
+        <h1>Flashcards</h1>
+        <div class="sub ja">フラッシュカード ・ 毎日すこしずつ！</div>
       </div>
     </div>
     <div class="chips">
@@ -300,6 +311,7 @@
 // Add more books here. Each file goes in the decks/ folder.
 const DECKS = [
   { id: "new-horizon-1", title: "New Horizon 1 (中1)", file: "decks/new-horizon-1.json" },
+  { id: "here-we-go-3", title: "Here We Go! 3 (中3)", file: "decks/here-we-go-3.json" },
 ];
 // Spaced repetition: days until the next review for each level (box).
 // Level 0 = new. Each "Got it!" moves a word up one level; "Not yet" sends it back to level 1.
@@ -379,14 +391,22 @@ function renderHome() {
   document.querySelectorAll("#dirToggle button").forEach((b) => b.classList.toggle("on", b.dataset.dir === store.settings.dir));
 
   const sel = selectedIds();
+  let lastGroup = null;
   $("sections").innerHTML = deck.sections.map((s) => {
+    let head = "";
+    if (s.group && s.group !== lastGroup) {
+      lastGroup = s.group;
+      const ids = deck.sections.filter((x) => x.group === s.group).map((x) => x.id);
+      const allOn = ids.every((id) => sel.includes(id));
+      head = `<div class="group-head"><span>${esc(s.group)}</span><button class="link" data-group="${esc(s.group)}">${allOn ? "Clear" : "Select all"}</button></div>`;
+    }
     const st = sectionStats(s);
     const pm = (st.mastered / st.total) * 100, pl = (st.learning / st.total) * 100;
     let badge;
     if (st.due) badge = `<span class="badge due">${st.due} to review</span>`;
     else if (st.fresh) badge = `<span class="badge new">${st.fresh} new</span>`;
     else badge = `<span class="badge done">✓ done today</span>`;
-    return `<button class="tile ${sel.includes(s.id) ? "sel" : ""}" data-id="${s.id}">
+    return head + `<button class="tile ${sel.includes(s.id) ? "sel" : ""}" data-id="${s.id}">
       <div class="check">✓</div>
       <div class="t-title">${esc(s.title)}</div>
       <div class="bar"><div class="m" style="width:${pm}%"></div><div class="l" style="width:${pl}%"></div></div>
@@ -396,6 +416,13 @@ function renderHome() {
   document.querySelectorAll(".tile").forEach((el) => el.addEventListener("click", () => {
     const id = el.dataset.id, cur = selectedIds();
     setSelected(cur.includes(id) ? cur.filter((x) => x !== id) : [...cur, id]);
+    renderHome();
+  }));
+  document.querySelectorAll("[data-group]").forEach((el) => el.addEventListener("click", () => {
+    const ids = deck.sections.filter((x) => x.group === el.dataset.group).map((x) => x.id);
+    const cur = selectedIds();
+    const allOn = ids.every((id) => cur.includes(id));
+    setSelected(allOn ? cur.filter((id) => !ids.includes(id)) : [...new Set([...cur, ...ids])]);
     renderHome();
   }));
   $("selectAll").textContent = sel.length === deck.sections.length ? "Clear" : "Select all";
@@ -633,7 +660,10 @@ $("dirToggle").addEventListener("click", (e) => {
   const b = e.target.closest("button"); if (!b) return;
   store.settings.dir = b.dataset.dir; saveStore(); renderHome();
 });
-$("deckSelect").addEventListener("change", (e) => loadDeck(e.target.value));
+$("deckSelect").addEventListener("change", (e) => {
+  history.replaceState(null, "", `?deck=${e.target.value}`);
+  loadDeck(e.target.value);
+});
 $("resetBtn").addEventListener("click", () => {
   if (confirm("Reset all progress on this device?\nこの端末の記録をすべて消しますか？")) {
     store = freshStore(); saveStore(); renderHome();
@@ -649,6 +679,9 @@ if ("speechSynthesis" in window) speechSynthesis.onvoiceschanged = () => {};
 
 // ================= START =================
 $("deckSelect").innerHTML = DECKS.map((d) => `<option value="${d.id}">${esc(d.title)}</option>`).join("");
+const urlDeck = new URLSearchParams(location.search).get("deck");
+if (urlDeck && DECKS.some((d) => d.id === urlDeck)) store.settings.deck = urlDeck;
+if (!DECKS.some((d) => d.id === store.settings.deck)) store.settings.deck = DECKS[0].id;
 $("deckSelect").value = store.settings.deck;
 loadDeck(store.settings.deck).catch(() => {
   document.querySelector("#sections").innerHTML = `<p>Couldn't load the word list. ・ 単語リストを読み込めませんでした。</p>`;
