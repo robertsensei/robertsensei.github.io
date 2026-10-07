@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Word Cards | 単語カード</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fff8ec;
+    --ink: #2b2540;
+    --muted: #7a7290;
+    --card: #ffffff;
+    --line: #eadfca;
+    --accent: #ff8a3d;
+    --accent-dark: #d9661c;
+    --good: #3cb371;
+    --good-dark: #2a8a55;
+    --again: #ef5a5a;
+    --again-dark: #c23d3d;
+    --blue: #4a7dff;
+    --blue-dark: #2f5bd1;
+    --gold: #ffc531;
+    --shadow: 0 6px 0 rgba(43, 37, 64, .08), 0 14px 30px rgba(43, 37, 64, .08);
+    --font: "Fredoka", "M PLUS Rounded 1c", system-ui, sans-serif;
+    --font-ja: "M PLUS Rounded 1c", "Fredoka", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    font-family: var(--font);
+    color: var(--ink);
+    background: var(--bg);
+    background-image: radial-gradient(#f3e6cd 1.5px, transparent 1.5px);
+    background-size: 22px 22px;
+    min-height: 100vh;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .ja { font-family: var(--font-ja); }
+  button { font-family: inherit; cursor: pointer; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 20px 16px 48px; }
+  .hidden { display: none !important; }
+
+  /* ---------- Header ---------- */
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo-mark {
+    width: 52px; height: 52px; border-radius: 14px; background: var(--accent);
+    display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 26px;
+    box-shadow: 0 5px 0 var(--accent-dark); transform: rotate(-6deg);
+  }
+  .logo h1 { margin: 0; font-size: 30px; line-height: 1; }
+  .logo .sub { color: var(--muted); font-size: 15px; margin-top: 4px; }
+  .chips { display: flex; gap: 8px; }
+  .chip {
+    background: var(--card); border: 2px solid var(--line); border-radius: 999px;
+    padding: 6px 14px; font-weight: 600; font-size: 17px; display: flex; align-items: center; gap: 6px;
+  }
+  .chip .ico { font-size: 18px; }
+
+  /* ---------- Panels ---------- */
+  .panel { background: var(--card); border-radius: 22px; box-shadow: var(--shadow); padding: 20px; margin-bottom: 18px; }
+  .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .label { font-weight: 600; color: var(--muted); font-size: 14px; text-transform: uppercase; letter-spacing: .06em; }
+  select {
+    font-family: inherit; font-size: 18px; font-weight: 600; color: var(--ink);
+    padding: 10px 14px; border-radius: 14px; border: 2px solid var(--line); background: #fffdf8;
+  }
+  .toggle { display: inline-flex; background: #f4ecdc; border-radius: 14px; padding: 4px; }
+  .toggle button {
+    border: 0; background: transparent; padding: 9px 14px; border-radius: 11px;
+    font-size: 16px; font-weight: 600; color: var(--muted);
+  }
+  .toggle button.on { background: var(--card); color: var(--ink); box-shadow: 0 2px 0 rgba(0,0,0,.08); }
+
+  .sec-head { display: flex; justify-content: space-between; align-items: baseline; margin: 6px 0 12px; }
+  .sec-head h2 { margin: 0; font-size: 22px; }
+  .link { background: none; border: 0; color: var(--blue); font-weight: 600; font-size: 16px; padding: 4px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+  .tile {
+    position: relative; text-align: left; background: #fffdf8; border: 3px solid var(--line);
+    border-radius: 18px; padding: 14px 14px 12px; color: var(--ink);
+    transition: transform .12s, border-color .12s, background .12s;
+  }
+  .tile:hover { transform: translateY(-2px); }
+  .tile.sel { border-color: var(--accent); background: #fff1e4; }
+  .tile .t-title { font-weight: 600; font-size: 17px; line-height: 1.2; min-height: 2.4em; padding-right: 26px; }
+  .tile .check {
+    position: absolute; top: 10px; right: 10px; width: 24px; height: 24px; border-radius: 50%;
+    border: 3px solid var(--line); background: #fff; display: grid; place-items: center; color: #fff; font-size: 14px; font-weight: 700;
+  }
+  .tile.sel .check { background: var(--accent); border-color: var(--accent); }
+  .bar { height: 10px; border-radius: 99px; background: #efe5d2; overflow: hidden; display: flex; margin: 10px 0 8px; }
+  .bar .m { background: var(--good); }
+  .bar .l { background: var(--gold); }
+  .tile .meta { display: flex; justify-content: space-between; font-size: 14px; color: var(--muted); font-weight: 500; }
+  .badge { border-radius: 99px; padding: 1px 9px; font-weight: 600; font-size: 13px; }
+  .badge.due { background: #ffe1d1; color: var(--accent-dark); }
+  .badge.new { background: #dfe8ff; color: var(--blue-dark); }
+  .badge.done { background: #d9f3e4; color: var(--good-dark); }
+
+  .legend { display: flex; gap: 16px; font-size: 14px; color: var(--muted); margin-top: 14px; flex-wrap: wrap; }
+  .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 4px; margin-right: 5px; vertical-align: -1px; }
+
+  .big-btn {
+    border: 0; border-radius: 18px; padding: 16px 28px; font-size: 22px; font-weight: 700; color: #fff;
+    background: var(--accent); box-shadow: 0 6px 0 var(--accent-dark); transition: transform .08s, box-shadow .08s;
+  }
+  .big-btn:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--accent-dark); }
+  .big-btn:disabled { background: #cfc6b4; box-shadow: 0 6px 0 #b0a792; cursor: default; }
+  .big-btn.blue { background: var(--blue); box-shadow: 0 6px 0 var(--blue-dark); }
+  .start-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 4px; }
+  .start-note { text-align: center; color: var(--muted); margin-top: 12px; font-size: 15px; }
+
+  footer { text-align: center; margin-top: 26px; color: var(--muted); font-size: 14px; }
+
+  /* ---------- Study screen ---------- */
+  .study-top { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .x-btn {
+    width: 44px; height: 44px; border-radius: 12px; border: 2px solid var(--line); background: var(--card);
+    font-size: 22px; color: var(--muted); flex: none;
+  }
+  .progress { flex: 1; height: 18px; background: #efe5d2; border-radius: 99px; overflow: hidden; }
+  .progress > div { height: 100%; width: 0; background: var(--good); border-radius: 99px; transition: width .35s ease; }
+  .combo { font-weight: 700; font-size: 18px; color: var(--accent-dark); min-width: 92px; text-align: right; transition: transform .15s; }
+  .combo.pop { transform: scale(1.3); }
+
+  .scene { perspective: 1400px; max-width: 640px; margin: 0 auto; }
+  .card { position: relative; height: 360px; cursor: pointer; }
+  .card .inner { position: absolute; inset: 0; transform-style: preserve-3d; transition: transform .45s cubic-bezier(.3,.9,.4,1.15); }
+  .card.flipped .inner { transform: rotateY(180deg); }
+  .card.noanim .inner { transition: none; }
+  .face {
+    position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden;
+    background: var(--card); border-radius: 28px; box-shadow: var(--shadow); border: 3px solid var(--line);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 28px; text-align: center;
+  }
+  .face.back { transform: rotateY(180deg); border-color: #cfe6d8; }
+  .face .tag { position: absolute; top: 16px; left: 18px; font-size: 14px; font-weight: 600; color: var(--muted); }
+  .face .lvl { position: absolute; top: 14px; right: 18px; display: flex; gap: 4px; }
+  .face .lvl span { width: 12px; height: 12px; border-radius: 50%; background: #efe5d2; }
+  .face .lvl span.on { background: var(--gold); }
+  .word-en { font-size: clamp(40px, 9vw, 72px); font-weight: 600; line-height: 1.1; word-break: break-word; }
+  .word-ja { font-size: clamp(28px, 6vw, 46px); font-weight: 800; line-height: 1.3; }
+  .forms { margin-top: 12px; color: var(--muted); font-size: 20px; }
+  .small-en { margin-top: 14px; font-size: 24px; color: var(--muted); font-weight: 500; }
+  .hint { position: absolute; bottom: 16px; color: var(--muted); font-size: 15px; }
+  .speak {
+    margin-top: 18px; width: 56px; height: 56px; border-radius: 50%; border: 0;
+    background: #e5edff; color: var(--blue-dark); display: grid; place-items: center;
+  }
+  .speak svg { width: 28px; height: 28px; }
+  .card.enter { animation: enter .35s ease; }
+  @keyframes enter { from { opacity: 0; transform: translateX(40px) rotate(2deg); } to { opacity: 1; transform: none; } }
+  .card.shake { animation: shake .35s; }
+  @keyframes shake { 20%,60% { transform: translateX(-10px); } 40%,80% { transform: translateX(10px); } }
+
+  .answer { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 640px; margin: 22px auto 0; }
+  .answer button {
+    border: 0; border-radius: 18px; padding: 14px 10px; color: #fff; font-weight: 700; font-size: 22px; line-height: 1.15;
+    transition: transform .08s, box-shadow .08s;
+  }
+  .answer button small { display: block; font-family: var(--font-ja); font-size: 15px; font-weight: 700; opacity: .9; margin-top: 2px; }
+  .answer .again { background: var(--again); box-shadow: 0 6px 0 var(--again-dark); }
+  .answer .good { background: var(--good); box-shadow: 0 6px 0 var(--good-dark); }
+  .answer button:active { transform: translateY(4px); box-shadow: 0 2px 0 rgba(0,0,0,.2); }
+  .answer.locked { visibility: hidden; }
+  .keys { text-align: center; color: var(--muted); font-size: 14px; margin-top: 16px; }
+  kbd { background: var(--card); border: 2px solid var(--line); border-bottom-width: 4px; border-radius: 7px; padding: 0 6px; font-family: inherit; font-weight: 600; }
+
+  .xp-float {
+    position: fixed; font-weight: 700; font-size: 26px; color: var(--good-dark); pointer-events: none;
+    animation: float 0.9s ease-out forwards; z-index: 5;
+  }
+  @keyframes float { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(-70px); } }
+
+  /* ---------- Summary ---------- */
+  .summary { text-align: center; max-width: 560px; margin: 30px auto 0; }
+  .summary .trophy { font-size: 84px; line-height: 1; animation: bounce 1s ease infinite alternate; }
+  @keyframes bounce { to { transform: translateY(-10px); } }
+  .summary h2 { font-size: 40px; margin: 10px 0 4px; }
+  .summary .ja-sub { color: var(--muted); font-size: 20px; margin-bottom: 22px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 26px; }
+  .stat { background: var(--card); border-radius: 18px; box-shadow: var(--shadow); padding: 16px 8px; }
+  .stat b { display: block; font-size: 34px; }
+  .stat span { color: var(--muted); font-size: 14px; font-weight: 600; }
+  #confetti { position: fixed; inset: 0; pointer-events: none; z-index: 10; }
+
+  @media (max-width: 560px) {
+    .card { height: 300px; }
+    .logo h1 { font-size: 24px; }
+    .answer button { font-size: 19px; }
+    .stats b { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+<canvas id="confetti"></canvas>
+
+<!-- ================= HOME ================= -->
+<div class="wrap" id="home">
+  <header>
+    <div class="logo">
+      <div class="logo-mark">Aa</div>
+      <div>
+        <h1>Word Cards</h1>
+        <div class="sub ja">単語カード ・ 毎日すこしずつ！</div>
+      </div>
+    </div>
+    <div class="chips">
+      <div class="chip" title="Days in a row 連続日数"><span class="ico">🔥</span><span id="streak">0</span></div>
+      <div class="chip" title="Total XP"><span class="ico">⭐</span><span id="xp">0</span></div>
+    </div>
+  </header>
+
+  <div class="panel">
+    <div class="row" style="justify-content: space-between;">
+      <div class="row">
+        <span class="label">Book</span>
+        <select id="deckSelect"></select>
+      </div>
+      <div class="toggle" id="dirToggle">
+        <button data-dir="en-ja">English → <span class="ja">日本語</span></button>
+        <button data-dir="ja-en"><span class="ja">日本語</span> → English</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="sec-head">
+      <h2>Choose units <span class="ja" style="font-size:16px;color:var(--muted)">ユニットを選ぼう</span></h2>
+      <button class="link" id="selectAll">Select all</button>
+    </div>
+    <div class="grid" id="sections"></div>
+    <div class="legend">
+      <span><i style="background:var(--good)"></i>Mastered 覚えた</span>
+      <span><i style="background:var(--gold)"></i>Learning 練習中</span>
+      <span><i style="background:#efe5d2"></i>New 新しい</span>
+    </div>
+  </div>
+
+  <div class="start-row">
+    <button class="big-btn" id="startBtn" disabled>Choose a unit</button>
+    <button class="big-btn blue hidden" id="practiceBtn">Practice anyway</button>
+  </div>
+  <div class="start-note ja" id="startNote"></div>
+
+  <footer>
+    <button class="link" id="resetBtn" style="color:var(--muted);font-size:14px">Reset my progress</button>
+  </footer>
+</div>
+
+<!-- ================= STUDY ================= -->
+<div class="wrap hidden" id="study">
+  <div class="study-top">
+    <button class="x-btn" id="quitBtn" title="Quit">✕</button>
+    <div class="progress"><div id="progressFill"></div></div>
+    <div class="combo" id="combo"></div>
+  </div>
+
+  <div class="scene">
+    <div class="card" id="card">
+      <div class="inner">
+        <div class="face front" id="front"></div>
+        <div class="face back" id="back"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="answer locked" id="answer">
+    <button class="again" id="againBtn">Not yet<small>まだ</small></button>
+    <button class="good" id="goodBtn">Got it!<small>わかった！</small></button>
+  </div>
+  <div class="keys"><kbd>Space</kbd> flip &nbsp; <kbd>1</kbd> not yet &nbsp; <kbd>2</kbd> got it</div>
+</div>
+
+<!-- ================= SUMMARY ================= -->
+<div class="wrap hidden" id="summary">
+  <div class="summary">
+    <div class="trophy">🏆</div>
+    <h2 id="sumTitle">Great job!</h2>
+    <div class="ja-sub ja" id="sumSub">よくできました！</div>
+    <div class="stats">
+      <div class="stat"><b id="sumCards">0</b><span>Cards</span></div>
+      <div class="stat"><b id="sumFirst">0%</b><span>First try</span></div>
+      <div class="stat"><b id="sumXp">+0</b><span>XP</span></div>
+    </div>
+    <div class="start-row">
+      <button class="big-btn" id="againSessionBtn">Keep going!</button>
+      <button class="big-btn blue" id="homeBtn">Home</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ================= SETTINGS =================
+// Add more books here. Each file goes in the decks/ folder.
+const DECKS = [
+  { id: "new-horizon-1", title: "New Horizon 1 (中1)", file: "decks/new-horizon-1.json" },
+];
+// Spaced repetition: days until the next review for each level (box).
+// Level 0 = new. Each "Got it!" moves a word up one level; "Not yet" sends it back to level 1.
+const INTERVALS = [0, 1, 3, 7, 14, 30, 60];
+const MASTERED_LEVEL = 4;     // level at which a word counts as "mastered"
+const NEW_PER_SESSION = 10;   // max new words introduced per session
+const MAX_SESSION = 20;       // max cards per session
+const STORE_KEY = "rs-wordcards-v1";
+
+// ================= SAVED PROGRESS =================
+function freshStore() {
+  return { cards: {}, xp: 0, streak: { last: -1, count: 0 }, settings: { dir: "en-ja", deck: DECKS[0].id, selected: {} } };
+}
+function loadStore() {
+  try {
+    const s = JSON.parse(localStorage.getItem(STORE_KEY));
+    if (!s) return freshStore();
+    const f = freshStore();
+    return { ...f, ...s, streak: { ...f.streak, ...s.streak }, settings: { ...f.settings, ...s.settings } };
+  } catch (e) { return freshStore(); }
+}
+function saveStore() { try { localStorage.setItem(STORE_KEY, JSON.stringify(store)); } catch (e) {} }
+function today() { const d = new Date(); return Math.floor((d.getTime() - d.getTimezoneOffset() * 60000) / 86400000); }
+
+let store = loadStore();
+let deck = null;              // loaded deck JSON
+const deckCache = {};
+
+// ================= HELPERS =================
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const shuffle = (a) => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const cardKey = (sectionId, w) => `${deck.id}::${sectionId}::${w.en}`;
+function show(screen) { ["home", "study", "summary"].forEach((s) => $(s).classList.toggle("hidden", s !== screen)); window.scrollTo(0, 0); }
+
+function speak(text) {
+  if (!("speechSynthesis" in window)) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = "en-US"; u.rate = 0.85;
+  const v = speechSynthesis.getVoices().find((v) => v.lang && v.lang.startsWith("en"));
+  if (v) u.voice = v;
+  speechSynthesis.speak(u);
+}
+
+// ================= HOME =================
+async function loadDeck(id) {
+  const info = DECKS.find((d) => d.id === id) || DECKS[0];
+  if (!deckCache[info.id]) {
+    const res = await fetch(info.file);
+    deckCache[info.id] = await res.json();
+  }
+  deck = deckCache[info.id];
+  store.settings.deck = info.id;
+  saveStore();
+  renderHome();
+}
+
+function selectedIds() { return store.settings.selected[deck.id] || []; }
+function setSelected(ids) { store.settings.selected[deck.id] = ids; saveStore(); }
+
+function sectionStats(section) {
+  const t = today();
+  let mastered = 0, learning = 0, due = 0, fresh = 0;
+  for (const w of section.words) {
+    const st = store.cards[cardKey(section.id, w)];
+    if (!st) { fresh++; continue; }
+    if (st.box >= MASTERED_LEVEL) mastered++; else learning++;
+    if (st.due <= t) due++;
+  }
+  return { mastered, learning, due, fresh, total: section.words.length };
+}
+
+function renderHome() {
+  $("streak").textContent = currentStreak();
+  $("xp").textContent = store.xp;
+  document.querySelectorAll("#dirToggle button").forEach((b) => b.classList.toggle("on", b.dataset.dir === store.settings.dir));
+
+  const sel = selectedIds();
+  $("sections").innerHTML = deck.sections.map((s) => {
+    const st = sectionStats(s);
+    const pm = (st.mastered / st.total) * 100, pl = (st.learning / st.total) * 100;
+    let badge;
+    if (st.due) badge = `<span class="badge due">${st.due} to review</span>`;
+    else if (st.fresh) badge = `<span class="badge new">${st.fresh} new</span>`;
+    else badge = `<span class="badge done">✓ done today</span>`;
+    return `<button class="tile ${sel.includes(s.id) ? "sel" : ""}" data-id="${s.id}">
+      <div class="check">✓</div>
+      <div class="t-title">${esc(s.title)}</div>
+      <div class="bar"><div class="m" style="width:${pm}%"></div><div class="l" style="width:${pl}%"></div></div>
+      <div class="meta"><span>★ ${st.mastered}/${st.total}</span>${badge}</div>
+    </button>`;
+  }).join("");
+  document.querySelectorAll(".tile").forEach((el) => el.addEventListener("click", () => {
+    const id = el.dataset.id, cur = selectedIds();
+    setSelected(cur.includes(id) ? cur.filter((x) => x !== id) : [...cur, id]);
+    renderHome();
+  }));
+  $("selectAll").textContent = sel.length === deck.sections.length ? "Clear" : "Select all";
+  updateStartButton();
+}
+
+function updateStartButton() {
+  const sel = selectedIds();
+  const plan = buildQueue(sel, false);
+  const btn = $("startBtn"), practice = $("practiceBtn"), note = $("startNote");
+  practice.classList.add("hidden");
+  note.textContent = "";
+  if (!sel.length) { btn.disabled = true; btn.textContent = "Choose a unit"; return; }
+  if (plan.length) {
+    btn.disabled = false;
+    btn.textContent = `Start! (${plan.length} cards)`;
+  } else {
+    btn.disabled = true;
+    btn.textContent = "All done for today! 🎉";
+    practice.classList.remove("hidden");
+    note.textContent = "今日の復習は終わり！また明日来てね。（練習はいつでもOK）";
+  }
+}
+
+function currentStreak() {
+  const t = today();
+  return (store.streak.last === t || store.streak.last === t - 1) ? store.streak.count : 0;
+}
+function bumpStreak() {
+  const t = today();
+  if (store.streak.last === t) return;
+  store.streak.count = store.streak.last === t - 1 ? store.streak.count + 1 : 1;
+  store.streak.last = t;
+}
+
+// ================= SESSION =================
+function buildQueue(sectionIds, cram) {
+  const t = today();
+  const due = [], fresh = [], all = [];
+  for (const s of deck.sections) {
+    if (!sectionIds.includes(s.id)) continue;
+    for (const w of s.words) {
+      const key = cardKey(s.id, w);
+      const item = { key, w, section: s };
+      const st = store.cards[key];
+      all.push(item);
+      if (!st) fresh.push(item);
+      else if (st.due <= t) due.push(item);
+    }
+  }
+  if (cram) {
+    // Practice mode: weakest words first, schedule is not changed.
+    shuffle(all).sort((a, b) => ((store.cards[a.key] || { box: 0 }).box) - ((store.cards[b.key] || { box: 0 }).box));
+    return shuffle(all.slice(0, MAX_SESSION));
+  }
+  shuffle(due);
+  const q = due.slice(0, MAX_SESSION);
+  const room = Math.min(NEW_PER_SESSION, MAX_SESSION - q.length);
+  return shuffle(q.concat(fresh.slice(0, Math.max(0, room))));
+}
+
+let S = null; // current session
+
+function startSession(cram) {
+  const queue = buildQueue(selectedIds(), cram);
+  if (!queue.length) return;
+  S = { queue, total: queue.length, done: 0, missed: new Set(), firstTry: 0, xp: 0, combo: 0, bestCombo: 0, cram, flipped: false, busy: false };
+  show("study");
+  $("combo").textContent = "";
+  updateProgress();
+  showCard(true);
+}
+
+function levelDots(key) {
+  const box = (store.cards[key] || { box: 0 }).box;
+  let h = "";
+  for (let i = 1; i <= MASTERED_LEVEL; i++) h += `<span class="${box >= i ? "on" : ""}"></span>`;
+  return `<div class="lvl" title="Level">${h}</div>`;
+}
+
+const speakerSvg = `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 10v4a1 1 0 0 0 1 1h3l4 4V5L7 9H4a1 1 0 0 0-1 1zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>`;
+
+function showCard(first) {
+  const item = S.queue[0];
+  const card = $("card");
+  const w = item.w;
+  const forms = w.forms ? `<div class="forms">${w.forms.map(esc).join(" ・ ")}</div>` : "";
+  const isNew = !store.cards[item.key];
+  const tag = `<div class="tag">${esc(item.section.title)}${isNew ? " · <span style='color:var(--blue)'>NEW</span>" : ""}</div>`;
+  const speakBtn = `<button class="speak" data-say="${esc(w.en)}" title="Listen">${speakerSvg}</button>`;
+
+  let front, back;
+  if (store.settings.dir === "en-ja") {
+    front = `${tag}${levelDots(item.key)}<div class="word-en">${esc(w.en)}</div>${speakBtn}<div class="hint">Tap to flip ・ タップしてめくる</div>`;
+    back = `${tag}${levelDots(item.key)}<div class="word-ja ja">${esc(w.ja)}</div><div class="small-en">${esc(w.en)}</div>${forms}${speakBtn}`;
+  } else {
+    front = `${tag}${levelDots(item.key)}<div class="word-ja ja">${esc(w.ja)}</div><div class="hint">Say it in English! ・ 英語で言ってみよう</div>`;
+    back = `${tag}${levelDots(item.key)}<div class="word-en">${esc(w.en)}</div>${forms}<div class="small-en ja" style="font-size:20px">${esc(w.ja)}</div>${speakBtn}`;
+  }
+
+  // reset to front without animating
+  card.classList.add("noanim");
+  card.classList.remove("flipped", "enter", "shake");
+  $("front").innerHTML = front;
+  $("back").innerHTML = back;
+  void card.offsetWidth;
+  card.classList.remove("noanim");
+  card.classList.add("enter");
+  S.flipped = false;
+  S.busy = false;
+  $("answer").classList.add("locked");
+  card.querySelectorAll(".speak").forEach((b) => b.addEventListener("click", (e) => { e.stopPropagation(); speak(b.dataset.say); }));
+  if (store.settings.dir === "en-ja") speak(w.en);
+}
+
+function flip() {
+  if (!S || S.busy) return;
+  S.flipped = !S.flipped;
+  $("card").classList.toggle("flipped", S.flipped);
+  if (S.flipped) {
+    $("answer").classList.remove("locked");
+    if (store.settings.dir === "ja-en") speak(S.queue[0].w.en);
+  }
+}
+
+function answer(good) {
+  if (!S || !S.flipped || S.busy) return;
+  S.busy = true;
+  const t = today();
+  const item = S.queue.shift();
+  const st = store.cards[item.key] || { box: 0, due: t };
+  const firstAttempt = !S.missed.has(item.key);
+
+  if (good) {
+    S.combo++;
+    S.bestCombo = Math.max(S.bestCombo, S.combo);
+    const gain = 10 + Math.min(S.combo - 1, 10);
+    S.xp += gain;
+    store.xp += gain;
+    S.done++;
+    if (firstAttempt) S.firstTry++;
+    if (!S.cram && firstAttempt) { st.box = Math.min(st.box + 1, INTERVALS.length - 1); st.due = t + INTERVALS[st.box]; }
+    floatXp(`+${gain}`);
+    comboText();
+  } else {
+    S.combo = 0;
+    comboText();
+    if (!S.cram) { st.box = 1; st.due = t + INTERVALS[1]; }
+    S.missed.add(item.key);
+    S.queue.splice(Math.min(3, S.queue.length), 0, item); // comes back in a few cards
+    $("card").classList.add("shake");
+  }
+  if (!S.cram || store.cards[item.key]) store.cards[item.key] = st;
+  bumpStreak();
+  saveStore();
+  updateProgress();
+
+  setTimeout(() => {
+    if (S.queue.length) showCard(false);
+    else finish();
+  }, good ? 220 : 420);
+}
+
+function updateProgress() { $("progressFill").style.width = `${(S.done / S.total) * 100}%`; }
+
+function comboText() {
+  const el = $("combo");
+  el.textContent = S.combo >= 3 ? `🔥 ${S.combo} combo` : "";
+  el.classList.add("pop");
+  setTimeout(() => el.classList.remove("pop"), 150);
+}
+
+function floatXp(text) {
+  const r = $("goodBtn").getBoundingClientRect();
+  const el = document.createElement("div");
+  el.className = "xp-float";
+  el.textContent = text;
+  el.style.left = `${r.left + r.width / 2 - 20}px`;
+  el.style.top = `${r.top - 10}px`;
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 900);
+}
+
+function finish() {
+  const pct = Math.round((S.firstTry / S.total) * 100);
+  $("sumCards").textContent = S.total;
+  $("sumFirst").textContent = `${pct}%`;
+  $("sumXp").textContent = `+${S.xp}`;
+  const [en, ja] = pct >= 90 ? ["Amazing!", "すばらしい！"] : pct >= 70 ? ["Great job!", "よくできました！"] : ["Nice work!", "がんばったね！"];
+  $("sumTitle").textContent = en;
+  $("sumSub").textContent = ja;
+  show("summary");
+  confetti();
+}
+
+// ================= CONFETTI =================
+function confetti() {
+  const c = $("confetti"), ctx = c.getContext("2d");
+  c.width = innerWidth; c.height = innerHeight;
+  const colors = ["#ff8a3d", "#3cb371", "#4a7dff", "#ffc531", "#ef5a5a", "#b06cff"];
+  const parts = Array.from({ length: 140 }, () => ({
+    x: Math.random() * c.width, y: -20 - Math.random() * c.height * 0.5,
+    vx: (Math.random() - 0.5) * 3, vy: 2 + Math.random() * 3,
+    r: Math.random() * Math.PI, vr: (Math.random() - 0.5) * 0.3,
+    w: 8 + Math.random() * 6, h: 5 + Math.random() * 5, col: colors[Math.floor(Math.random() * colors.length)],
+  }));
+  let frames = 0;
+  (function tick() {
+    ctx.clearRect(0, 0, c.width, c.height);
+    for (const p of parts) {
+      p.x += p.vx; p.y += p.vy; p.vy += 0.04; p.r += p.vr;
+      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.r); ctx.fillStyle = p.col; ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h); ctx.restore();
+    }
+    if (++frames < 240) requestAnimationFrame(tick); else ctx.clearRect(0, 0, c.width, c.height);
+  })();
+}
+
+// ================= EVENTS =================
+$("card").addEventListener("click", flip);
+$("againBtn").addEventListener("click", () => answer(false));
+$("goodBtn").addEventListener("click", () => answer(true));
+$("quitBtn").addEventListener("click", () => { S = null; speechSynthesis && speechSynthesis.cancel(); show("home"); renderHome(); });
+$("startBtn").addEventListener("click", () => startSession(false));
+$("practiceBtn").addEventListener("click", () => startSession(true));
+$("againSessionBtn").addEventListener("click", () => {
+  const plan = buildQueue(selectedIds(), false);
+  if (plan.length) startSession(false); else startSession(true);
+});
+$("homeBtn").addEventListener("click", () => { show("home"); renderHome(); });
+$("selectAll").addEventListener("click", () => {
+  setSelected(selectedIds().length === deck.sections.length ? [] : deck.sections.map((s) => s.id));
+  renderHome();
+});
+$("dirToggle").addEventListener("click", (e) => {
+  const b = e.target.closest("button"); if (!b) return;
+  store.settings.dir = b.dataset.dir; saveStore(); renderHome();
+});
+$("deckSelect").addEventListener("change", (e) => loadDeck(e.target.value));
+$("resetBtn").addEventListener("click", () => {
+  if (confirm("Reset all progress on this device?\nこの端末の記録をすべて消しますか？")) {
+    store = freshStore(); saveStore(); renderHome();
+  }
+});
+document.addEventListener("keydown", (e) => {
+  if ($("study").classList.contains("hidden")) return;
+  if (e.code === "Space" || e.key === "Enter") { e.preventDefault(); if (!S.flipped) flip(); }
+  else if (e.key === "1" || e.key === "ArrowLeft") answer(false);
+  else if (e.key === "2" || e.key === "ArrowRight") answer(true);
+});
+if ("speechSynthesis" in window) speechSynthesis.onvoiceschanged = () => {};
+
+// ================= START =================
+$("deckSelect").innerHTML = DECKS.map((d) => `<option value="${d.id}">${esc(d.title)}</option>`).join("");
+$("deckSelect").value = store.settings.deck;
+loadDeck(store.settings.deck).catch(() => {
+  document.querySelector("#sections").innerHTML = `<p>Couldn't load the word list. ・ 単語リストを読み込めませんでした。</p>`;
+});
+</script>
+</body>
+</html>

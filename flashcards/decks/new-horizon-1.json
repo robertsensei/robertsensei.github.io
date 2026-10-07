@@ -1,0 +1,1361 @@
+{
+ "id": "new-horizon-1",
+ "title": "New Horizon 1",
+ "grade": "中1",
+ "sections": [
+  {
+   "id": "elementary",
+   "title": "Elementary Review",
+   "words": [
+    {
+     "en": "nice",
+     "ja": "すてきな、よい"
+    },
+    {
+     "en": "to",
+     "ja": "～へ、～に"
+    },
+    {
+     "en": "meet",
+     "ja": "会う"
+    },
+    {
+     "en": "you",
+     "ja": "あなた（たち）"
+    },
+    {
+     "en": "good",
+     "ja": "よい"
+    },
+    {
+     "en": "morning",
+     "ja": "朝、午前"
+    },
+    {
+     "en": "I",
+     "ja": "私は"
+    },
+    {
+     "en": "am",
+     "ja": "～である"
+    },
+    {
+     "en": "hi",
+     "ja": "やあ"
+    },
+    {
+     "en": "my",
+     "ja": "私の"
+    },
+    {
+     "en": "name",
+     "ja": "名前"
+    },
+    {
+     "en": "is",
+     "ja": "～である"
+    },
+    {
+     "en": "hello",
+     "ja": "こんにちは"
+    },
+    {
+     "en": "do",
+     "ja": "する"
+    },
+    {
+     "en": "like",
+     "ja": "好きである"
+    },
+    {
+     "en": "tennis",
+     "ja": "テニス"
+    },
+    {
+     "en": "yes",
+     "ja": "はい"
+    }
+   ]
+  },
+  {
+   "id": "phonics",
+   "title": "Elementary Review (Phonics)",
+   "words": [
+    {
+     "en": "fan",
+     "ja": "うちわ、扇風機"
+    },
+    {
+     "en": "pen",
+     "ja": "ペン"
+    },
+    {
+     "en": "ten",
+     "ja": "10"
+    },
+    {
+     "en": "sun",
+     "ja": "太陽"
+    },
+    {
+     "en": "run",
+     "ja": "走る"
+    },
+    {
+     "en": "hat",
+     "ja": "（ふちのある）帽子"
+    },
+    {
+     "en": "hot",
+     "ja": "暑い、熱い"
+    },
+    {
+     "en": "cup",
+     "ja": "カップ"
+    },
+    {
+     "en": "cap",
+     "ja": "（ふちのない）帽子"
+    },
+    {
+     "en": "map",
+     "ja": "地図"
+    },
+    {
+     "en": "mop",
+     "ja": "モップ"
+    },
+    {
+     "en": "cut",
+     "ja": "切る"
+    },
+    {
+     "en": "TV",
+     "ja": "テレビ"
+    },
+    {
+     "en": "milk",
+     "ja": "牛乳"
+    },
+    {
+     "en": "box",
+     "ja": "箱"
+    },
+    {
+     "en": "bag",
+     "ja": "かばん"
+    },
+    {
+     "en": "desk",
+     "ja": "机"
+    },
+    {
+     "en": "bed",
+     "ja": "ベッド"
+    }
+   ]
+  },
+  {
+   "id": "unit1",
+   "title": "Unit 1",
+   "words": [
+    {
+     "en": "call",
+     "ja": "呼ぶ"
+    },
+    {
+     "en": "South Africa",
+     "ja": "南アフリカ"
+    },
+    {
+     "en": "love",
+     "ja": "大好きである"
+    },
+    {
+     "en": "fan",
+     "ja": "ファン"
+    },
+    {
+     "en": "often",
+     "ja": "よく、しばしば"
+    },
+    {
+     "en": "with",
+     "ja": "～と一緒に"
+    },
+    {
+     "en": "but",
+     "ja": "しかし"
+    },
+    {
+     "en": "draw",
+     "ja": "（絵を）描く"
+    },
+    {
+     "en": "an",
+     "ja": "1つの"
+    },
+    {
+     "en": "anime",
+     "ja": "アニメ"
+    },
+    {
+     "en": "so",
+     "ja": "だから"
+    },
+    {
+     "en": "about",
+     "ja": "～について"
+    },
+    {
+     "en": "lesson",
+     "ja": "レッスン、授業",
+     "forms": [
+      "lessons"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "unit2",
+   "title": "Unit 2",
+   "words": [
+    {
+     "en": "class",
+     "ja": "クラス、授業"
+    },
+    {
+     "en": "our",
+     "ja": "私たちの"
+    },
+    {
+     "en": "Canada",
+     "ja": "カナダ"
+    },
+    {
+     "en": "America",
+     "ja": "アメリカ"
+    },
+    {
+     "en": "Chinese",
+     "ja": "中国語、中国の"
+    },
+    {
+     "en": "cannot",
+     "ja": "～できない"
+    },
+    {
+     "en": "some",
+     "ja": "いくつかの"
+    },
+    {
+     "en": "parent",
+     "ja": "親",
+     "forms": [
+      "parents"
+     ]
+    },
+    {
+     "en": "China",
+     "ja": "中国"
+    },
+    {
+     "en": "excuse",
+     "ja": "許す（Excuse me. すみません）"
+    },
+    {
+     "en": "oops",
+     "ja": "おっと"
+    },
+    {
+     "en": "here",
+     "ja": "ここに"
+    },
+    {
+     "en": "welcome",
+     "ja": "ようこそ"
+    }
+   ]
+  },
+  {
+   "id": "unit3",
+   "title": "Unit 3",
+   "words": [
+    {
+     "en": "symbol",
+     "ja": "象徴、シンボル"
+    },
+    {
+     "en": "for",
+     "ja": "～のために"
+    },
+    {
+     "en": "interesting",
+     "ja": "おもしろい、興味深い"
+    },
+    {
+     "en": "favorite",
+     "ja": "お気に入りの"
+    },
+    {
+     "en": "character",
+     "ja": "キャラクター、登場人物"
+    },
+    {
+     "en": "also",
+     "ja": "～もまた"
+    },
+    {
+     "en": "around",
+     "ja": "～のあちこちに"
+    },
+    {
+     "en": "after",
+     "ja": "～の後に"
+    },
+    {
+     "en": "online",
+     "ja": "オンラインで"
+    },
+    {
+     "en": "hallway",
+     "ja": "廊下"
+    },
+    {
+     "en": "win",
+     "ja": "勝つ"
+    },
+    {
+     "en": "next",
+     "ja": "次の"
+    },
+    {
+     "en": "luck",
+     "ja": "運（Good luck! がんばって）"
+    },
+    {
+     "en": "near",
+     "ja": "～の近くに"
+    }
+   ]
+  },
+  {
+   "id": "unit4",
+   "title": "Unit 4",
+   "words": [
+    {
+     "en": "New Zealand",
+     "ja": "ニュージーランド"
+    },
+    {
+     "en": "puppy",
+     "ja": "子犬",
+     "forms": [
+      "puppies"
+     ]
+    },
+    {
+     "en": "of",
+     "ja": "～の"
+    },
+    {
+     "en": "someday",
+     "ja": "いつか"
+    },
+    {
+     "en": "lot",
+     "ja": "たくさん（a lot）"
+    },
+    {
+     "en": "they",
+     "ja": "彼らは、それらは"
+    },
+    {
+     "en": "noon",
+     "ja": "正午"
+    },
+    {
+     "en": "last",
+     "ja": "最後の"
+    },
+    {
+     "en": "like",
+     "ja": "～のような"
+    },
+    {
+     "en": "o'clock",
+     "ja": "～時"
+    },
+    {
+     "en": "front",
+     "ja": "前（in front of ～の前に）"
+    },
+    {
+     "en": "be",
+     "ja": "～である（Don't be ～.）"
+    },
+    {
+     "en": "nervous",
+     "ja": "緊張して"
+    },
+    {
+     "en": "worry",
+     "ja": "心配する"
+    },
+    {
+     "en": "yourself",
+     "ja": "あなた自身"
+    },
+    {
+     "en": "sheep",
+     "ja": "羊"
+    },
+    {
+     "en": "kiwi",
+     "ja": "キウイ（鳥）",
+     "forms": [
+      "kiwis"
+     ]
+    },
+    {
+     "en": "right",
+     "ja": "正しい、右"
+    }
+   ]
+  },
+  {
+   "id": "stage1",
+   "title": "Stage Activity 1",
+   "words": [
+    {
+     "en": "poster",
+     "ja": "ポスター"
+    },
+    {
+     "en": "age",
+     "ja": "年齢"
+    },
+    {
+     "en": "movie",
+     "ja": "映画"
+    },
+    {
+     "en": "student",
+     "ja": "生徒、学生"
+    },
+    {
+     "en": "much",
+     "ja": "たくさん（How much ～? いくら）"
+    },
+    {
+     "en": "starter",
+     "ja": "先発選手"
+    },
+    {
+     "en": "famous",
+     "ja": "有名な"
+    },
+    {
+     "en": "tell",
+     "ja": "伝える、話す"
+    }
+   ]
+  },
+  {
+   "id": "unit5",
+   "title": "Unit 5",
+   "words": [
+    {
+     "en": "as",
+     "ja": "～として"
+    },
+    {
+     "en": "tour",
+     "ja": "ツアー"
+    },
+    {
+     "en": "guide",
+     "ja": "ガイド、案内人"
+    },
+    {
+     "en": "write",
+     "ja": "書く",
+     "forms": [
+      "writes"
+     ]
+    },
+    {
+     "en": "blog",
+     "ja": "ブログ"
+    },
+    {
+     "en": "local",
+     "ja": "地元の"
+    },
+    {
+     "en": "beautiful",
+     "ja": "美しい"
+    },
+    {
+     "en": "spot",
+     "ja": "場所",
+     "forms": [
+      "spots"
+     ]
+    },
+    {
+     "en": "his",
+     "ja": "彼の"
+    },
+    {
+     "en": "any",
+     "ja": "何か、いくつかの（疑問文）"
+    },
+    {
+     "en": "does",
+     "ja": "～しますか（三人称単数）"
+    },
+    {
+     "en": "has",
+     "ja": "持っている（haveの三人称単数）"
+    },
+    {
+     "en": "there",
+     "ja": "そこに"
+    },
+    {
+     "en": "surf",
+     "ja": "サーフィンをする",
+     "forms": [
+      "surfs"
+     ]
+    },
+    {
+     "en": "life",
+     "ja": "生活"
+    }
+   ]
+  },
+  {
+   "id": "unit6",
+   "title": "Unit 6",
+   "words": [
+    {
+     "en": "him",
+     "ja": "彼を、彼に"
+    },
+    {
+     "en": "say",
+     "ja": "言う"
+    },
+    {
+     "en": "everything",
+     "ja": "すべてのこと"
+    },
+    {
+     "en": "show",
+     "ja": "見せる"
+    },
+    {
+     "en": "her",
+     "ja": "彼女を、彼女の"
+    },
+    {
+     "en": "performer",
+     "ja": "演者"
+    },
+    {
+     "en": "the U.K.",
+     "ja": "イギリス"
+    },
+    {
+     "en": "together",
+     "ja": "一緒に"
+    },
+    {
+     "en": "minute",
+     "ja": "分",
+     "forms": [
+      "minutes"
+     ]
+    },
+    {
+     "en": "wait",
+     "ja": "待つ"
+    },
+    {
+     "en": "whose",
+     "ja": "誰の"
+    },
+    {
+     "en": "yours",
+     "ja": "あなたのもの"
+    },
+    {
+     "en": "mine",
+     "ja": "私のもの"
+    },
+    {
+     "en": "maybe",
+     "ja": "たぶん"
+    },
+    {
+     "en": "careful",
+     "ja": "注意深い"
+    },
+    {
+     "en": "crowded",
+     "ja": "混雑した"
+    },
+    {
+     "en": "history",
+     "ja": "歴史"
+    },
+    {
+     "en": "still",
+     "ja": "まだ"
+    },
+    {
+     "en": "over",
+     "ja": "終わって"
+    },
+    {
+     "en": "cushion",
+     "ja": "座布団、クッション"
+    },
+    {
+     "en": "different",
+     "ja": "違う"
+    },
+    {
+     "en": "role",
+     "ja": "役割",
+     "forms": [
+      "roles"
+     ]
+    },
+    {
+     "en": "use",
+     "ja": "使う",
+     "forms": [
+      "uses"
+     ]
+    },
+    {
+     "en": "only",
+     "ja": "～だけ"
+    },
+    {
+     "en": "prop",
+     "ja": "小道具",
+     "forms": [
+      "props"
+     ]
+    },
+    {
+     "en": "which",
+     "ja": "どちら、どの"
+    },
+    {
+     "en": "or",
+     "ja": "または"
+    },
+    {
+     "en": "casual",
+     "ja": "気軽な"
+    },
+    {
+     "en": "large",
+     "ja": "大きい"
+    },
+    {
+     "en": "collection",
+     "ja": "コレクション"
+    }
+   ]
+  },
+  {
+   "id": "unit7",
+   "title": "Unit 7",
+   "words": [
+    {
+     "en": "tomorrow",
+     "ja": "明日"
+    },
+    {
+     "en": "plan",
+     "ja": "計画、予定",
+     "forms": [
+      "plans"
+     ]
+    },
+    {
+     "en": "free",
+     "ja": "ひまな"
+    },
+    {
+     "en": "mean",
+     "ja": "意味する"
+    },
+    {
+     "en": "forward",
+     "ja": "前へ（look forward to ～を楽しみにする）"
+    },
+    {
+     "en": "market",
+     "ja": "市場"
+    },
+    {
+     "en": "souvenir",
+     "ja": "おみやげ",
+     "forms": [
+      "souvenirs"
+     ]
+    },
+    {
+     "en": "place",
+     "ja": "場所"
+    },
+    {
+     "en": "appear",
+     "ja": "現れる",
+     "forms": [
+      "appears"
+     ]
+    },
+    {
+     "en": "those",
+     "ja": "それらの、あれらの"
+    },
+    {
+     "en": "mom",
+     "ja": "お母さん"
+    },
+    {
+     "en": "dad",
+     "ja": "お父さん"
+    },
+    {
+     "en": "travel",
+     "ja": "旅行する",
+     "forms": [
+      "traveling"
+     ]
+    },
+    {
+     "en": "angry",
+     "ja": "怒った"
+    },
+    {
+     "en": "palace",
+     "ja": "宮殿"
+    },
+    {
+     "en": "exciting",
+     "ja": "わくわくする"
+    },
+    {
+     "en": "late",
+     "ja": "遅れた、遅い"
+    },
+    {
+     "en": "pardon",
+     "ja": "（Pardon? もう一度言ってください）"
+    },
+    {
+     "en": "along",
+     "ja": "～に沿って"
+    },
+    {
+     "en": "street",
+     "ja": "通り"
+    },
+    {
+     "en": "traffic light",
+     "ja": "信号"
+    },
+    {
+     "en": "straight",
+     "ja": "まっすぐに"
+    },
+    {
+     "en": "factory",
+     "ja": "工場"
+    },
+    {
+     "en": "building",
+     "ja": "建物"
+    }
+   ]
+  },
+  {
+   "id": "unit8",
+   "title": "Unit 8",
+   "words": [
+    {
+     "en": "ethnic",
+     "ja": "民族の"
+    },
+    {
+     "en": "Africa",
+     "ja": "アフリカ"
+    },
+    {
+     "en": "Kenya",
+     "ja": "ケニア"
+    },
+    {
+     "en": "volunteer",
+     "ja": "ボランティア"
+    },
+    {
+     "en": "need",
+     "ja": "必要とする"
+    },
+    {
+     "en": "teach",
+     "ja": "教える",
+     "forms": [
+      "teaches"
+     ]
+    },
+    {
+     "en": "try",
+     "ja": "やってみる",
+     "forms": [
+      "tries"
+     ]
+    },
+    {
+     "en": "best",
+     "ja": "最もよい（do my best 最善を尽くす）"
+    },
+    {
+     "en": "respect",
+     "ja": "尊敬する"
+    },
+    {
+     "en": "become",
+     "ja": "～になる"
+    },
+    {
+     "en": "African",
+     "ja": "アフリカの"
+    },
+    {
+     "en": "reduce",
+     "ja": "減らす"
+    },
+    {
+     "en": "waste",
+     "ja": "無駄、ごみ"
+    },
+    {
+     "en": "plastic",
+     "ja": "プラスチック"
+    },
+    {
+     "en": "paper",
+     "ja": "紙"
+    },
+    {
+     "en": "straw",
+     "ja": "ストロー",
+     "forms": [
+      "straws"
+     ]
+    },
+    {
+     "en": "original",
+     "ja": "独自の"
+    },
+    {
+     "en": "reusable",
+     "ja": "再利用できる"
+    },
+    {
+     "en": "course",
+     "ja": "（of course もちろん）"
+    }
+   ]
+  },
+  {
+   "id": "rl4",
+   "title": "Real Life English Scene 4",
+   "words": [
+    {
+     "en": "server",
+     "ja": "給仕係"
+    },
+    {
+     "en": "would",
+     "ja": "（would like ～がほしい）"
+    },
+    {
+     "en": "anything",
+     "ja": "何か"
+    },
+    {
+     "en": "else",
+     "ja": "ほかに"
+    },
+    {
+     "en": "full",
+     "ja": "おなかがいっぱいの"
+    }
+   ]
+  },
+  {
+   "id": "stage2",
+   "title": "Stage Activity 2: My Hero",
+   "words": [
+    {
+     "en": "voice",
+     "ja": "声"
+    },
+    {
+     "en": "word",
+     "ja": "言葉",
+     "forms": [
+      "words"
+     ]
+    },
+    {
+     "en": "cheer",
+     "ja": "元気づける、応援する"
+    },
+    {
+     "en": "concert",
+     "ja": "コンサート"
+    },
+    {
+     "en": "dome",
+     "ja": "ドーム"
+    },
+    {
+     "en": "stage",
+     "ja": "ステージ"
+    },
+    {
+     "en": "performance",
+     "ja": "公演、演技"
+    },
+    {
+     "en": "again",
+     "ja": "再び"
+    }
+   ]
+  },
+  {
+   "id": "unit9",
+   "title": "Unit 9",
+   "words": [
+    {
+     "en": "back",
+     "ja": "戻って"
+    },
+    {
+     "en": "during",
+     "ja": "～の間に"
+    },
+    {
+     "en": "stay",
+     "ja": "滞在する",
+     "forms": [
+      "stayed"
+     ]
+    },
+    {
+     "en": "snowboarding",
+     "ja": "スノーボード"
+    },
+    {
+     "en": "Christmas Day",
+     "ja": "クリスマス"
+    },
+    {
+     "en": "relax",
+     "ja": "くつろぐ",
+     "forms": [
+      "relaxed"
+     ]
+    },
+    {
+     "en": "met",
+     "ja": "meetの過去形"
+    },
+    {
+     "en": "ice hockey",
+     "ja": "アイスホッケー"
+    }
+   ]
+  },
+  {
+   "id": "rl5",
+   "title": "Real Life English Scene 5",
+   "words": [
+    {
+     "en": "dear",
+     "ja": "親愛なる（手紙の書き出し）"
+    },
+    {
+     "en": "grandma",
+     "ja": "おばあちゃん"
+    },
+    {
+     "en": "grandpa",
+     "ja": "おじいちゃん"
+    },
+    {
+     "en": "ski",
+     "ja": "スキーをする",
+     "forms": [
+      "skiing"
+     ]
+    },
+    {
+     "en": "fell",
+     "ja": "fallの過去形"
+    },
+    {
+     "en": "Mt.",
+     "ja": "～山"
+    },
+    {
+     "en": "snow",
+     "ja": "雪"
+    },
+    {
+     "en": "outside",
+     "ja": "外で"
+    },
+    {
+     "en": "miss",
+     "ja": "～がいなくてさびしい"
+    },
+    {
+     "en": "care",
+     "ja": "気をつけること（Take care.）"
+    }
+   ]
+  },
+  {
+   "id": "unit10",
+   "title": "Unit 10",
+   "words": [
+    {
+     "en": "remember",
+     "ja": "覚えている、思い出す"
+    },
+    {
+     "en": "bored",
+     "ja": "退屈した"
+    },
+    {
+     "en": "were",
+     "ja": "areの過去形"
+    },
+    {
+     "en": "realize",
+     "ja": "気づく",
+     "forms": [
+      "realized"
+     ]
+    },
+    {
+     "en": "made",
+     "ja": "makeの過去形"
+    },
+    {
+     "en": "mistake",
+     "ja": "間違い",
+     "forms": [
+      "mistakes"
+     ]
+    },
+    {
+     "en": "anyone",
+     "ja": "誰か"
+    },
+    {
+     "en": "won",
+     "ja": "winの過去形"
+    },
+    {
+     "en": "anyway",
+     "ja": "とにかく"
+    },
+    {
+     "en": "hey",
+     "ja": "ねえ"
+    },
+    {
+     "en": "break",
+     "ja": "休憩"
+    },
+    {
+     "en": "then",
+     "ja": "そのとき、それから"
+    },
+    {
+     "en": "bring",
+     "ja": "持ってくる"
+    },
+    {
+     "en": "heart",
+     "ja": "心臓、心"
+    },
+    {
+     "en": "beat",
+     "ja": "鼓動する",
+     "forms": [
+      "beating"
+     ]
+    },
+    {
+     "en": "way",
+     "ja": "道、方法"
+    },
+    {
+     "en": "each",
+     "ja": "それぞれの"
+    },
+    {
+     "en": "trip",
+     "ja": "旅行"
+    },
+    {
+     "en": "campground",
+     "ja": "キャンプ場"
+    },
+    {
+     "en": "hot spring",
+     "ja": "温泉"
+    },
+    {
+     "en": "set",
+     "ja": "設置する（set up）"
+    },
+    {
+     "en": "tent",
+     "ja": "テント",
+     "forms": [
+      "tents"
+     ]
+    },
+    {
+     "en": "main",
+     "ja": "主な"
+    },
+    {
+     "en": "campfire",
+     "ja": "キャンプファイヤー"
+    }
+   ]
+  },
+  {
+   "id": "rl6",
+   "title": "Real Life English Scene 6",
+   "words": [
+    {
+     "en": "wrong",
+     "ja": "具合が悪い、間違った"
+    },
+    {
+     "en": "stomachache",
+     "ja": "腹痛"
+    },
+    {
+     "en": "before",
+     "ja": "～の前に"
+    },
+    {
+     "en": "mild",
+     "ja": "軽い"
+    },
+    {
+     "en": "medicine",
+     "ja": "薬"
+    },
+    {
+     "en": "rest",
+     "ja": "休息"
+    },
+    {
+     "en": "headache",
+     "ja": "頭痛"
+    },
+    {
+     "en": "fever",
+     "ja": "熱"
+    },
+    {
+     "en": "toothache",
+     "ja": "歯痛"
+    },
+    {
+     "en": "food poisoning",
+     "ja": "食中毒"
+    }
+   ]
+  },
+  {
+   "id": "stage3",
+   "title": "Stage Activity 3",
+   "words": [
+    {
+     "en": "ran",
+     "ja": "runの過去形"
+    },
+    {
+     "en": "relay",
+     "ja": "リレー"
+    },
+    {
+     "en": "another",
+     "ja": "もう一つの"
+    },
+    {
+     "en": "runner",
+     "ja": "走者"
+    },
+    {
+     "en": "behind",
+     "ja": "～の後ろに"
+    },
+    {
+     "en": "sports day",
+     "ja": "運動会"
+    }
+   ]
+  },
+  {
+   "id": "read",
+   "title": "Let's Read",
+   "words": [
+    {
+     "en": "naughty",
+     "ja": "いたずらな"
+    },
+    {
+     "en": "trick",
+     "ja": "いたずら",
+     "forms": [
+      "tricks"
+     ]
+    },
+    {
+     "en": "crept",
+     "ja": "creepの過去形（忍び寄った）"
+    },
+    {
+     "en": "let",
+     "ja": "～させる"
+    },
+    {
+     "en": "shout",
+     "ja": "叫ぶ",
+     "forms": [
+      "shouted"
+     ]
+    },
+    {
+     "en": "escape",
+     "ja": "逃げる",
+     "forms": [
+      "escaped"
+     ]
+    },
+    {
+     "en": "later",
+     "ja": "後で"
+    },
+    {
+     "en": "thought",
+     "ja": "thinkの過去形"
+    },
+    {
+     "en": "die",
+     "ja": "死ぬ",
+     "forms": [
+      "died"
+     ]
+    },
+    {
+     "en": "alone",
+     "ja": "ひとりで"
+    },
+    {
+     "en": "out",
+     "ja": "外へ"
+    },
+    {
+     "en": "took",
+     "ja": "takeの過去形"
+    },
+    {
+     "en": "vendor",
+     "ja": "行商人、売り手"
+    },
+    {
+     "en": "cart",
+     "ja": "荷車"
+    },
+    {
+     "en": "left",
+     "ja": "leaveの過去形"
+    },
+    {
+     "en": "brought",
+     "ja": "bringの過去形"
+    },
+    {
+     "en": "chestnut",
+     "ja": "栗",
+     "forms": [
+      "chestnuts"
+     ]
+    },
+    {
+     "en": "heard",
+     "ja": "hearの過去形"
+    },
+    {
+     "en": "something",
+     "ja": "何か"
+    },
+    {
+     "en": "himself",
+     "ja": "彼自身"
+    },
+    {
+     "en": "neighbor",
+     "ja": "近所の人"
+    },
+    {
+     "en": "receive",
+     "ja": "受け取る"
+    },
+    {
+     "en": "someone",
+     "ja": "誰か"
+    },
+    {
+     "en": "thing",
+     "ja": "もの、こと",
+     "forms": [
+      "things"
+     ]
+    },
+    {
+     "en": "god",
+     "ja": "神様"
+    },
+    {
+     "en": "say to oneself",
+     "ja": "心の中で思う、ひとりごとを言う"
+    }
+   ]
+  }
+ ]
+}
