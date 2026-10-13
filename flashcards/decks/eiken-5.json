@@ -1,0 +1,92 @@
+{
+ "id": "eiken-5",
+ "title": "英検5級",
+ "grade": "英検5級",
+ "sections": [
+  {
+   "id": "e5-verbs",
+   "title": "Everyday Verbs ・ よく使う動詞",
+   "group": "英検5級",
+   "words": [
+    { "en": "wash", "ja": "洗う", "forms": ["washes"] },
+    { "en": "clean", "ja": "掃除する", "forms": ["cleans"] },
+    { "en": "cook", "ja": "料理する", "forms": ["cooks"] },
+    { "en": "use", "ja": "使う", "forms": ["uses"] },
+    { "en": "wait", "ja": "待つ", "forms": ["waits"] },
+    { "en": "listen", "ja": "聞く", "forms": ["listens"] },
+    { "en": "sing", "ja": "歌う", "forms": ["sings"] },
+    { "en": "help", "ja": "手伝う・助ける", "forms": ["helps"] },
+    { "en": "study", "ja": "勉強する", "forms": ["studies"] },
+    { "en": "practice", "ja": "練習する", "forms": ["practices"] }
+   ]
+  },
+  {
+   "id": "e5-town",
+   "title": "Places ・ 場所",
+   "group": "英検5級",
+   "words": [
+    { "en": "station", "ja": "駅", "forms": ["stations"] },
+    { "en": "library", "ja": "図書館", "forms": ["libraries"] },
+    { "en": "hospital", "ja": "病院", "forms": ["hospitals"] },
+    { "en": "park", "ja": "公園", "forms": ["parks"] },
+    { "en": "store", "ja": "店", "forms": ["stores"] },
+    { "en": "restaurant", "ja": "レストラン", "forms": ["restaurants"] },
+    { "en": "kitchen", "ja": "台所", "forms": ["kitchens"] },
+    { "en": "classroom", "ja": "教室", "forms": ["classrooms"] },
+    { "en": "gym", "ja": "体育館", "forms": ["gyms"] },
+    { "en": "museum", "ja": "博物館・美術館", "forms": ["museums"] }
+   ]
+  },
+  {
+   "id": "e5-things",
+   "title": "Things & People ・ もの・人",
+   "group": "英検5級",
+   "words": [
+    { "en": "umbrella", "ja": "かさ", "forms": ["umbrellas"] },
+    { "en": "dictionary", "ja": "辞書", "forms": ["dictionaries"] },
+    { "en": "notebook", "ja": "ノート", "forms": ["notebooks"] },
+    { "en": "bike", "ja": "自転車", "forms": ["bikes"] },
+    { "en": "picture", "ja": "写真・絵", "forms": ["pictures"] },
+    { "en": "letter", "ja": "手紙", "forms": ["letters"] },
+    { "en": "uncle", "ja": "おじ", "forms": ["uncles"] },
+    { "en": "aunt", "ja": "おば", "forms": ["aunts"] },
+    { "en": "cousin", "ja": "いとこ", "forms": ["cousins"] },
+    { "en": "doctor", "ja": "医者", "forms": ["doctors"] }
+   ]
+  },
+  {
+   "id": "e5-describe",
+   "title": "Describing Words ・ 様子を表すことば",
+   "group": "英検5級",
+   "words": [
+    { "en": "tall", "ja": "背が高い" },
+    { "en": "short", "ja": "短い・背が低い" },
+    { "en": "long", "ja": "長い" },
+    { "en": "new", "ja": "新しい" },
+    { "en": "old", "ja": "古い・年をとった" },
+    { "en": "busy", "ja": "忙しい" },
+    { "en": "free", "ja": "ひまな" },
+    { "en": "sunny", "ja": "晴れた" },
+    { "en": "cloudy", "ja": "くもりの" },
+    { "en": "hungry", "ja": "おなかがすいた" }
+   ]
+  },
+  {
+   "id": "e5-time",
+   "title": "Time & Question Words ・ 時・疑問詞",
+   "group": "英検5級",
+   "words": [
+    { "en": "today", "ja": "今日" },
+    { "en": "tomorrow", "ja": "明日" },
+    { "en": "weekend", "ja": "週末", "forms": ["weekends"] },
+    { "en": "always", "ja": "いつも" },
+    { "en": "usually", "ja": "ふつうは・たいてい" },
+    { "en": "sometimes", "ja": "ときどき" },
+    { "en": "now", "ja": "今" },
+    { "en": "whose", "ja": "だれの" },
+    { "en": "which", "ja": "どちら・どの" },
+    { "en": "how many", "ja": "いくつ" }
+   ]
+  }
+ ]
+}
