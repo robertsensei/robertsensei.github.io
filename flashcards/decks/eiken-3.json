@@ -1,0 +1,297 @@
+{
+ "id": "eiken-3",
+ "title": "英検3級",
+ "grade": "英検3級",
+ "sections": [
+  {
+   "id": "e3-verbs",
+   "title": "Verbs (Past & Past Participle) ・ 動詞",
+   "group": "英検3級",
+   "words": [
+    {
+     "en": "believe",
+     "ja": "信じる",
+     "forms": [
+      "believed",
+      "believed"
+     ]
+    },
+    {
+     "en": "explain",
+     "ja": "説明する",
+     "forms": [
+      "explained",
+      "explained"
+     ]
+    },
+    {
+     "en": "grow",
+     "ja": "育つ・育てる",
+     "forms": [
+      "grew",
+      "grown"
+     ]
+    },
+    {
+     "en": "hope",
+     "ja": "望む",
+     "forms": [
+      "hoped",
+      "hoped"
+     ]
+    },
+    {
+     "en": "improve",
+     "ja": "上達させる・改善する",
+     "forms": [
+      "improved",
+      "improved"
+     ]
+    },
+    {
+     "en": "introduce",
+     "ja": "紹介する",
+     "forms": [
+      "introduced",
+      "introduced"
+     ]
+    },
+    {
+     "en": "protect",
+     "ja": "守る",
+     "forms": [
+      "protected",
+      "protected"
+     ]
+    },
+    {
+     "en": "remember",
+     "ja": "覚えている・思い出す",
+     "forms": [
+      "remembered",
+      "remembered"
+     ]
+    },
+    {
+     "en": "spend",
+     "ja": "過ごす・使う",
+     "forms": [
+      "spent",
+      "spent"
+     ]
+    },
+    {
+     "en": "worry",
+     "ja": "心配する",
+     "forms": [
+      "worried",
+      "worried"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e3-topics",
+   "title": "Topic Words ・ テーマのことば",
+   "group": "英検3級",
+   "words": [
+    {
+     "en": "environment",
+     "ja": "環境"
+    },
+    {
+     "en": "experience",
+     "ja": "経験",
+     "forms": [
+      "experiences"
+     ]
+    },
+    {
+     "en": "future",
+     "ja": "未来・将来"
+    },
+    {
+     "en": "information",
+     "ja": "情報"
+    },
+    {
+     "en": "language",
+     "ja": "言語",
+     "forms": [
+      "languages"
+     ]
+    },
+    {
+     "en": "culture",
+     "ja": "文化",
+     "forms": [
+      "cultures"
+     ]
+    },
+    {
+     "en": "volunteer",
+     "ja": "ボランティア",
+     "forms": [
+      "volunteers"
+     ]
+    },
+    {
+     "en": "island",
+     "ja": "島",
+     "forms": [
+      "islands"
+     ]
+    },
+    {
+     "en": "science",
+     "ja": "科学・理科"
+    },
+    {
+     "en": "history",
+     "ja": "歴史"
+    }
+   ]
+  },
+  {
+   "id": "e3-describe",
+   "title": "Describing Words ・ 様子を表すことば",
+   "group": "英検3級",
+   "words": [
+    {
+     "en": "important",
+     "ja": "大切な"
+    },
+    {
+     "en": "necessary",
+     "ja": "必要な"
+    },
+    {
+     "en": "different",
+     "ja": "違う・異なる"
+    },
+    {
+     "en": "international",
+     "ja": "国際的な"
+    },
+    {
+     "en": "traditional",
+     "ja": "伝統的な"
+    },
+    {
+     "en": "useful",
+     "ja": "役に立つ"
+    },
+    {
+     "en": "careful",
+     "ja": "注意深い"
+    },
+    {
+     "en": "excited",
+     "ja": "わくわくした"
+    },
+    {
+     "en": "surprised",
+     "ja": "驚いた"
+    },
+    {
+     "en": "own",
+     "ja": "自分自身の"
+    }
+   ]
+  },
+  {
+   "id": "e3-grammar",
+   "title": "Grammar Words ・ 文法のことば",
+   "group": "英検3級",
+   "words": [
+    {
+     "en": "already",
+     "ja": "すでに・もう"
+    },
+    {
+     "en": "yet",
+     "ja": "（疑問文で）もう・（否定文で）まだ"
+    },
+    {
+     "en": "since",
+     "ja": "〜以来"
+    },
+    {
+     "en": "ever",
+     "ja": "今までに"
+    },
+    {
+     "en": "never",
+     "ja": "一度も〜ない"
+    },
+    {
+     "en": "during",
+     "ja": "〜の間に"
+    },
+    {
+     "en": "until",
+     "ja": "〜まで"
+    },
+    {
+     "en": "though",
+     "ja": "〜だけれども"
+    },
+    {
+     "en": "each",
+     "ja": "それぞれの"
+    },
+    {
+     "en": "than",
+     "ja": "〜よりも"
+    }
+   ]
+  },
+  {
+   "id": "e3-phrases",
+   "title": "Useful Phrases ・ 熟語",
+   "group": "英検3級",
+   "words": [
+    {
+     "en": "take care of",
+     "ja": "〜の世話をする"
+    },
+    {
+     "en": "look forward to",
+     "ja": "〜を楽しみに待つ"
+    },
+    {
+     "en": "be able to",
+     "ja": "〜できる"
+    },
+    {
+     "en": "a few",
+     "ja": "少しの・いくつかの"
+    },
+    {
+     "en": "each other",
+     "ja": "お互い"
+    },
+    {
+     "en": "for example",
+     "ja": "例えば"
+    },
+    {
+     "en": "in the future",
+     "ja": "将来"
+    },
+    {
+     "en": "because of",
+     "ja": "〜のために・〜が原因で"
+    },
+    {
+     "en": "be interested in",
+     "ja": "〜に興味がある"
+    },
+    {
+     "en": "look for",
+     "ja": "〜を探す"
+    }
+   ]
+  }
+ ]
+}

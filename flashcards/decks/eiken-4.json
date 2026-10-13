@@ -1,0 +1,329 @@
+{
+ "id": "eiken-4",
+ "title": "英検4級",
+ "grade": "英検4級",
+ "sections": [
+  {
+   "id": "e4-verbs",
+   "title": "Verbs (Past Tense) ・ 動詞と過去形",
+   "group": "英検4級",
+   "words": [
+    {
+     "en": "arrive",
+     "ja": "着く",
+     "forms": [
+      "arrived"
+     ]
+    },
+    {
+     "en": "borrow",
+     "ja": "借りる",
+     "forms": [
+      "borrowed"
+     ]
+    },
+    {
+     "en": "bring",
+     "ja": "持ってくる",
+     "forms": [
+      "brought"
+     ]
+    },
+    {
+     "en": "catch",
+     "ja": "捕まえる",
+     "forms": [
+      "caught"
+     ]
+    },
+    {
+     "en": "decide",
+     "ja": "決める",
+     "forms": [
+      "decided"
+     ]
+    },
+    {
+     "en": "forget",
+     "ja": "忘れる",
+     "forms": [
+      "forgot"
+     ]
+    },
+    {
+     "en": "invite",
+     "ja": "招待する",
+     "forms": [
+      "invited"
+     ]
+    },
+    {
+     "en": "join",
+     "ja": "参加する",
+     "forms": [
+      "joined"
+     ]
+    },
+    {
+     "en": "leave",
+     "ja": "出発する・去る",
+     "forms": [
+      "left"
+     ]
+    },
+    {
+     "en": "sell",
+     "ja": "売る",
+     "forms": [
+      "sold"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-places",
+   "title": "Places & Travel ・ 場所・旅行",
+   "group": "英検4級",
+   "words": [
+    {
+     "en": "airport",
+     "ja": "空港",
+     "forms": [
+      "airports"
+     ]
+    },
+    {
+     "en": "bakery",
+     "ja": "パン屋",
+     "forms": [
+      "bakeries"
+     ]
+    },
+    {
+     "en": "bridge",
+     "ja": "橋",
+     "forms": [
+      "bridges"
+     ]
+    },
+    {
+     "en": "hotel",
+     "ja": "ホテル",
+     "forms": [
+      "hotels"
+     ]
+    },
+    {
+     "en": "post office",
+     "ja": "郵便局",
+     "forms": [
+      "post offices"
+     ]
+    },
+    {
+     "en": "supermarket",
+     "ja": "スーパー",
+     "forms": [
+      "supermarkets"
+     ]
+    },
+    {
+     "en": "theater",
+     "ja": "劇場",
+     "forms": [
+      "theaters"
+     ]
+    },
+    {
+     "en": "beach",
+     "ja": "浜辺・ビーチ",
+     "forms": [
+      "beaches"
+     ]
+    },
+    {
+     "en": "mountain",
+     "ja": "山",
+     "forms": [
+      "mountains"
+     ]
+    },
+    {
+     "en": "trip",
+     "ja": "旅行",
+     "forms": [
+      "trips"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-things",
+   "title": "Things & Events ・ もの・行事",
+   "group": "英検4級",
+   "words": [
+    {
+     "en": "ticket",
+     "ja": "チケット・切符",
+     "forms": [
+      "tickets"
+     ]
+    },
+    {
+     "en": "money",
+     "ja": "お金"
+    },
+    {
+     "en": "contest",
+     "ja": "コンテスト",
+     "forms": [
+      "contests"
+     ]
+    },
+    {
+     "en": "festival",
+     "ja": "祭り",
+     "forms": [
+      "festivals"
+     ]
+    },
+    {
+     "en": "concert",
+     "ja": "コンサート",
+     "forms": [
+      "concerts"
+     ]
+    },
+    {
+     "en": "vacation",
+     "ja": "休暇",
+     "forms": [
+      "vacations"
+     ]
+    },
+    {
+     "en": "map",
+     "ja": "地図",
+     "forms": [
+      "maps"
+     ]
+    },
+    {
+     "en": "magazine",
+     "ja": "雑誌",
+     "forms": [
+      "magazines"
+     ]
+    },
+    {
+     "en": "nurse",
+     "ja": "看護師",
+     "forms": [
+      "nurses"
+     ]
+    },
+    {
+     "en": "pilot",
+     "ja": "パイロット",
+     "forms": [
+      "pilots"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-describe",
+   "title": "Describing Words ・ 様子を表すことば",
+   "group": "英検4級",
+   "words": [
+    {
+     "en": "easy",
+     "ja": "簡単な"
+    },
+    {
+     "en": "difficult",
+     "ja": "難しい"
+    },
+    {
+     "en": "famous",
+     "ja": "有名な"
+    },
+    {
+     "en": "popular",
+     "ja": "人気のある"
+    },
+    {
+     "en": "interesting",
+     "ja": "おもしろい・興味深い"
+    },
+    {
+     "en": "expensive",
+     "ja": "高価な"
+    },
+    {
+     "en": "cheap",
+     "ja": "安い"
+    },
+    {
+     "en": "dangerous",
+     "ja": "危険な"
+    },
+    {
+     "en": "sick",
+     "ja": "病気の"
+    },
+    {
+     "en": "tired",
+     "ja": "疲れた"
+    }
+   ]
+  },
+  {
+   "id": "e4-time",
+   "title": "Time Words ・ 時を表すことば",
+   "group": "英検4級",
+   "words": [
+    {
+     "en": "yesterday",
+     "ja": "昨日"
+    },
+    {
+     "en": "ago",
+     "ja": "〜前に"
+    },
+    {
+     "en": "before",
+     "ja": "〜の前に"
+    },
+    {
+     "en": "after",
+     "ja": "〜の後に"
+    },
+    {
+     "en": "soon",
+     "ja": "すぐに"
+    },
+    {
+     "en": "next",
+     "ja": "次の"
+    },
+    {
+     "en": "last",
+     "ja": "この前の・最後の"
+    },
+    {
+     "en": "early",
+     "ja": "早く・早い"
+    },
+    {
+     "en": "late",
+     "ja": "遅く・遅い"
+    },
+    {
+     "en": "tonight",
+     "ja": "今夜"
+    }
+   ]
+  }
+ ]
+}
