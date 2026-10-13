@@ -4,94 +4,143 @@
  "grade": "英検4級",
  "sections": [
   {
-   "id": "e4-verbs",
-   "title": "Verbs (Past Tense) ・ 動詞と過去形",
-   "group": "英検4級",
+   "id": "e4-people",
+   "title": "People & Jobs ・ 人・職業",
+   "group": "名詞 ・ Nouns",
    "words": [
     {
-     "en": "arrive",
-     "ja": "着く",
+     "en": "neighbor",
+     "ja": "近所の人",
      "forms": [
-      "arrived"
+      "neighbors"
      ]
     },
     {
-     "en": "borrow",
-     "ja": "借りる",
+     "en": "classmate",
+     "ja": "クラスメート",
      "forms": [
-      "borrowed"
+      "classmates"
      ]
     },
     {
-     "en": "bring",
-     "ja": "持ってくる",
+     "en": "member",
+     "ja": "メンバー・一員",
      "forms": [
-      "brought"
+      "members"
      ]
     },
     {
-     "en": "catch",
-     "ja": "捕まえる",
+     "en": "guest",
+     "ja": "客",
      "forms": [
-      "caught"
+      "guests"
      ]
     },
     {
-     "en": "decide",
-     "ja": "決める",
+     "en": "visitor",
+     "ja": "訪問者",
      "forms": [
-      "decided"
+      "visitors"
      ]
     },
     {
-     "en": "forget",
-     "ja": "忘れる",
+     "en": "host family",
+     "ja": "ホストファミリー",
      "forms": [
-      "forgot"
+      "host families"
      ]
     },
     {
-     "en": "invite",
-     "ja": "招待する",
+     "en": "grandparent",
+     "ja": "祖父母",
      "forms": [
-      "invited"
+      "grandparents"
      ]
     },
     {
-     "en": "join",
-     "ja": "参加する",
+     "en": "husband",
+     "ja": "夫",
      "forms": [
-      "joined"
+      "husbands"
      ]
     },
     {
-     "en": "leave",
-     "ja": "出発する・去る",
+     "en": "wife",
+     "ja": "妻",
      "forms": [
-      "left"
+      "wives"
      ]
     },
     {
-     "en": "sell",
-     "ja": "売る",
+     "en": "scientist",
+     "ja": "科学者",
      "forms": [
-      "sold"
+      "scientists"
+     ]
+    },
+    {
+     "en": "engineer",
+     "ja": "技術者・エンジニア",
+     "forms": [
+      "engineers"
+     ]
+    },
+    {
+     "en": "musician",
+     "ja": "音楽家",
+     "forms": [
+      "musicians"
+     ]
+    },
+    {
+     "en": "firefighter",
+     "ja": "消防士",
+     "forms": [
+      "firefighters"
+     ]
+    },
+    {
+     "en": "dentist",
+     "ja": "歯医者",
+     "forms": [
+      "dentists"
+     ]
+    },
+    {
+     "en": "vet",
+     "ja": "獣医",
+     "forms": [
+      "vets"
+     ]
+    },
+    {
+     "en": "clerk",
+     "ja": "店員",
+     "forms": [
+      "clerks"
+     ]
+    },
+    {
+     "en": "waiter",
+     "ja": "ウェイター",
+     "forms": [
+      "waiters"
+     ]
+    },
+    {
+     "en": "astronaut",
+     "ja": "宇宙飛行士",
+     "forms": [
+      "astronauts"
      ]
     }
    ]
   },
   {
-   "id": "e4-places",
-   "title": "Places & Travel ・ 場所・旅行",
-   "group": "英検4級",
+   "id": "e4-town",
+   "title": "Around Town ・ 町の中",
+   "group": "名詞 ・ Nouns",
    "words": [
-    {
-     "en": "airport",
-     "ja": "空港",
-     "forms": [
-      "airports"
-     ]
-    },
     {
      "en": "bakery",
      "ja": "パン屋",
@@ -100,17 +149,63 @@
      ]
     },
     {
-     "en": "bridge",
-     "ja": "橋",
+     "en": "bank",
+     "ja": "銀行",
      "forms": [
-      "bridges"
+      "banks"
      ]
     },
     {
-     "en": "hotel",
-     "ja": "ホテル",
+     "en": "bookstore",
+     "ja": "書店",
      "forms": [
-      "hotels"
+      "bookstores"
+     ]
+    },
+    {
+     "en": "building",
+     "ja": "建物",
+     "forms": [
+      "buildings"
+     ]
+    },
+    {
+     "en": "church",
+     "ja": "教会",
+     "forms": [
+      "churches"
+     ]
+    },
+    {
+     "en": "city hall",
+     "ja": "市役所"
+    },
+    {
+     "en": "department store",
+     "ja": "デパート",
+     "forms": [
+      "department stores"
+     ]
+    },
+    {
+     "en": "factory",
+     "ja": "工場",
+     "forms": [
+      "factories"
+     ]
+    },
+    {
+     "en": "fire station",
+     "ja": "消防署",
+     "forms": [
+      "fire stations"
+     ]
+    },
+    {
+     "en": "police station",
+     "ja": "警察署",
+     "forms": [
+      "police stations"
      ]
     },
     {
@@ -121,10 +216,17 @@
      ]
     },
     {
-     "en": "supermarket",
-     "ja": "スーパー",
+     "en": "shopping mall",
+     "ja": "ショッピングモール",
      "forms": [
-      "supermarkets"
+      "shopping malls"
+     ]
+    },
+    {
+     "en": "stadium",
+     "ja": "スタジアム・競技場",
+     "forms": [
+      "stadiums"
      ]
     },
     {
@@ -135,33 +237,93 @@
      ]
     },
     {
-     "en": "beach",
-     "ja": "浜辺・ビーチ",
+     "en": "temple",
+     "ja": "寺",
      "forms": [
-      "beaches"
+      "temples"
      ]
     },
     {
-     "en": "mountain",
-     "ja": "山",
+     "en": "shrine",
+     "ja": "神社",
      "forms": [
-      "mountains"
+      "shrines"
      ]
     },
+    {
+     "en": "aquarium",
+     "ja": "水族館",
+     "forms": [
+      "aquariums"
+     ]
+    },
+    {
+     "en": "amusement park",
+     "ja": "遊園地",
+     "forms": [
+      "amusement parks"
+     ]
+    },
+    {
+     "en": "road",
+     "ja": "道路",
+     "forms": [
+      "roads"
+     ]
+    },
+    {
+     "en": "corner",
+     "ja": "角",
+     "forms": [
+      "corners"
+     ]
+    },
+    {
+     "en": "village",
+     "ja": "村",
+     "forms": [
+      "villages"
+     ]
+    },
+    {
+     "en": "bridge",
+     "ja": "橋",
+     "forms": [
+      "bridges"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-travel",
+   "title": "Travel ・ 旅行",
+   "group": "名詞 ・ Nouns",
+   "words": [
     {
      "en": "trip",
      "ja": "旅行",
      "forms": [
       "trips"
      ]
-    }
-   ]
-  },
-  {
-   "id": "e4-things",
-   "title": "Things & Events ・ もの・行事",
-   "group": "英検4級",
-   "words": [
+    },
+    {
+     "en": "vacation",
+     "ja": "休暇"
+    },
+    {
+     "en": "airport",
+     "ja": "空港",
+     "forms": [
+      "airports"
+     ]
+    },
+    {
+     "en": "hotel",
+     "ja": "ホテル",
+     "forms": [
+      "hotels"
+     ]
+    },
     {
      "en": "ticket",
      "ja": "チケット・切符",
@@ -170,16 +332,86 @@
      ]
     },
     {
-     "en": "money",
-     "ja": "お金"
-    },
-    {
-     "en": "contest",
-     "ja": "コンテスト",
+     "en": "passport",
+     "ja": "パスポート",
      "forms": [
-      "contests"
+      "passports"
      ]
     },
+    {
+     "en": "suitcase",
+     "ja": "スーツケース",
+     "forms": [
+      "suitcases"
+     ]
+    },
+    {
+     "en": "souvenir",
+     "ja": "おみやげ",
+     "forms": [
+      "souvenirs"
+     ]
+    },
+    {
+     "en": "seat",
+     "ja": "座席",
+     "forms": [
+      "seats"
+     ]
+    },
+    {
+     "en": "flight",
+     "ja": "飛行機の便",
+     "forms": [
+      "flights"
+     ]
+    },
+    {
+     "en": "bus stop",
+     "ja": "バス停",
+     "forms": [
+      "bus stops"
+     ]
+    },
+    {
+     "en": "subway",
+     "ja": "地下鉄"
+    },
+    {
+     "en": "way",
+     "ja": "道・方法",
+     "forms": [
+      "ways"
+     ]
+    },
+    {
+     "en": "guide",
+     "ja": "ガイド・案内",
+     "forms": [
+      "guides"
+     ]
+    },
+    {
+     "en": "tour",
+     "ja": "ツアー",
+     "forms": [
+      "tours"
+     ]
+    },
+    {
+     "en": "plan",
+     "ja": "計画・予定",
+     "forms": [
+      "plans"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-events",
+   "title": "Events & Free Time ・ 行事・余暇",
+   "group": "名詞 ・ Nouns",
+   "words": [
     {
      "en": "festival",
      "ja": "祭り",
@@ -195,17 +427,301 @@
      ]
     },
     {
-     "en": "vacation",
-     "ja": "休暇",
+     "en": "contest",
+     "ja": "コンテスト",
      "forms": [
-      "vacations"
+      "contests"
      ]
     },
     {
-     "en": "map",
-     "ja": "地図",
+     "en": "event",
+     "ja": "行事・イベント",
      "forms": [
-      "maps"
+      "events"
+     ]
+    },
+    {
+     "en": "speech",
+     "ja": "スピーチ",
+     "forms": [
+      "speeches"
+     ]
+    },
+    {
+     "en": "race",
+     "ja": "競走・レース",
+     "forms": [
+      "races"
+     ]
+    },
+    {
+     "en": "match",
+     "ja": "試合",
+     "forms": [
+      "matches"
+     ]
+    },
+    {
+     "en": "prize",
+     "ja": "賞",
+     "forms": [
+      "prizes"
+     ]
+    },
+    {
+     "en": "picnic",
+     "ja": "ピクニック",
+     "forms": [
+      "picnics"
+     ]
+    },
+    {
+     "en": "camp",
+     "ja": "キャンプ",
+     "forms": [
+      "camps"
+     ]
+    },
+    {
+     "en": "hiking",
+     "ja": "ハイキング"
+    },
+    {
+     "en": "show",
+     "ja": "ショー・番組",
+     "forms": [
+      "shows"
+     ]
+    },
+    {
+     "en": "program",
+     "ja": "番組",
+     "forms": [
+      "programs"
+     ]
+    },
+    {
+     "en": "comic book",
+     "ja": "まんが",
+     "forms": [
+      "comic books"
+     ]
+    },
+    {
+     "en": "hobby",
+     "ja": "趣味",
+     "forms": [
+      "hobbies"
+     ]
+    },
+    {
+     "en": "idea",
+     "ja": "考え・アイデア",
+     "forms": [
+      "ideas"
+     ]
+    },
+    {
+     "en": "fun",
+     "ja": "楽しみ"
+    },
+    {
+     "en": "drama",
+     "ja": "ドラマ・演劇",
+     "forms": [
+      "dramas"
+     ]
+    },
+    {
+     "en": "band",
+     "ja": "バンド",
+     "forms": [
+      "bands"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-school",
+   "title": "School Life ・ 学校生活",
+   "group": "名詞 ・ Nouns",
+   "words": [
+    {
+     "en": "grade",
+     "ja": "学年・成績",
+     "forms": [
+      "grades"
+     ]
+    },
+    {
+     "en": "uniform",
+     "ja": "制服",
+     "forms": [
+      "uniforms"
+     ]
+    },
+    {
+     "en": "lesson",
+     "ja": "授業・レッスン",
+     "forms": [
+      "lessons"
+     ]
+    },
+    {
+     "en": "exam",
+     "ja": "試験",
+     "forms": [
+      "exams"
+     ]
+    },
+    {
+     "en": "school festival",
+     "ja": "文化祭",
+     "forms": [
+      "school festivals"
+     ]
+    },
+    {
+     "en": "sports day",
+     "ja": "運動会"
+    },
+    {
+     "en": "lunchtime",
+     "ja": "昼休み"
+    },
+    {
+     "en": "break",
+     "ja": "休憩",
+     "forms": [
+      "breaks"
+     ]
+    },
+    {
+     "en": "report",
+     "ja": "レポート・報告",
+     "forms": [
+      "reports"
+     ]
+    },
+    {
+     "en": "paper",
+     "ja": "紙・レポート"
+    },
+    {
+     "en": "poster",
+     "ja": "ポスター",
+     "forms": [
+      "posters"
+     ]
+    },
+    {
+     "en": "homeroom",
+     "ja": "ホームルーム"
+    },
+    {
+     "en": "project",
+     "ja": "課題・プロジェクト",
+     "forms": [
+      "projects"
+     ]
+    },
+    {
+     "en": "dream",
+     "ja": "夢",
+     "forms": [
+      "dreams"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-home",
+   "title": "Home & Things ・ 家・もの",
+   "group": "名詞 ・ Nouns",
+   "words": [
+    {
+     "en": "apartment",
+     "ja": "アパート・マンション",
+     "forms": [
+      "apartments"
+     ]
+    },
+    {
+     "en": "floor",
+     "ja": "床・階",
+     "forms": [
+      "floors"
+     ]
+    },
+    {
+     "en": "wall",
+     "ja": "壁",
+     "forms": [
+      "walls"
+     ]
+    },
+    {
+     "en": "roof",
+     "ja": "屋根",
+     "forms": [
+      "roofs"
+     ]
+    },
+    {
+     "en": "stairs",
+     "ja": "階段"
+    },
+    {
+     "en": "fridge",
+     "ja": "冷蔵庫",
+     "forms": [
+      "fridges"
+     ]
+    },
+    {
+     "en": "towel",
+     "ja": "タオル",
+     "forms": [
+      "towels"
+     ]
+    },
+    {
+     "en": "soap",
+     "ja": "せっけん"
+    },
+    {
+     "en": "bottle",
+     "ja": "びん・ボトル",
+     "forms": [
+      "bottles"
+     ]
+    },
+    {
+     "en": "plate",
+     "ja": "皿",
+     "forms": [
+      "plates"
+     ]
+    },
+    {
+     "en": "fork",
+     "ja": "フォーク",
+     "forms": [
+      "forks"
+     ]
+    },
+    {
+     "en": "knife",
+     "ja": "ナイフ",
+     "forms": [
+      "knives"
+     ]
+    },
+    {
+     "en": "spoon",
+     "ja": "スプーン",
+     "forms": [
+      "spoons"
      ]
     },
     {
@@ -216,25 +732,1285 @@
      ]
     },
     {
-     "en": "nurse",
-     "ja": "看護師",
+     "en": "newspaper",
+     "ja": "新聞",
      "forms": [
-      "nurses"
+      "newspapers"
      ]
     },
     {
-     "en": "pilot",
-     "ja": "パイロット",
+     "en": "card",
+     "ja": "カード",
      "forms": [
-      "pilots"
+      "cards"
+     ]
+    },
+    {
+     "en": "wallet",
+     "ja": "財布",
+     "forms": [
+      "wallets"
+     ]
+    },
+    {
+     "en": "ring",
+     "ja": "指輪",
+     "forms": [
+      "rings"
+     ]
+    },
+    {
+     "en": "gift",
+     "ja": "贈り物",
+     "forms": [
+      "gifts"
+     ]
+    },
+    {
+     "en": "video",
+     "ja": "動画・ビデオ",
+     "forms": [
+      "videos"
+     ]
+    },
+    {
+     "en": "message",
+     "ja": "メッセージ",
+     "forms": [
+      "messages"
+     ]
+    },
+    {
+     "en": "e-mail",
+     "ja": "Eメール",
+     "forms": [
+      "e-mails"
      ]
     }
    ]
   },
   {
-   "id": "e4-describe",
-   "title": "Describing Words ・ 様子を表すことば",
-   "group": "英検4級",
+   "id": "e4-food",
+   "title": "Food & Cooking ・ 食べ物・料理",
+   "group": "名詞 ・ Nouns",
+   "words": [
+    {
+     "en": "hamburger",
+     "ja": "ハンバーガー",
+     "forms": [
+      "hamburgers"
+     ]
+    },
+    {
+     "en": "noodles",
+     "ja": "めん類"
+    },
+    {
+     "en": "spaghetti",
+     "ja": "スパゲッティ"
+    },
+    {
+     "en": "pie",
+     "ja": "パイ",
+     "forms": [
+      "pies"
+     ]
+    },
+    {
+     "en": "sugar",
+     "ja": "砂糖"
+    },
+    {
+     "en": "salt",
+     "ja": "塩"
+    },
+    {
+     "en": "butter",
+     "ja": "バター"
+    },
+    {
+     "en": "cheese",
+     "ja": "チーズ"
+    },
+    {
+     "en": "grape",
+     "ja": "ぶどう",
+     "forms": [
+      "grapes"
+     ]
+    },
+    {
+     "en": "peach",
+     "ja": "もも",
+     "forms": [
+      "peaches"
+     ]
+    },
+    {
+     "en": "melon",
+     "ja": "メロン",
+     "forms": [
+      "melons"
+     ]
+    },
+    {
+     "en": "onion",
+     "ja": "たまねぎ",
+     "forms": [
+      "onions"
+     ]
+    },
+    {
+     "en": "corn",
+     "ja": "とうもろこし"
+    },
+    {
+     "en": "chicken",
+     "ja": "鶏肉・ニワトリ",
+     "forms": [
+      "chickens"
+     ]
+    },
+    {
+     "en": "beef",
+     "ja": "牛肉"
+    },
+    {
+     "en": "pork",
+     "ja": "豚肉"
+    },
+    {
+     "en": "dessert",
+     "ja": "デザート",
+     "forms": [
+      "desserts"
+     ]
+    },
+    {
+     "en": "snack",
+     "ja": "おやつ・軽食",
+     "forms": [
+      "snacks"
+     ]
+    },
+    {
+     "en": "menu",
+     "ja": "メニュー",
+     "forms": [
+      "menus"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-nature",
+   "title": "Nature & Animals ・ 自然・動物",
+   "group": "名詞 ・ Nouns",
+   "words": [
+    {
+     "en": "wind",
+     "ja": "風"
+    },
+    {
+     "en": "cloud",
+     "ja": "雲",
+     "forms": [
+      "clouds"
+     ]
+    },
+    {
+     "en": "storm",
+     "ja": "嵐",
+     "forms": [
+      "storms"
+     ]
+    },
+    {
+     "en": "typhoon",
+     "ja": "台風",
+     "forms": [
+      "typhoons"
+     ]
+    },
+    {
+     "en": "forest",
+     "ja": "森",
+     "forms": [
+      "forests"
+     ]
+    },
+    {
+     "en": "hill",
+     "ja": "丘",
+     "forms": [
+      "hills"
+     ]
+    },
+    {
+     "en": "field",
+     "ja": "野原・畑",
+     "forms": [
+      "fields"
+     ]
+    },
+    {
+     "en": "ground",
+     "ja": "地面・グラウンド"
+    },
+    {
+     "en": "earth",
+     "ja": "地球"
+    },
+    {
+     "en": "leaf",
+     "ja": "葉",
+     "forms": [
+      "leaves"
+     ]
+    },
+    {
+     "en": "pet",
+     "ja": "ペット",
+     "forms": [
+      "pets"
+     ]
+    },
+    {
+     "en": "dolphin",
+     "ja": "イルカ",
+     "forms": [
+      "dolphins"
+     ]
+    },
+    {
+     "en": "whale",
+     "ja": "クジラ",
+     "forms": [
+      "whales"
+     ]
+    },
+    {
+     "en": "snake",
+     "ja": "ヘビ",
+     "forms": [
+      "snakes"
+     ]
+    },
+    {
+     "en": "frog",
+     "ja": "カエル",
+     "forms": [
+      "frogs"
+     ]
+    },
+    {
+     "en": "duck",
+     "ja": "アヒル・カモ",
+     "forms": [
+      "ducks"
+     ]
+    },
+    {
+     "en": "sheep",
+     "ja": "羊",
+     "forms": [
+      "sheep"
+     ]
+    },
+    {
+     "en": "turtle",
+     "ja": "カメ",
+     "forms": [
+      "turtles"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-health",
+   "title": "Body & Health ・ 体・健康",
+   "group": "名詞 ・ Nouns",
+   "words": [
+    {
+     "en": "arm",
+     "ja": "腕",
+     "forms": [
+      "arms"
+     ]
+    },
+    {
+     "en": "leg",
+     "ja": "脚",
+     "forms": [
+      "legs"
+     ]
+    },
+    {
+     "en": "finger",
+     "ja": "指",
+     "forms": [
+      "fingers"
+     ]
+    },
+    {
+     "en": "tooth",
+     "ja": "歯",
+     "forms": [
+      "teeth"
+     ]
+    },
+    {
+     "en": "back",
+     "ja": "背中"
+    },
+    {
+     "en": "shoulder",
+     "ja": "肩",
+     "forms": [
+      "shoulders"
+     ]
+    },
+    {
+     "en": "cold",
+     "ja": "風邪"
+    },
+    {
+     "en": "fever",
+     "ja": "熱"
+    },
+    {
+     "en": "headache",
+     "ja": "頭痛",
+     "forms": [
+      "headaches"
+     ]
+    },
+    {
+     "en": "stomachache",
+     "ja": "腹痛",
+     "forms": [
+      "stomachaches"
+     ]
+    },
+    {
+     "en": "medicine",
+     "ja": "薬"
+    }
+   ]
+  },
+  {
+   "id": "e4-general",
+   "title": "Useful Nouns ・ 便利な名詞",
+   "group": "名詞 ・ Nouns",
+   "words": [
+    {
+     "en": "kind",
+     "ja": "種類",
+     "forms": [
+      "kinds"
+     ]
+    },
+    {
+     "en": "part",
+     "ja": "部分",
+     "forms": [
+      "parts"
+     ]
+    },
+    {
+     "en": "place",
+     "ja": "場所",
+     "forms": [
+      "places"
+     ]
+    },
+    {
+     "en": "thing",
+     "ja": "もの・こと",
+     "forms": [
+      "things"
+     ]
+    },
+    {
+     "en": "life",
+     "ja": "生活・命",
+     "forms": [
+      "lives"
+     ]
+    },
+    {
+     "en": "job",
+     "ja": "仕事",
+     "forms": [
+      "jobs"
+     ]
+    },
+    {
+     "en": "work",
+     "ja": "仕事・作品"
+    },
+    {
+     "en": "problem",
+     "ja": "問題",
+     "forms": [
+      "problems"
+     ]
+    },
+    {
+     "en": "news",
+     "ja": "ニュース"
+    },
+    {
+     "en": "sound",
+     "ja": "音",
+     "forms": [
+      "sounds"
+     ]
+    },
+    {
+     "en": "voice",
+     "ja": "声",
+     "forms": [
+      "voices"
+     ]
+    },
+    {
+     "en": "size",
+     "ja": "サイズ・大きさ",
+     "forms": [
+      "sizes"
+     ]
+    },
+    {
+     "en": "group",
+     "ja": "グループ",
+     "forms": [
+      "groups"
+     ]
+    },
+    {
+     "en": "Internet",
+     "ja": "インターネット"
+    },
+    {
+     "en": "smartphone",
+     "ja": "スマートフォン",
+     "forms": [
+      "smartphones"
+     ]
+    },
+    {
+     "en": "website",
+     "ja": "ウェブサイト",
+     "forms": [
+      "websites"
+     ]
+    },
+    {
+     "en": "sign",
+     "ja": "標識・看板",
+     "forms": [
+      "signs"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-sports",
+   "title": "Sports & Music ・ スポーツ・音楽",
+   "group": "名詞 ・ Nouns",
+   "words": [
+    {
+     "en": "goal",
+     "ja": "ゴール・目標",
+     "forms": [
+      "goals"
+     ]
+    },
+    {
+     "en": "score",
+     "ja": "得点",
+     "forms": [
+      "scores"
+     ]
+    },
+    {
+     "en": "coach",
+     "ja": "コーチ",
+     "forms": [
+      "coaches"
+     ]
+    },
+    {
+     "en": "fan",
+     "ja": "ファン",
+     "forms": [
+      "fans"
+     ]
+    },
+    {
+     "en": "pool",
+     "ja": "プール",
+     "forms": [
+      "pools"
+     ]
+    },
+    {
+     "en": "marathon",
+     "ja": "マラソン",
+     "forms": [
+      "marathons"
+     ]
+    },
+    {
+     "en": "skiing",
+     "ja": "スキー"
+    },
+    {
+     "en": "skating",
+     "ja": "スケート"
+    },
+    {
+     "en": "drum",
+     "ja": "ドラム",
+     "forms": [
+      "drums"
+     ]
+    },
+    {
+     "en": "flute",
+     "ja": "フルート",
+     "forms": [
+      "flutes"
+     ]
+    },
+    {
+     "en": "trumpet",
+     "ja": "トランペット",
+     "forms": [
+      "trumpets"
+     ]
+    },
+    {
+     "en": "violin",
+     "ja": "バイオリン",
+     "forms": [
+      "violins"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-time",
+   "title": "Time ・ 時",
+   "group": "名詞 ・ Nouns",
+   "words": [
+    {
+     "en": "date",
+     "ja": "日付",
+     "forms": [
+      "dates"
+     ]
+    },
+    {
+     "en": "calendar",
+     "ja": "カレンダー",
+     "forms": [
+      "calendars"
+     ]
+    },
+    {
+     "en": "noon",
+     "ja": "正午"
+    },
+    {
+     "en": "midnight",
+     "ja": "真夜中"
+    },
+    {
+     "en": "half",
+     "ja": "半分"
+    },
+    {
+     "en": "quarter",
+     "ja": "4分の1・15分"
+    },
+    {
+     "en": "o'clock",
+     "ja": "〜時（ちょうど）"
+    },
+    {
+     "en": "yesterday",
+     "ja": "昨日"
+    },
+    {
+     "en": "tonight",
+     "ja": "今夜"
+    },
+    {
+     "en": "weekday",
+     "ja": "平日",
+     "forms": [
+      "weekdays"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-past1",
+   "title": "Past Tense Review ① ・ 過去形の復習①",
+   "group": "動詞 ・ Verbs",
+   "words": [
+    {
+     "en": "go",
+     "ja": "行く",
+     "forms": [
+      "went"
+     ]
+    },
+    {
+     "en": "come",
+     "ja": "来る",
+     "forms": [
+      "came"
+     ]
+    },
+    {
+     "en": "have",
+     "ja": "持っている・食べる",
+     "forms": [
+      "had"
+     ]
+    },
+    {
+     "en": "eat",
+     "ja": "食べる",
+     "forms": [
+      "ate"
+     ]
+    },
+    {
+     "en": "drink",
+     "ja": "飲む",
+     "forms": [
+      "drank"
+     ]
+    },
+    {
+     "en": "see",
+     "ja": "見える・会う",
+     "forms": [
+      "saw"
+     ]
+    },
+    {
+     "en": "make",
+     "ja": "作る",
+     "forms": [
+      "made"
+     ]
+    },
+    {
+     "en": "take",
+     "ja": "取る・持っていく",
+     "forms": [
+      "took"
+     ]
+    },
+    {
+     "en": "get",
+     "ja": "手に入れる・着く",
+     "forms": [
+      "got"
+     ]
+    },
+    {
+     "en": "buy",
+     "ja": "買う",
+     "forms": [
+      "bought"
+     ]
+    },
+    {
+     "en": "read",
+     "ja": "読む",
+     "forms": [
+      "read（発音：レッド）"
+     ]
+    },
+    {
+     "en": "write",
+     "ja": "書く",
+     "forms": [
+      "wrote"
+     ]
+    },
+    {
+     "en": "speak",
+     "ja": "話す",
+     "forms": [
+      "spoke"
+     ]
+    },
+    {
+     "en": "run",
+     "ja": "走る",
+     "forms": [
+      "ran"
+     ]
+    },
+    {
+     "en": "swim",
+     "ja": "泳ぐ",
+     "forms": [
+      "swam"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-past2",
+   "title": "Past Tense Review ② ・ 過去形の復習②",
+   "group": "動詞 ・ Verbs",
+   "words": [
+    {
+     "en": "sing",
+     "ja": "歌う",
+     "forms": [
+      "sang"
+     ]
+    },
+    {
+     "en": "sit",
+     "ja": "すわる",
+     "forms": [
+      "sat"
+     ]
+    },
+    {
+     "en": "stand",
+     "ja": "立つ",
+     "forms": [
+      "stood"
+     ]
+    },
+    {
+     "en": "teach",
+     "ja": "教える",
+     "forms": [
+      "taught"
+     ]
+    },
+    {
+     "en": "give",
+     "ja": "あたえる",
+     "forms": [
+      "gave"
+     ]
+    },
+    {
+     "en": "tell",
+     "ja": "伝える・話す",
+     "forms": [
+      "told"
+     ]
+    },
+    {
+     "en": "say",
+     "ja": "言う",
+     "forms": [
+      "said"
+     ]
+    },
+    {
+     "en": "think",
+     "ja": "思う・考える",
+     "forms": [
+      "thought"
+     ]
+    },
+    {
+     "en": "know",
+     "ja": "知っている",
+     "forms": [
+      "knew"
+     ]
+    },
+    {
+     "en": "meet",
+     "ja": "会う",
+     "forms": [
+      "met"
+     ]
+    },
+    {
+     "en": "put",
+     "ja": "置く",
+     "forms": [
+      "put"
+     ]
+    },
+    {
+     "en": "fly",
+     "ja": "飛ぶ",
+     "forms": [
+      "flew"
+     ]
+    },
+    {
+     "en": "ride",
+     "ja": "乗る",
+     "forms": [
+      "rode"
+     ]
+    },
+    {
+     "en": "draw",
+     "ja": "描く",
+     "forms": [
+      "drew"
+     ]
+    },
+    {
+     "en": "sleep",
+     "ja": "眠る",
+     "forms": [
+      "slept"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-verbs1",
+   "title": "Going Places ・ 移動の動詞",
+   "group": "動詞 ・ Verbs",
+   "words": [
+    {
+     "en": "arrive",
+     "ja": "着く",
+     "forms": [
+      "arrived"
+     ]
+    },
+    {
+     "en": "leave",
+     "ja": "出発する・去る",
+     "forms": [
+      "left"
+     ]
+    },
+    {
+     "en": "return",
+     "ja": "戻る・返す",
+     "forms": [
+      "returned"
+     ]
+    },
+    {
+     "en": "travel",
+     "ja": "旅行する",
+     "forms": [
+      "traveled"
+     ]
+    },
+    {
+     "en": "move",
+     "ja": "引っ越す・動く",
+     "forms": [
+      "moved"
+     ]
+    },
+    {
+     "en": "drive",
+     "ja": "運転する",
+     "forms": [
+      "drove"
+     ]
+    },
+    {
+     "en": "climb",
+     "ja": "登る",
+     "forms": [
+      "climbed"
+     ]
+    },
+    {
+     "en": "cross",
+     "ja": "渡る・横切る",
+     "forms": [
+      "crossed"
+     ]
+    },
+    {
+     "en": "hurry",
+     "ja": "急ぐ",
+     "forms": [
+      "hurried"
+     ]
+    },
+    {
+     "en": "turn",
+     "ja": "曲がる",
+     "forms": [
+      "turned"
+     ]
+    },
+    {
+     "en": "stop",
+     "ja": "止まる・やめる",
+     "forms": [
+      "stopped"
+     ]
+    },
+    {
+     "en": "carry",
+     "ja": "運ぶ",
+     "forms": [
+      "carried"
+     ]
+    },
+    {
+     "en": "bring",
+     "ja": "持ってくる",
+     "forms": [
+      "brought"
+     ]
+    },
+    {
+     "en": "send",
+     "ja": "送る",
+     "forms": [
+      "sent"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-verbs2",
+   "title": "People Verbs ・ 人と関わる動詞",
+   "group": "動詞 ・ Verbs",
+   "words": [
+    {
+     "en": "invite",
+     "ja": "招待する",
+     "forms": [
+      "invited"
+     ]
+    },
+    {
+     "en": "join",
+     "ja": "参加する",
+     "forms": [
+      "joined"
+     ]
+    },
+    {
+     "en": "answer",
+     "ja": "答える",
+     "forms": [
+      "answered"
+     ]
+    },
+    {
+     "en": "borrow",
+     "ja": "借りる",
+     "forms": [
+      "borrowed"
+     ]
+    },
+    {
+     "en": "lend",
+     "ja": "貸す",
+     "forms": [
+      "lent"
+     ]
+    },
+    {
+     "en": "sell",
+     "ja": "売る",
+     "forms": [
+      "sold"
+     ]
+    },
+    {
+     "en": "pay",
+     "ja": "支払う",
+     "forms": [
+      "paid"
+     ]
+    },
+    {
+     "en": "win",
+     "ja": "勝つ",
+     "forms": [
+      "won"
+     ]
+    },
+    {
+     "en": "lose",
+     "ja": "負ける・なくす",
+     "forms": [
+      "lost"
+     ]
+    },
+    {
+     "en": "share",
+     "ja": "分け合う・共有する",
+     "forms": [
+      "shared"
+     ]
+    },
+    {
+     "en": "plan",
+     "ja": "計画する",
+     "forms": [
+      "planned"
+     ]
+    },
+    {
+     "en": "call back",
+     "ja": "折り返し電話する",
+     "forms": [
+      "called back"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-verbs3",
+   "title": "Doing & Feeling ・ する・感じる",
+   "group": "動詞 ・ Verbs",
+   "words": [
+    {
+     "en": "forget",
+     "ja": "忘れる",
+     "forms": [
+      "forgot"
+     ]
+    },
+    {
+     "en": "decide",
+     "ja": "決める",
+     "forms": [
+      "decided"
+     ]
+    },
+    {
+     "en": "feel",
+     "ja": "感じる",
+     "forms": [
+      "felt"
+     ]
+    },
+    {
+     "en": "laugh",
+     "ja": "笑う",
+     "forms": [
+      "laughed"
+     ]
+    },
+    {
+     "en": "cry",
+     "ja": "泣く",
+     "forms": [
+      "cried"
+     ]
+    },
+    {
+     "en": "smile",
+     "ja": "ほほえむ",
+     "forms": [
+      "smiled"
+     ]
+    },
+    {
+     "en": "choose",
+     "ja": "選ぶ",
+     "forms": [
+      "chose"
+     ]
+    },
+    {
+     "en": "catch",
+     "ja": "捕まえる",
+     "forms": [
+      "caught"
+     ]
+    },
+    {
+     "en": "break",
+     "ja": "壊す",
+     "forms": [
+      "broke"
+     ]
+    },
+    {
+     "en": "build",
+     "ja": "建てる",
+     "forms": [
+      "built"
+     ]
+    },
+    {
+     "en": "find",
+     "ja": "見つける",
+     "forms": [
+      "found"
+     ]
+    },
+    {
+     "en": "keep",
+     "ja": "保つ・飼う",
+     "forms": [
+      "kept"
+     ]
+    },
+    {
+     "en": "become",
+     "ja": "〜になる",
+     "forms": [
+      "became"
+     ]
+    },
+    {
+     "en": "begin",
+     "ja": "始める・始まる",
+     "forms": [
+      "began"
+     ]
+    },
+    {
+     "en": "hear",
+     "ja": "聞こえる",
+     "forms": [
+      "heard"
+     ]
+    },
+    {
+     "en": "wear",
+     "ja": "着ている",
+     "forms": [
+      "wore"
+     ]
+    },
+    {
+     "en": "change",
+     "ja": "変える・変わる",
+     "forms": [
+      "changed"
+     ]
+    },
+    {
+     "en": "check",
+     "ja": "確かめる",
+     "forms": [
+      "checked"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-verbs4",
+   "title": "More Action Verbs ・ もっと動詞",
+   "group": "動詞 ・ Verbs",
+   "words": [
+    {
+     "en": "understand",
+     "ja": "理解する",
+     "forms": [
+      "understood"
+     ]
+    },
+    {
+     "en": "collect",
+     "ja": "集める",
+     "forms": [
+      "collected"
+     ]
+    },
+    {
+     "en": "paint",
+     "ja": "（絵の具で）描く・塗る",
+     "forms": [
+      "painted"
+     ]
+    },
+    {
+     "en": "fix",
+     "ja": "修理する",
+     "forms": [
+      "fixed"
+     ]
+    },
+    {
+     "en": "fall",
+     "ja": "落ちる・転ぶ",
+     "forms": [
+      "fell"
+     ]
+    },
+    {
+     "en": "hit",
+     "ja": "打つ",
+     "forms": [
+      "hit"
+     ]
+    },
+    {
+     "en": "throw",
+     "ja": "投げる",
+     "forms": [
+      "threw"
+     ]
+    },
+    {
+     "en": "kick",
+     "ja": "蹴る",
+     "forms": [
+      "kicked"
+     ]
+    },
+    {
+     "en": "rain",
+     "ja": "雨が降る",
+     "forms": [
+      "rained"
+     ]
+    },
+    {
+     "en": "snow",
+     "ja": "雪が降る",
+     "forms": [
+      "snowed"
+     ]
+    },
+    {
+     "en": "die",
+     "ja": "死ぬ",
+     "forms": [
+      "died"
+     ]
+    },
+    {
+     "en": "wish",
+     "ja": "願う",
+     "forms": [
+      "wished"
+     ]
+    },
+    {
+     "en": "enter",
+     "ja": "入る",
+     "forms": [
+      "entered"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-adj1",
+   "title": "Comparing Words ・ 比べることば",
+   "group": "形容詞・副詞 ・ Describing Words",
    "words": [
     {
      "en": "easy",
@@ -243,6 +2019,10 @@
     {
      "en": "difficult",
      "ja": "難しい"
+    },
+    {
+     "en": "hard",
+     "ja": "難しい・かたい・熱心に"
     },
     {
      "en": "famous",
@@ -257,6 +2037,14 @@
      "ja": "おもしろい・興味深い"
     },
     {
+     "en": "exciting",
+     "ja": "わくわくさせる"
+    },
+    {
+     "en": "boring",
+     "ja": "退屈な"
+    },
+    {
      "en": "expensive",
      "ja": "高価な"
     },
@@ -265,43 +2053,127 @@
      "ja": "安い"
     },
     {
-     "en": "dangerous",
-     "ja": "危険な"
+     "en": "heavy",
+     "ja": "重い"
     },
+    {
+     "en": "light",
+     "ja": "軽い・明るい"
+    },
+    {
+     "en": "large",
+     "ja": "大きい"
+    },
+    {
+     "en": "high",
+     "ja": "高い"
+    },
+    {
+     "en": "low",
+     "ja": "低い"
+    },
+    {
+     "en": "strong",
+     "ja": "強い"
+    },
+    {
+     "en": "quick",
+     "ja": "速い"
+    },
+    {
+     "en": "slow",
+     "ja": "遅い"
+    },
+    {
+     "en": "quiet",
+     "ja": "静かな"
+    },
+    {
+     "en": "dark",
+     "ja": "暗い"
+    },
+    {
+     "en": "bright",
+     "ja": "明るい"
+    }
+   ]
+  },
+  {
+   "id": "e4-adj2",
+   "title": "Feelings & More ・ 気持ち・その他",
+   "group": "形容詞・副詞 ・ Describing Words",
+   "words": [
     {
      "en": "sick",
      "ja": "病気の"
     },
     {
-     "en": "tired",
-     "ja": "疲れた"
-    }
-   ]
-  },
-  {
-   "id": "e4-time",
-   "title": "Time Words ・ 時を表すことば",
-   "group": "英検4級",
-   "words": [
-    {
-     "en": "yesterday",
-     "ja": "昨日"
+     "en": "angry",
+     "ja": "怒った"
     },
     {
-     "en": "ago",
-     "ja": "〜前に"
+     "en": "glad",
+     "ja": "うれしい"
     },
     {
-     "en": "before",
-     "ja": "〜の前に"
+     "en": "afraid",
+     "ja": "怖がって"
     },
     {
-     "en": "after",
-     "ja": "〜の後に"
+     "en": "ready",
+     "ja": "準備ができて"
     },
     {
-     "en": "soon",
-     "ja": "すぐに"
+     "en": "friendly",
+     "ja": "親しみやすい"
+    },
+    {
+     "en": "funny",
+     "ja": "おかしい"
+    },
+    {
+     "en": "delicious",
+     "ja": "とてもおいしい"
+    },
+    {
+     "en": "special",
+     "ja": "特別な"
+    },
+    {
+     "en": "wonderful",
+     "ja": "すばらしい"
+    },
+    {
+     "en": "poor",
+     "ja": "貧しい・かわいそうな"
+    },
+    {
+     "en": "rich",
+     "ja": "金持ちの"
+    },
+    {
+     "en": "dangerous",
+     "ja": "危険な"
+    },
+    {
+     "en": "safe",
+     "ja": "安全な"
+    },
+    {
+     "en": "sure",
+     "ja": "確かな"
+    },
+    {
+     "en": "same",
+     "ja": "同じ"
+    },
+    {
+     "en": "other",
+     "ja": "ほかの"
+    },
+    {
+     "en": "only",
+     "ja": "唯一の・〜だけ"
     },
     {
      "en": "next",
@@ -310,18 +2182,502 @@
     {
      "en": "last",
      "ja": "この前の・最後の"
+    }
+   ]
+  },
+  {
+   "id": "e4-adj3",
+   "title": "Right or Wrong? ・ 正しい？まちがい？",
+   "group": "形容詞・副詞 ・ Describing Words",
+   "words": [
+    {
+     "en": "full",
+     "ja": "いっぱいの・満腹の"
+    },
+    {
+     "en": "empty",
+     "ja": "空の"
+    },
+    {
+     "en": "right",
+     "ja": "正しい・右の"
+    },
+    {
+     "en": "wrong",
+     "ja": "間違った"
+    },
+    {
+     "en": "left",
+     "ja": "左の"
+    },
+    {
+     "en": "sweet",
+     "ja": "甘い"
+    },
+    {
+     "en": "real",
+     "ja": "本当の・本物の"
+    },
+    {
+     "en": "true",
+     "ja": "本当の"
+    },
+    {
+     "en": "lucky",
+     "ja": "幸運な"
+    },
+    {
+     "en": "foreign",
+     "ja": "外国の"
+    }
+   ]
+  },
+  {
+   "id": "e4-compare",
+   "title": "Better & Best ・ 比較級・最上級",
+   "group": "形容詞・副詞 ・ Describing Words",
+   "words": [
+    {
+     "en": "better",
+     "ja": "よりよい・より上手に"
+    },
+    {
+     "en": "best",
+     "ja": "最もよい・最も上手に"
+    },
+    {
+     "en": "more",
+     "ja": "もっと多くの・より〜"
+    },
+    {
+     "en": "most",
+     "ja": "最も多くの・最も〜"
+    },
+    {
+     "en": "than",
+     "ja": "〜よりも"
     },
     {
      "en": "early",
-     "ja": "早く・早い"
+     "ja": "早く・早い",
+     "forms": [
+      "earlier",
+      "earliest"
+     ]
     },
     {
      "en": "late",
-     "ja": "遅く・遅い"
+     "ja": "遅く・遅い",
+     "forms": [
+      "later",
+      "latest"
+     ]
     },
     {
-     "en": "tonight",
-     "ja": "今夜"
+     "en": "old",
+     "ja": "古い・年をとった",
+     "forms": [
+      "older",
+      "oldest"
+     ]
+    },
+    {
+     "en": "young",
+     "ja": "若い",
+     "forms": [
+      "younger",
+      "youngest"
+     ]
+    },
+    {
+     "en": "big",
+     "ja": "大きい",
+     "forms": [
+      "bigger",
+      "biggest"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e4-adv",
+   "title": "When & How ・ 時・様子",
+   "group": "形容詞・副詞 ・ Describing Words",
+   "words": [
+    {
+     "en": "ago",
+     "ja": "〜前に"
+    },
+    {
+     "en": "soon",
+     "ja": "すぐに"
+    },
+    {
+     "en": "later",
+     "ja": "後で"
+    },
+    {
+     "en": "still",
+     "ja": "まだ"
+    },
+    {
+     "en": "then",
+     "ja": "そのとき・それから"
+    },
+    {
+     "en": "once",
+     "ja": "一度"
+    },
+    {
+     "en": "twice",
+     "ja": "二度"
+    },
+    {
+     "en": "finally",
+     "ja": "ついに"
+    },
+    {
+     "en": "maybe",
+     "ja": "たぶん"
+    },
+    {
+     "en": "also",
+     "ja": "〜もまた"
+    },
+    {
+     "en": "slowly",
+     "ja": "ゆっくりと"
+    },
+    {
+     "en": "quickly",
+     "ja": "すばやく"
+    },
+    {
+     "en": "almost",
+     "ja": "ほとんど"
+    },
+    {
+     "en": "outside",
+     "ja": "外で"
+    },
+    {
+     "en": "inside",
+     "ja": "中で"
+    },
+    {
+     "en": "someday",
+     "ja": "いつか"
+    }
+   ]
+  },
+  {
+   "id": "e4-small",
+   "title": "Connecting & Position ・ つなぐ・位置",
+   "group": "前置詞・接続詞 ・ Small Words",
+   "words": [
+    {
+     "en": "because",
+     "ja": "なぜなら〜だから"
+    },
+    {
+     "en": "if",
+     "ja": "もし〜なら"
+    },
+    {
+     "en": "when",
+     "ja": "〜するとき"
+    },
+    {
+     "en": "so",
+     "ja": "だから"
+    },
+    {
+     "en": "or",
+     "ja": "または"
+    },
+    {
+     "en": "behind",
+     "ja": "〜の後ろに"
+    },
+    {
+     "en": "between",
+     "ja": "〜の間に"
+    },
+    {
+     "en": "in front of",
+     "ja": "〜の前に"
+    },
+    {
+     "en": "next to",
+     "ja": "〜の隣に"
+    },
+    {
+     "en": "across",
+     "ja": "〜を横切って・〜の向こうに"
+    },
+    {
+     "en": "along",
+     "ja": "〜に沿って"
+    },
+    {
+     "en": "around",
+     "ja": "〜のまわりに"
+    },
+    {
+     "en": "into",
+     "ja": "〜の中へ"
+    },
+    {
+     "en": "over",
+     "ja": "〜の上に・〜を越えて"
+    },
+    {
+     "en": "through",
+     "ja": "〜を通って"
+    },
+    {
+     "en": "without",
+     "ja": "〜なしで"
+    },
+    {
+     "en": "like",
+     "ja": "〜のような"
+    }
+   ]
+  },
+  {
+   "id": "e4-phr1",
+   "title": "Verb Phrases ① ・ 動詞の熟語①",
+   "group": "熟語・表現 ・ Phrases",
+   "words": [
+    {
+     "en": "be going to",
+     "ja": "〜するつもりだ"
+    },
+    {
+     "en": "be late for",
+     "ja": "〜に遅れる"
+    },
+    {
+     "en": "look like",
+     "ja": "〜のように見える"
+    },
+    {
+     "en": "get on",
+     "ja": "〜に乗る"
+    },
+    {
+     "en": "get off",
+     "ja": "〜から降りる"
+    },
+    {
+     "en": "put on",
+     "ja": "〜を着る"
+    },
+    {
+     "en": "take off",
+     "ja": "〜を脱ぐ・離陸する"
+    },
+    {
+     "en": "wake up",
+     "ja": "目を覚ます"
+    },
+    {
+     "en": "come back",
+     "ja": "戻ってくる"
+    },
+    {
+     "en": "go out",
+     "ja": "外出する"
+    },
+    {
+     "en": "talk to",
+     "ja": "〜に話しかける"
+    },
+    {
+     "en": "think about",
+     "ja": "〜について考える"
+    },
+    {
+     "en": "hear about",
+     "ja": "〜について聞く"
+    },
+    {
+     "en": "help ~ with …",
+     "ja": "〜の…を手伝う"
+    }
+   ]
+  },
+  {
+   "id": "e4-phr2",
+   "title": "Verb Phrases ② ・ 動詞の熟語②",
+   "group": "熟語・表現 ・ Phrases",
+   "words": [
+    {
+     "en": "be from",
+     "ja": "〜出身だ"
+    },
+    {
+     "en": "be famous for",
+     "ja": "〜で有名だ"
+    },
+    {
+     "en": "be afraid of",
+     "ja": "〜を怖がる"
+    },
+    {
+     "en": "be glad to",
+     "ja": "〜してうれしい"
+    },
+    {
+     "en": "have to",
+     "ja": "〜しなければならない"
+    },
+    {
+     "en": "want to be",
+     "ja": "〜になりたい"
+    },
+    {
+     "en": "stay home",
+     "ja": "家にいる"
+    },
+    {
+     "en": "arrive at",
+     "ja": "〜に着く"
+    },
+    {
+     "en": "leave for",
+     "ja": "〜に向けて出発する"
+    },
+    {
+     "en": "take a walk",
+     "ja": "散歩する"
+    },
+    {
+     "en": "have a cold",
+     "ja": "風邪をひいている"
+    },
+    {
+     "en": "catch a cold",
+     "ja": "風邪をひく"
+    }
+   ]
+  },
+  {
+   "id": "e4-phr3",
+   "title": "Time & Amount Phrases ・ 時・量の熟語",
+   "group": "熟語・表現 ・ Phrases",
+   "words": [
+    {
+     "en": "at first",
+     "ja": "最初は"
+    },
+    {
+     "en": "for the first time",
+     "ja": "初めて"
+    },
+    {
+     "en": "one day",
+     "ja": "ある日"
+    },
+    {
+     "en": "last week",
+     "ja": "先週"
+    },
+    {
+     "en": "next year",
+     "ja": "来年"
+    },
+    {
+     "en": "these days",
+     "ja": "最近"
+    },
+    {
+     "en": "all day",
+     "ja": "一日中"
+    },
+    {
+     "en": "at that time",
+     "ja": "そのとき"
+    },
+    {
+     "en": "far from",
+     "ja": "〜から遠い"
+    },
+    {
+     "en": "a cup of",
+     "ja": "カップ1杯の"
+    },
+    {
+     "en": "a glass of",
+     "ja": "コップ1杯の"
+    },
+    {
+     "en": "a piece of",
+     "ja": "1切れの・1枚の"
+    }
+   ]
+  },
+  {
+   "id": "e4-talk",
+   "title": "Conversation ・ 会話表現",
+   "group": "熟語・表現 ・ Phrases",
+   "words": [
+    {
+     "en": "May I help you?",
+     "ja": "いらっしゃいませ。・お手伝いしましょうか。"
+    },
+    {
+     "en": "What's wrong?",
+     "ja": "どうしたの？"
+    },
+    {
+     "en": "That's too bad.",
+     "ja": "それはお気の毒に。"
+    },
+    {
+     "en": "Sounds good.",
+     "ja": "いいね。"
+    },
+    {
+     "en": "I'd like ~.",
+     "ja": "〜がほしいのですが。"
+    },
+    {
+     "en": "Would you like ~?",
+     "ja": "〜はいかがですか。"
+    },
+    {
+     "en": "Why don't we ~?",
+     "ja": "〜しませんか。"
+    },
+    {
+     "en": "Shall I ~?",
+     "ja": "〜しましょうか。"
+    },
+    {
+     "en": "Have a nice day.",
+     "ja": "よい一日を。"
+    },
+    {
+     "en": "Take care.",
+     "ja": "気をつけてね。"
+    },
+    {
+     "en": "Just a minute.",
+     "ja": "ちょっと待って。"
+    },
+    {
+     "en": "I see.",
+     "ja": "なるほど。"
+    },
+    {
+     "en": "No problem.",
+     "ja": "問題ないよ。"
+    },
+    {
+     "en": "Here it is.",
+     "ja": "はい、ここにあります。"
     }
    ]
   }

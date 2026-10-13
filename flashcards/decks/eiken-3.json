@@ -4,88 +4,131 @@
  "grade": "英検3級",
  "sections": [
   {
-   "id": "e3-verbs",
-   "title": "Verbs (Past & Past Participle) ・ 動詞",
-   "group": "英検3級",
+   "id": "e3-people",
+   "title": "People ・ 人",
+   "group": "名詞 ・ Nouns",
    "words": [
     {
-     "en": "believe",
-     "ja": "信じる",
+     "en": "adult",
+     "ja": "大人",
      "forms": [
-      "believed",
-      "believed"
+      "adults"
      ]
     },
     {
-     "en": "explain",
-     "ja": "説明する",
+     "en": "teenager",
+     "ja": "10代の若者",
      "forms": [
-      "explained",
-      "explained"
+      "teenagers"
      ]
     },
     {
-     "en": "grow",
-     "ja": "育つ・育てる",
+     "en": "citizen",
+     "ja": "市民",
      "forms": [
-      "grew",
-      "grown"
+      "citizens"
      ]
     },
     {
-     "en": "hope",
-     "ja": "望む",
+     "en": "customer",
+     "ja": "客",
      "forms": [
-      "hoped",
-      "hoped"
+      "customers"
      ]
     },
     {
-     "en": "improve",
-     "ja": "上達させる・改善する",
+     "en": "owner",
+     "ja": "持ち主",
      "forms": [
-      "improved",
-      "improved"
+      "owners"
      ]
     },
     {
-     "en": "introduce",
-     "ja": "紹介する",
+     "en": "staff",
+     "ja": "スタッフ・職員"
+    },
+    {
+     "en": "leader",
+     "ja": "リーダー",
      "forms": [
-      "introduced",
-      "introduced"
+      "leaders"
      ]
     },
     {
-     "en": "protect",
-     "ja": "守る",
+     "en": "captain",
+     "ja": "キャプテン・船長",
      "forms": [
-      "protected",
-      "protected"
+      "captains"
      ]
     },
     {
-     "en": "remember",
-     "ja": "覚えている・思い出す",
+     "en": "partner",
+     "ja": "パートナー",
      "forms": [
-      "remembered",
-      "remembered"
+      "partners"
      ]
     },
     {
-     "en": "spend",
-     "ja": "過ごす・使う",
+     "en": "volunteer",
+     "ja": "ボランティア",
      "forms": [
-      "spent",
-      "spent"
+      "volunteers"
      ]
     },
     {
-     "en": "worry",
-     "ja": "心配する",
+     "en": "designer",
+     "ja": "デザイナー",
      "forms": [
-      "worried",
-      "worried"
+      "designers"
+     ]
+    },
+    {
+     "en": "photographer",
+     "ja": "写真家",
+     "forms": [
+      "photographers"
+     ]
+    },
+    {
+     "en": "reporter",
+     "ja": "記者",
+     "forms": [
+      "reporters"
+     ]
+    },
+    {
+     "en": "author",
+     "ja": "著者",
+     "forms": [
+      "authors"
+     ]
+    },
+    {
+     "en": "actor",
+     "ja": "俳優",
+     "forms": [
+      "actors"
+     ]
+    },
+    {
+     "en": "professional",
+     "ja": "プロ",
+     "forms": [
+      "professionals"
+     ]
+    },
+    {
+     "en": "expert",
+     "ja": "専門家",
+     "forms": [
+      "experts"
+     ]
+    },
+    {
+     "en": "stranger",
+     "ja": "知らない人",
+     "forms": [
+      "strangers"
      ]
     }
    ]
@@ -93,11 +136,37 @@
   {
    "id": "e3-topics",
    "title": "Topic Words ・ テーマのことば",
-   "group": "英検3級",
+   "group": "名詞 ・ Nouns",
    "words": [
     {
      "en": "environment",
      "ja": "環境"
+    },
+    {
+     "en": "nature",
+     "ja": "自然"
+    },
+    {
+     "en": "culture",
+     "ja": "文化",
+     "forms": [
+      "cultures"
+     ]
+    },
+    {
+     "en": "technology",
+     "ja": "科学技術"
+    },
+    {
+     "en": "language",
+     "ja": "言語",
+     "forms": [
+      "languages"
+     ]
+    },
+    {
+     "en": "information",
+     "ja": "情報"
     },
     {
      "en": "experience",
@@ -111,28 +180,87 @@
      "ja": "未来・将来"
     },
     {
-     "en": "information",
-     "ja": "情報"
+     "en": "peace",
+     "ja": "平和"
     },
     {
-     "en": "language",
-     "ja": "言語",
+     "en": "war",
+     "ja": "戦争",
      "forms": [
-      "languages"
+      "wars"
      ]
     },
     {
-     "en": "culture",
-     "ja": "文化",
+     "en": "energy",
+     "ja": "エネルギー"
+    },
+    {
+     "en": "pollution",
+     "ja": "汚染"
+    },
+    {
+     "en": "garbage",
+     "ja": "ごみ"
+    },
+    {
+     "en": "recycling",
+     "ja": "リサイクル"
+    },
+    {
+     "en": "plastic",
+     "ja": "プラスチック"
+    },
+    {
+     "en": "health",
+     "ja": "健康"
+    }
+   ]
+  },
+  {
+   "id": "e3-society",
+   "title": "Society & Places ・ 社会・場所",
+   "group": "名詞 ・ Nouns",
+   "words": [
+    {
+     "en": "community",
+     "ja": "地域社会",
      "forms": [
-      "cultures"
+      "communities"
      ]
     },
     {
-     "en": "volunteer",
-     "ja": "ボランティア",
+     "en": "area",
+     "ja": "地域",
      "forms": [
-      "volunteers"
+      "areas"
+     ]
+    },
+    {
+     "en": "center",
+     "ja": "中心・センター",
+     "forms": [
+      "centers"
+     ]
+    },
+    {
+     "en": "office",
+     "ja": "事務所・会社",
+     "forms": [
+      "offices"
+     ]
+    },
+    {
+     "en": "company",
+     "ja": "会社",
+     "forms": [
+      "companies"
+     ]
+    },
+    {
+     "en": "hall",
+     "ja": "会館・ホール",
+     "forms": [
+      "halls"
      ]
     },
     {
@@ -143,19 +271,1468 @@
      ]
     },
     {
-     "en": "science",
-     "ja": "科学・理科"
+     "en": "coast",
+     "ja": "海岸",
+     "forms": [
+      "coasts"
+     ]
     },
     {
-     "en": "history",
-     "ja": "歴史"
+     "en": "desert",
+     "ja": "砂漠",
+     "forms": [
+      "deserts"
+     ]
+    },
+    {
+     "en": "ocean",
+     "ja": "海・大洋",
+     "forms": [
+      "oceans"
+     ]
+    },
+    {
+     "en": "space",
+     "ja": "宇宙"
+    },
+    {
+     "en": "planet",
+     "ja": "惑星",
+     "forms": [
+      "planets"
+     ]
     }
    ]
   },
   {
-   "id": "e3-describe",
-   "title": "Describing Words ・ 様子を表すことば",
-   "group": "英検3級",
+   "id": "e3-school",
+   "title": "School & Study ・ 学校・学習",
+   "group": "名詞 ・ Nouns",
+   "words": [
+    {
+     "en": "graduation",
+     "ja": "卒業"
+    },
+    {
+     "en": "ceremony",
+     "ja": "式",
+     "forms": [
+      "ceremonies"
+     ]
+    },
+    {
+     "en": "result",
+     "ja": "結果",
+     "forms": [
+      "results"
+     ]
+    },
+    {
+     "en": "skill",
+     "ja": "技術・技能",
+     "forms": [
+      "skills"
+     ]
+    },
+    {
+     "en": "topic",
+     "ja": "話題",
+     "forms": [
+      "topics"
+     ]
+    },
+    {
+     "en": "title",
+     "ja": "題名",
+     "forms": [
+      "titles"
+     ]
+    },
+    {
+     "en": "example",
+     "ja": "例",
+     "forms": [
+      "examples"
+     ]
+    },
+    {
+     "en": "reason",
+     "ja": "理由",
+     "forms": [
+      "reasons"
+     ]
+    },
+    {
+     "en": "opinion",
+     "ja": "意見",
+     "forms": [
+      "opinions"
+     ]
+    },
+    {
+     "en": "fact",
+     "ja": "事実",
+     "forms": [
+      "facts"
+     ]
+    },
+    {
+     "en": "chance",
+     "ja": "機会",
+     "forms": [
+      "chances"
+     ]
+    },
+    {
+     "en": "rule",
+     "ja": "規則",
+     "forms": [
+      "rules"
+     ]
+    },
+    {
+     "en": "mistake",
+     "ja": "間違い",
+     "forms": [
+      "mistakes"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e3-life",
+   "title": "Daily Life ・ 生活",
+   "group": "名詞 ・ Nouns",
+   "words": [
+    {
+     "en": "meal",
+     "ja": "食事",
+     "forms": [
+      "meals"
+     ]
+    },
+    {
+     "en": "recipe",
+     "ja": "レシピ",
+     "forms": [
+      "recipes"
+     ]
+    },
+    {
+     "en": "ingredient",
+     "ja": "材料",
+     "forms": [
+      "ingredients"
+     ]
+    },
+    {
+     "en": "dish",
+     "ja": "料理・皿",
+     "forms": [
+      "dishes"
+     ]
+    },
+    {
+     "en": "taste",
+     "ja": "味"
+    },
+    {
+     "en": "price",
+     "ja": "値段",
+     "forms": [
+      "prices"
+     ]
+    },
+    {
+     "en": "sale",
+     "ja": "特売・販売",
+     "forms": [
+      "sales"
+     ]
+    },
+    {
+     "en": "coupon",
+     "ja": "クーポン",
+     "forms": [
+      "coupons"
+     ]
+    },
+    {
+     "en": "cash",
+     "ja": "現金"
+    },
+    {
+     "en": "sweater",
+     "ja": "セーター",
+     "forms": [
+      "sweaters"
+     ]
+    },
+    {
+     "en": "glove",
+     "ja": "手袋",
+     "forms": [
+      "gloves"
+     ]
+    },
+    {
+     "en": "boots",
+     "ja": "ブーツ"
+    },
+    {
+     "en": "schedule",
+     "ja": "予定",
+     "forms": [
+      "schedules"
+     ]
+    },
+    {
+     "en": "appointment",
+     "ja": "（人と会う）約束・予約",
+     "forms": [
+      "appointments"
+     ]
+    },
+    {
+     "en": "reservation",
+     "ja": "予約",
+     "forms": [
+      "reservations"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e3-things",
+   "title": "Things ・ もの",
+   "group": "名詞 ・ Nouns",
+   "words": [
+    {
+     "en": "instrument",
+     "ja": "楽器・道具",
+     "forms": [
+      "instruments"
+     ]
+    },
+    {
+     "en": "machine",
+     "ja": "機械",
+     "forms": [
+      "machines"
+     ]
+    },
+    {
+     "en": "robot",
+     "ja": "ロボット",
+     "forms": [
+      "robots"
+     ]
+    },
+    {
+     "en": "tool",
+     "ja": "道具",
+     "forms": [
+      "tools"
+     ]
+    },
+    {
+     "en": "battery",
+     "ja": "電池",
+     "forms": [
+      "batteries"
+     ]
+    },
+    {
+     "en": "light",
+     "ja": "明かり",
+     "forms": [
+      "lights"
+     ]
+    },
+    {
+     "en": "screen",
+     "ja": "画面",
+     "forms": [
+      "screens"
+     ]
+    },
+    {
+     "en": "tablet",
+     "ja": "タブレット",
+     "forms": [
+      "tablets"
+     ]
+    },
+    {
+     "en": "model",
+     "ja": "模型",
+     "forms": [
+      "models"
+     ]
+    },
+    {
+     "en": "statue",
+     "ja": "像",
+     "forms": [
+      "statues"
+     ]
+    },
+    {
+     "en": "sticker",
+     "ja": "シール",
+     "forms": [
+      "stickers"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e3-feelings",
+   "title": "Feelings & Ideas ・ 気持ち・考え",
+   "group": "名詞 ・ Nouns",
+   "words": [
+    {
+     "en": "feeling",
+     "ja": "気持ち",
+     "forms": [
+      "feelings"
+     ]
+    },
+    {
+     "en": "hope",
+     "ja": "希望",
+     "forms": [
+      "hopes"
+     ]
+    },
+    {
+     "en": "memory",
+     "ja": "思い出・記憶",
+     "forms": [
+      "memories"
+     ]
+    },
+    {
+     "en": "interest",
+     "ja": "興味",
+     "forms": [
+      "interests"
+     ]
+    },
+    {
+     "en": "trouble",
+     "ja": "困ったこと・面倒"
+    },
+    {
+     "en": "advice",
+     "ja": "助言"
+    },
+    {
+     "en": "promise",
+     "ja": "約束",
+     "forms": [
+      "promises"
+     ]
+    },
+    {
+     "en": "secret",
+     "ja": "秘密",
+     "forms": [
+      "secrets"
+     ]
+    },
+    {
+     "en": "surprise",
+     "ja": "驚き",
+     "forms": [
+      "surprises"
+     ]
+    },
+    {
+     "en": "thought",
+     "ja": "考え",
+     "forms": [
+      "thoughts"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e3-nature",
+   "title": "Nature & Environment ・ 自然・環境",
+   "group": "名詞 ・ Nouns",
+   "words": [
+    {
+     "en": "climate",
+     "ja": "気候"
+    },
+    {
+     "en": "temperature",
+     "ja": "気温・温度"
+    },
+    {
+     "en": "global warming",
+     "ja": "地球温暖化"
+    },
+    {
+     "en": "earthquake",
+     "ja": "地震",
+     "forms": [
+      "earthquakes"
+     ]
+    },
+    {
+     "en": "disaster",
+     "ja": "災害",
+     "forms": [
+      "disasters"
+     ]
+    },
+    {
+     "en": "flood",
+     "ja": "洪水",
+     "forms": [
+      "floods"
+     ]
+    },
+    {
+     "en": "air",
+     "ja": "空気"
+    },
+    {
+     "en": "insect",
+     "ja": "昆虫",
+     "forms": [
+      "insects"
+     ]
+    },
+    {
+     "en": "plant",
+     "ja": "植物",
+     "forms": [
+      "plants"
+     ]
+    },
+    {
+     "en": "seed",
+     "ja": "種",
+     "forms": [
+      "seeds"
+     ]
+    },
+    {
+     "en": "sunlight",
+     "ja": "日光"
+    }
+   ]
+  },
+  {
+   "id": "e3-world",
+   "title": "World & Travel ・ 世界・旅行",
+   "group": "名詞 ・ Nouns",
+   "words": [
+    {
+     "en": "tourist",
+     "ja": "観光客",
+     "forms": [
+      "tourists"
+     ]
+    },
+    {
+     "en": "sightseeing",
+     "ja": "観光"
+    },
+    {
+     "en": "custom",
+     "ja": "習慣",
+     "forms": [
+      "customs"
+     ]
+    },
+    {
+     "en": "tradition",
+     "ja": "伝統",
+     "forms": [
+      "traditions"
+     ]
+    },
+    {
+     "en": "castle",
+     "ja": "城",
+     "forms": [
+      "castles"
+     ]
+    },
+    {
+     "en": "view",
+     "ja": "景色・眺め",
+     "forms": [
+      "views"
+     ]
+    },
+    {
+     "en": "exchange student",
+     "ja": "交換留学生",
+     "forms": [
+      "exchange students"
+     ]
+    },
+    {
+     "en": "homestay",
+     "ja": "ホームステイ"
+    },
+    {
+     "en": "capital",
+     "ja": "首都",
+     "forms": [
+      "capitals"
+     ]
+    },
+    {
+     "en": "population",
+     "ja": "人口"
+    }
+   ]
+  },
+  {
+   "id": "e3-sports",
+   "title": "Sports & Health ・ スポーツ・健康",
+   "group": "名詞 ・ Nouns",
+   "words": [
+    {
+     "en": "athlete",
+     "ja": "運動選手",
+     "forms": [
+      "athletes"
+     ]
+    },
+    {
+     "en": "competition",
+     "ja": "大会・競争",
+     "forms": [
+      "competitions"
+     ]
+    },
+    {
+     "en": "tournament",
+     "ja": "トーナメント",
+     "forms": [
+      "tournaments"
+     ]
+    },
+    {
+     "en": "injury",
+     "ja": "けが",
+     "forms": [
+      "injuries"
+     ]
+    },
+    {
+     "en": "pain",
+     "ja": "痛み"
+    },
+    {
+     "en": "patient",
+     "ja": "患者",
+     "forms": [
+      "patients"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e3-media",
+   "title": "Books & Media ・ 本・メディア",
+   "group": "名詞 ・ Nouns",
+   "words": [
+    {
+     "en": "article",
+     "ja": "記事",
+     "forms": [
+      "articles"
+     ]
+    },
+    {
+     "en": "novel",
+     "ja": "小説",
+     "forms": [
+      "novels"
+     ]
+    },
+    {
+     "en": "poem",
+     "ja": "詩",
+     "forms": [
+      "poems"
+     ]
+    },
+    {
+     "en": "character",
+     "ja": "登場人物・文字",
+     "forms": [
+      "characters"
+     ]
+    },
+    {
+     "en": "app",
+     "ja": "アプリ",
+     "forms": [
+      "apps"
+     ]
+    },
+    {
+     "en": "advertisement",
+     "ja": "広告",
+     "forms": [
+      "advertisements"
+     ]
+    },
+    {
+     "en": "comment",
+     "ja": "コメント",
+     "forms": [
+      "comments"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e3-pp1",
+   "title": "Past Participles ① ・ 過去分詞①",
+   "group": "動詞 ・ Verbs",
+   "words": [
+    {
+     "en": "go",
+     "ja": "行く",
+     "forms": [
+      "went",
+      "gone"
+     ]
+    },
+    {
+     "en": "come",
+     "ja": "来る",
+     "forms": [
+      "came",
+      "come"
+     ]
+    },
+    {
+     "en": "eat",
+     "ja": "食べる",
+     "forms": [
+      "ate",
+      "eaten"
+     ]
+    },
+    {
+     "en": "see",
+     "ja": "見える・会う",
+     "forms": [
+      "saw",
+      "seen"
+     ]
+    },
+    {
+     "en": "take",
+     "ja": "取る",
+     "forms": [
+      "took",
+      "taken"
+     ]
+    },
+    {
+     "en": "give",
+     "ja": "あたえる",
+     "forms": [
+      "gave",
+      "given"
+     ]
+    },
+    {
+     "en": "write",
+     "ja": "書く",
+     "forms": [
+      "wrote",
+      "written"
+     ]
+    },
+    {
+     "en": "speak",
+     "ja": "話す",
+     "forms": [
+      "spoke",
+      "spoken"
+     ]
+    },
+    {
+     "en": "know",
+     "ja": "知っている",
+     "forms": [
+      "knew",
+      "known"
+     ]
+    },
+    {
+     "en": "make",
+     "ja": "作る",
+     "forms": [
+      "made",
+      "made"
+     ]
+    },
+    {
+     "en": "be",
+     "ja": "〜である・いる",
+     "forms": [
+      "was / were",
+      "been"
+     ]
+    },
+    {
+     "en": "do",
+     "ja": "する",
+     "forms": [
+      "did",
+      "done"
+     ]
+    },
+    {
+     "en": "have",
+     "ja": "持っている",
+     "forms": [
+      "had",
+      "had"
+     ]
+    },
+    {
+     "en": "build",
+     "ja": "建てる",
+     "forms": [
+      "built",
+      "built"
+     ]
+    },
+    {
+     "en": "find",
+     "ja": "見つける",
+     "forms": [
+      "found",
+      "found"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e3-pp2",
+   "title": "Past Participles ② ・ 過去分詞②",
+   "group": "動詞 ・ Verbs",
+   "words": [
+    {
+     "en": "begin",
+     "ja": "始める",
+     "forms": [
+      "began",
+      "begun"
+     ]
+    },
+    {
+     "en": "break",
+     "ja": "壊す",
+     "forms": [
+      "broke",
+      "broken"
+     ]
+    },
+    {
+     "en": "choose",
+     "ja": "選ぶ",
+     "forms": [
+      "chose",
+      "chosen"
+     ]
+    },
+    {
+     "en": "drive",
+     "ja": "運転する",
+     "forms": [
+      "drove",
+      "driven"
+     ]
+    },
+    {
+     "en": "fall",
+     "ja": "落ちる",
+     "forms": [
+      "fell",
+      "fallen"
+     ]
+    },
+    {
+     "en": "forget",
+     "ja": "忘れる",
+     "forms": [
+      "forgot",
+      "forgotten"
+     ]
+    },
+    {
+     "en": "hear",
+     "ja": "聞こえる",
+     "forms": [
+      "heard",
+      "heard"
+     ]
+    },
+    {
+     "en": "lose",
+     "ja": "なくす・負ける",
+     "forms": [
+      "lost",
+      "lost"
+     ]
+    },
+    {
+     "en": "read",
+     "ja": "読む",
+     "forms": [
+      "read",
+      "read"
+     ]
+    },
+    {
+     "en": "ride",
+     "ja": "乗る",
+     "forms": [
+      "rode",
+      "ridden"
+     ]
+    },
+    {
+     "en": "sell",
+     "ja": "売る",
+     "forms": [
+      "sold",
+      "sold"
+     ]
+    },
+    {
+     "en": "sing",
+     "ja": "歌う",
+     "forms": [
+      "sang",
+      "sung"
+     ]
+    },
+    {
+     "en": "swim",
+     "ja": "泳ぐ",
+     "forms": [
+      "swam",
+      "swum"
+     ]
+    },
+    {
+     "en": "teach",
+     "ja": "教える",
+     "forms": [
+      "taught",
+      "taught"
+     ]
+    },
+    {
+     "en": "wear",
+     "ja": "着ている",
+     "forms": [
+      "wore",
+      "worn"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e3-verbs1",
+   "title": "Thinking & Feeling ・ 考える・感じる",
+   "group": "動詞 ・ Verbs",
+   "words": [
+    {
+     "en": "believe",
+     "ja": "信じる",
+     "forms": [
+      "believed",
+      "believed"
+     ]
+    },
+    {
+     "en": "hope",
+     "ja": "望む",
+     "forms": [
+      "hoped",
+      "hoped"
+     ]
+    },
+    {
+     "en": "worry",
+     "ja": "心配する",
+     "forms": [
+      "worried",
+      "worried"
+     ]
+    },
+    {
+     "en": "remember",
+     "ja": "覚えている・思い出す",
+     "forms": [
+      "remembered",
+      "remembered"
+     ]
+    },
+    {
+     "en": "wonder",
+     "ja": "〜だろうかと思う",
+     "forms": [
+      "wondered",
+      "wondered"
+     ]
+    },
+    {
+     "en": "imagine",
+     "ja": "想像する",
+     "forms": [
+      "imagined",
+      "imagined"
+     ]
+    },
+    {
+     "en": "agree",
+     "ja": "賛成する",
+     "forms": [
+      "agreed",
+      "agreed"
+     ]
+    },
+    {
+     "en": "mean",
+     "ja": "意味する",
+     "forms": [
+      "meant",
+      "meant"
+     ]
+    },
+    {
+     "en": "notice",
+     "ja": "気づく",
+     "forms": [
+      "noticed",
+      "noticed"
+     ]
+    },
+    {
+     "en": "surprise",
+     "ja": "驚かせる",
+     "forms": [
+      "surprised",
+      "surprised"
+     ]
+    },
+    {
+     "en": "excite",
+     "ja": "わくわくさせる",
+     "forms": [
+      "excited",
+      "excited"
+     ]
+    },
+    {
+     "en": "miss",
+     "ja": "恋しく思う・乗り遅れる",
+     "forms": [
+      "missed",
+      "missed"
+     ]
+    },
+    {
+     "en": "prefer",
+     "ja": "〜をより好む",
+     "forms": [
+      "preferred",
+      "preferred"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e3-verbs2",
+   "title": "Doing Things ・ 行動の動詞",
+   "group": "動詞 ・ Verbs",
+   "words": [
+    {
+     "en": "explain",
+     "ja": "説明する",
+     "forms": [
+      "explained",
+      "explained"
+     ]
+    },
+    {
+     "en": "introduce",
+     "ja": "紹介する",
+     "forms": [
+      "introduced",
+      "introduced"
+     ]
+    },
+    {
+     "en": "improve",
+     "ja": "上達させる・改善する",
+     "forms": [
+      "improved",
+      "improved"
+     ]
+    },
+    {
+     "en": "protect",
+     "ja": "守る",
+     "forms": [
+      "protected",
+      "protected"
+     ]
+    },
+    {
+     "en": "spend",
+     "ja": "過ごす・使う",
+     "forms": [
+      "spent",
+      "spent"
+     ]
+    },
+    {
+     "en": "grow",
+     "ja": "育つ・育てる",
+     "forms": [
+      "grew",
+      "grown"
+     ]
+    },
+    {
+     "en": "save",
+     "ja": "救う・節約する",
+     "forms": [
+      "saved",
+      "saved"
+     ]
+    },
+    {
+     "en": "solve",
+     "ja": "解決する",
+     "forms": [
+      "solved",
+      "solved"
+     ]
+    },
+    {
+     "en": "create",
+     "ja": "創り出す",
+     "forms": [
+      "created",
+      "created"
+     ]
+    },
+    {
+     "en": "discover",
+     "ja": "発見する",
+     "forms": [
+      "discovered",
+      "discovered"
+     ]
+    },
+    {
+     "en": "produce",
+     "ja": "生産する",
+     "forms": [
+      "produced",
+      "produced"
+     ]
+    },
+    {
+     "en": "prepare",
+     "ja": "準備する",
+     "forms": [
+      "prepared",
+      "prepared"
+     ]
+    },
+    {
+     "en": "reach",
+     "ja": "着く・届く",
+     "forms": [
+      "reached",
+      "reached"
+     ]
+    },
+    {
+     "en": "raise",
+     "ja": "上げる・育てる",
+     "forms": [
+      "raised",
+      "raised"
+     ]
+    },
+    {
+     "en": "hold",
+     "ja": "持つ・開催する",
+     "forms": [
+      "held",
+      "held"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e3-verbs3",
+   "title": "Daily Life Verbs ・ 生活の動詞",
+   "group": "動詞 ・ Verbs",
+   "words": [
+    {
+     "en": "order",
+     "ja": "注文する",
+     "forms": [
+      "ordered",
+      "ordered"
+     ]
+    },
+    {
+     "en": "receive",
+     "ja": "受け取る",
+     "forms": [
+      "received",
+      "received"
+     ]
+    },
+    {
+     "en": "reserve",
+     "ja": "予約する",
+     "forms": [
+      "reserved",
+      "reserved"
+     ]
+    },
+    {
+     "en": "cancel",
+     "ja": "取り消す",
+     "forms": [
+      "canceled",
+      "canceled"
+     ]
+    },
+    {
+     "en": "recycle",
+     "ja": "リサイクルする",
+     "forms": [
+      "recycled",
+      "recycled"
+     ]
+    },
+    {
+     "en": "throw away",
+     "ja": "捨てる",
+     "forms": [
+      "threw away",
+      "thrown away"
+     ]
+    },
+    {
+     "en": "graduate",
+     "ja": "卒業する",
+     "forms": [
+      "graduated",
+      "graduated"
+     ]
+    },
+    {
+     "en": "belong",
+     "ja": "所属する",
+     "forms": [
+      "belonged",
+      "belonged"
+     ]
+    },
+    {
+     "en": "exercise",
+     "ja": "運動する",
+     "forms": [
+      "exercised",
+      "exercised"
+     ]
+    },
+    {
+     "en": "relax",
+     "ja": "くつろぐ",
+     "forms": [
+      "relaxed",
+      "relaxed"
+     ]
+    },
+    {
+     "en": "rest",
+     "ja": "休む",
+     "forms": [
+      "rested",
+      "rested"
+     ]
+    },
+    {
+     "en": "taste",
+     "ja": "〜な味がする",
+     "forms": [
+      "tasted",
+      "tasted"
+     ]
+    },
+    {
+     "en": "smell",
+     "ja": "〜なにおいがする",
+     "forms": [
+      "smelled",
+      "smelled"
+     ]
+    },
+    {
+     "en": "sound",
+     "ja": "〜に聞こえる",
+     "forms": [
+      "sounded",
+      "sounded"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e3-verbs4",
+   "title": "Communication ・ 伝える動詞",
+   "group": "動詞 ・ Verbs",
+   "words": [
+    {
+     "en": "communicate",
+     "ja": "意思を伝え合う",
+     "forms": [
+      "communicated",
+      "communicated"
+     ]
+    },
+    {
+     "en": "discuss",
+     "ja": "話し合う",
+     "forms": [
+      "discussed",
+      "discussed"
+     ]
+    },
+    {
+     "en": "report",
+     "ja": "報告する",
+     "forms": [
+      "reported",
+      "reported"
+     ]
+    },
+    {
+     "en": "describe",
+     "ja": "説明する・描写する",
+     "forms": [
+      "described",
+      "described"
+     ]
+    },
+    {
+     "en": "accept",
+     "ja": "受け入れる",
+     "forms": [
+      "accepted",
+      "accepted"
+     ]
+    },
+    {
+     "en": "allow",
+     "ja": "許す",
+     "forms": [
+      "allowed",
+      "allowed"
+     ]
+    },
+    {
+     "en": "offer",
+     "ja": "申し出る",
+     "forms": [
+      "offered",
+      "offered"
+     ]
+    },
+    {
+     "en": "suggest",
+     "ja": "提案する",
+     "forms": [
+      "suggested",
+      "suggested"
+     ]
+    },
+    {
+     "en": "thank",
+     "ja": "感謝する",
+     "forms": [
+      "thanked",
+      "thanked"
+     ]
+    },
+    {
+     "en": "welcome",
+     "ja": "歓迎する",
+     "forms": [
+      "welcomed",
+      "welcomed"
+     ]
+    },
+    {
+     "en": "translate",
+     "ja": "翻訳する",
+     "forms": [
+      "translated",
+      "translated"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e3-verbs5",
+   "title": "Change & Action ・ 変化・行動",
+   "group": "動詞 ・ Verbs",
+   "words": [
+    {
+     "en": "happen",
+     "ja": "起こる",
+     "forms": [
+      "happened",
+      "happened"
+     ]
+    },
+    {
+     "en": "continue",
+     "ja": "続ける",
+     "forms": [
+      "continued",
+      "continued"
+     ]
+    },
+    {
+     "en": "follow",
+     "ja": "従う・ついていく",
+     "forms": [
+      "followed",
+      "followed"
+     ]
+    },
+    {
+     "en": "perform",
+     "ja": "演じる・演奏する",
+     "forms": [
+      "performed",
+      "performed"
+     ]
+    },
+    {
+     "en": "fill",
+     "ja": "満たす",
+     "forms": [
+      "filled",
+      "filled"
+     ]
+    },
+    {
+     "en": "hurt",
+     "ja": "傷つける・痛む",
+     "forms": [
+      "hurt",
+      "hurt"
+     ]
+    },
+    {
+     "en": "spread",
+     "ja": "広がる・広げる",
+     "forms": [
+      "spread",
+      "spread"
+     ]
+    },
+    {
+     "en": "increase",
+     "ja": "増える・増やす",
+     "forms": [
+      "increased",
+      "increased"
+     ]
+    },
+    {
+     "en": "decrease",
+     "ja": "減る・減らす",
+     "forms": [
+      "decreased",
+      "decreased"
+     ]
+    },
+    {
+     "en": "reduce",
+     "ja": "減らす",
+     "forms": [
+      "reduced",
+      "reduced"
+     ]
+    },
+    {
+     "en": "waste",
+     "ja": "無駄にする",
+     "forms": [
+      "wasted",
+      "wasted"
+     ]
+    },
+    {
+     "en": "plant",
+     "ja": "植える",
+     "forms": [
+      "planted",
+      "planted"
+     ]
+    },
+    {
+     "en": "land",
+     "ja": "着陸する",
+     "forms": [
+      "landed",
+      "landed"
+     ]
+    },
+    {
+     "en": "appear",
+     "ja": "現れる",
+     "forms": [
+      "appeared",
+      "appeared"
+     ]
+    },
+    {
+     "en": "disappear",
+     "ja": "消える",
+     "forms": [
+      "disappeared",
+      "disappeared"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e3-adj1",
+   "title": "Important Words ・ 大切なことば",
+   "group": "形容詞・副詞 ・ Describing Words",
    "words": [
     {
      "en": "important",
@@ -170,6 +1747,10 @@
      "ja": "違う・異なる"
     },
     {
+     "en": "similar",
+     "ja": "似ている"
+    },
+    {
      "en": "international",
      "ja": "国際的な"
     },
@@ -181,6 +1762,45 @@
      "en": "useful",
      "ja": "役に立つ"
     },
+    {
+     "en": "possible",
+     "ja": "可能な"
+    },
+    {
+     "en": "impossible",
+     "ja": "不可能な"
+    },
+    {
+     "en": "common",
+     "ja": "共通の・よくある"
+    },
+    {
+     "en": "main",
+     "ja": "主な"
+    },
+    {
+     "en": "local",
+     "ja": "地元の"
+    },
+    {
+     "en": "modern",
+     "ja": "現代の"
+    },
+    {
+     "en": "natural",
+     "ja": "自然の"
+    },
+    {
+     "en": "public",
+     "ja": "公共の"
+    }
+   ]
+  },
+  {
+   "id": "e3-adj2",
+   "title": "Feelings & People ・ 気持ち・人",
+   "group": "形容詞・副詞 ・ Describing Words",
+   "words": [
     {
      "en": "careful",
      "ja": "注意深い"
@@ -194,15 +1814,181 @@
      "ja": "驚いた"
     },
     {
-     "en": "own",
-     "ja": "自分自身の"
+     "en": "interested",
+     "ja": "興味がある"
+    },
+    {
+     "en": "worried",
+     "ja": "心配した"
+    },
+    {
+     "en": "nervous",
+     "ja": "緊張した"
+    },
+    {
+     "en": "proud",
+     "ja": "誇りに思う"
+    },
+    {
+     "en": "bored",
+     "ja": "退屈した"
+    },
+    {
+     "en": "lonely",
+     "ja": "さびしい"
+    },
+    {
+     "en": "shy",
+     "ja": "恥ずかしがりの"
+    },
+    {
+     "en": "brave",
+     "ja": "勇敢な"
+    },
+    {
+     "en": "smart",
+     "ja": "頭のよい"
+    },
+    {
+     "en": "polite",
+     "ja": "礼儀正しい"
+    },
+    {
+     "en": "helpful",
+     "ja": "役に立つ・親切な"
+    },
+    {
+     "en": "healthy",
+     "ja": "健康な"
     }
    ]
   },
   {
-   "id": "e3-grammar",
-   "title": "Grammar Words ・ 文法のことば",
-   "group": "英検3級",
+   "id": "e3-adj3",
+   "title": "Describing Things ・ ものの様子",
+   "group": "形容詞・副詞 ・ Describing Words",
+   "words": [
+    {
+     "en": "own",
+     "ja": "自分自身の"
+    },
+    {
+     "en": "enough",
+     "ja": "十分な"
+    },
+    {
+     "en": "each",
+     "ja": "それぞれの"
+    },
+    {
+     "en": "several",
+     "ja": "いくつかの"
+    },
+    {
+     "en": "whole",
+     "ja": "全体の"
+    },
+    {
+     "en": "huge",
+     "ja": "巨大な"
+    },
+    {
+     "en": "tiny",
+     "ja": "とても小さい"
+    },
+    {
+     "en": "wide",
+     "ja": "幅の広い"
+    },
+    {
+     "en": "narrow",
+     "ja": "狭い"
+    },
+    {
+     "en": "deep",
+     "ja": "深い"
+    },
+    {
+     "en": "fresh",
+     "ja": "新鮮な"
+    },
+    {
+     "en": "crowded",
+     "ja": "混雑した"
+    },
+    {
+     "en": "comfortable",
+     "ja": "快適な"
+    },
+    {
+     "en": "convenient",
+     "ja": "便利な"
+    }
+   ]
+  },
+  {
+   "id": "e3-adj4",
+   "title": "More Describing Words ・ もっと形容詞",
+   "group": "形容詞・副詞 ・ Describing Words",
+   "words": [
+    {
+     "en": "clear",
+     "ja": "はっきりした・澄んだ"
+    },
+    {
+     "en": "serious",
+     "ja": "深刻な・真剣な"
+    },
+    {
+     "en": "strange",
+     "ja": "奇妙な"
+    },
+    {
+     "en": "terrible",
+     "ja": "ひどい"
+    },
+    {
+     "en": "perfect",
+     "ja": "完璧な"
+    },
+    {
+     "en": "simple",
+     "ja": "簡単な・単純な"
+    },
+    {
+     "en": "active",
+     "ja": "活動的な"
+    },
+    {
+     "en": "alone",
+     "ja": "ひとりで"
+    },
+    {
+     "en": "colorful",
+     "ja": "色とりどりの"
+    },
+    {
+     "en": "dry",
+     "ja": "乾いた"
+    },
+    {
+     "en": "wet",
+     "ja": "ぬれた"
+    },
+    {
+     "en": "dirty",
+     "ja": "汚い"
+    },
+    {
+     "en": "loud",
+     "ja": "（音が）大きい・うるさい"
+    }
+   ]
+  },
+  {
+   "id": "e3-adv",
+   "title": "Adverbs ・ 副詞",
+   "group": "形容詞・副詞 ・ Describing Words",
    "words": [
     {
      "en": "already",
@@ -213,10 +1999,6 @@
      "ja": "（疑問文で）もう・（否定文で）まだ"
     },
     {
-     "en": "since",
-     "ja": "〜以来"
-    },
-    {
      "en": "ever",
      "ja": "今までに"
     },
@@ -224,6 +2006,61 @@
      "en": "never",
      "ja": "一度も〜ない"
     },
+    {
+     "en": "just",
+     "ja": "ちょうど・ただ"
+    },
+    {
+     "en": "recently",
+     "ja": "最近"
+    },
+    {
+     "en": "abroad",
+     "ja": "海外へ・海外で"
+    },
+    {
+     "en": "once",
+     "ja": "かつて・一度"
+    },
+    {
+     "en": "especially",
+     "ja": "特に"
+    },
+    {
+     "en": "probably",
+     "ja": "たぶん"
+    },
+    {
+     "en": "actually",
+     "ja": "実は"
+    },
+    {
+     "en": "suddenly",
+     "ja": "突然"
+    },
+    {
+     "en": "carefully",
+     "ja": "注意深く"
+    },
+    {
+     "en": "easily",
+     "ja": "簡単に"
+    },
+    {
+     "en": "instead",
+     "ja": "その代わりに"
+    },
+    {
+     "en": "even",
+     "ja": "〜でさえ"
+    }
+   ]
+  },
+  {
+   "id": "e3-small",
+   "title": "Connecting Words ・ つなぐことば",
+   "group": "前置詞・接続詞 ・ Small Words",
+   "words": [
     {
      "en": "during",
      "ja": "〜の間に"
@@ -233,23 +2070,122 @@
      "ja": "〜まで"
     },
     {
+     "en": "since",
+     "ja": "〜以来"
+    },
+    {
      "en": "though",
      "ja": "〜だけれども"
     },
     {
-     "en": "each",
-     "ja": "それぞれの"
+     "en": "although",
+     "ja": "〜だけれども"
     },
     {
-     "en": "than",
-     "ja": "〜よりも"
+     "en": "while",
+     "ja": "〜している間に"
+    },
+    {
+     "en": "however",
+     "ja": "しかし"
+    },
+    {
+     "en": "such",
+     "ja": "そのような"
+    },
+    {
+     "en": "against",
+     "ja": "〜に反対して"
+    },
+    {
+     "en": "among",
+     "ja": "〜の間で（3つ以上）"
+    },
+    {
+     "en": "toward",
+     "ja": "〜の方へ"
+    },
+    {
+     "en": "beside",
+     "ja": "〜のそばに"
+    },
+    {
+     "en": "who",
+     "ja": "（関係代名詞）〜する人"
+    },
+    {
+     "en": "which",
+     "ja": "（関係代名詞）〜するもの"
+    },
+    {
+     "en": "that",
+     "ja": "（関係代名詞）〜する人・もの"
     }
    ]
   },
   {
-   "id": "e3-phrases",
-   "title": "Useful Phrases ・ 熟語",
-   "group": "英検3級",
+   "id": "e3-phr1",
+   "title": "Be Phrases ・ beの熟語",
+   "group": "熟語・表現 ・ Phrases",
+   "words": [
+    {
+     "en": "be able to",
+     "ja": "〜できる"
+    },
+    {
+     "en": "be interested in",
+     "ja": "〜に興味がある"
+    },
+    {
+     "en": "be proud of",
+     "ja": "〜を誇りに思う"
+    },
+    {
+     "en": "be different from",
+     "ja": "〜と違う"
+    },
+    {
+     "en": "be full of",
+     "ja": "〜でいっぱいだ"
+    },
+    {
+     "en": "be made of",
+     "ja": "〜でできている（材料）"
+    },
+    {
+     "en": "be made from",
+     "ja": "〜から作られる（原料）"
+    },
+    {
+     "en": "be known as",
+     "ja": "〜として知られている"
+    },
+    {
+     "en": "be covered with",
+     "ja": "〜でおおわれている"
+    },
+    {
+     "en": "be surprised at",
+     "ja": "〜に驚く"
+    },
+    {
+     "en": "be worried about",
+     "ja": "〜を心配する"
+    },
+    {
+     "en": "be ready for",
+     "ja": "〜の準備ができている"
+    },
+    {
+     "en": "be sure to",
+     "ja": "必ず〜する"
+    }
+   ]
+  },
+  {
+   "id": "e3-phr2",
+   "title": "Verb Phrases ・ 動詞の熟語",
+   "group": "熟語・表現 ・ Phrases",
    "words": [
     {
      "en": "take care of",
@@ -260,12 +2196,71 @@
      "ja": "〜を楽しみに待つ"
     },
     {
-     "en": "be able to",
-     "ja": "〜できる"
+     "en": "look for",
+     "ja": "〜を探す"
     },
+    {
+     "en": "look after",
+     "ja": "〜の世話をする"
+    },
+    {
+     "en": "give up",
+     "ja": "あきらめる"
+    },
+    {
+     "en": "grow up",
+     "ja": "成長する"
+    },
+    {
+     "en": "find out",
+     "ja": "わかる・見つけ出す"
+    },
+    {
+     "en": "pick up",
+     "ja": "拾う・車で迎えに行く"
+    },
+    {
+     "en": "turn on",
+     "ja": "（電気などを）つける"
+    },
+    {
+     "en": "turn off",
+     "ja": "（電気などを）消す"
+    },
+    {
+     "en": "try on",
+     "ja": "試着する"
+    },
+    {
+     "en": "get to",
+     "ja": "〜に着く"
+    },
+    {
+     "en": "hear from",
+     "ja": "〜から便りがある"
+    },
+    {
+     "en": "make friends with",
+     "ja": "〜と友達になる"
+    },
+    {
+     "en": "take part in",
+     "ja": "〜に参加する"
+    }
+   ]
+  },
+  {
+   "id": "e3-phr3",
+   "title": "Other Phrases ・ その他の熟語",
+   "group": "熟語・表現 ・ Phrases",
+   "words": [
     {
      "en": "a few",
      "ja": "少しの・いくつかの"
+    },
+    {
+     "en": "a lot",
+     "ja": "たくさん"
     },
     {
      "en": "each other",
@@ -284,12 +2279,178 @@
      "ja": "〜のために・〜が原因で"
     },
     {
-     "en": "be interested in",
-     "ja": "〜に興味がある"
+     "en": "in fact",
+     "ja": "実際は"
     },
     {
-     "en": "look for",
-     "ja": "〜を探す"
+     "en": "at last",
+     "ja": "ついに"
+    },
+    {
+     "en": "as soon as",
+     "ja": "〜するとすぐに"
+    },
+    {
+     "en": "not only A but also B",
+     "ja": "AだけでなくBも"
+    },
+    {
+     "en": "both A and B",
+     "ja": "AとBの両方"
+    },
+    {
+     "en": "either A or B",
+     "ja": "AかBのどちらか"
+    },
+    {
+     "en": "too ~ to …",
+     "ja": "〜すぎて…できない"
+    },
+    {
+     "en": "so ~ that …",
+     "ja": "とても〜なので…"
+    },
+    {
+     "en": "instead of",
+     "ja": "〜の代わりに"
+    },
+    {
+     "en": "thanks to",
+     "ja": "〜のおかげで"
+    }
+   ]
+  },
+  {
+   "id": "e3-phr4",
+   "title": "Grammar Patterns ・ 文の形",
+   "group": "熟語・表現 ・ Phrases",
+   "words": [
+    {
+     "en": "decide to",
+     "ja": "〜することに決める"
+    },
+    {
+     "en": "try to",
+     "ja": "〜しようとする"
+    },
+    {
+     "en": "need to",
+     "ja": "〜する必要がある"
+    },
+    {
+     "en": "would like to",
+     "ja": "〜したい"
+    },
+    {
+     "en": "keep ~ing",
+     "ja": "〜し続ける"
+    },
+    {
+     "en": "stop ~ing",
+     "ja": "〜するのをやめる"
+    },
+    {
+     "en": "finish ~ing",
+     "ja": "〜し終える"
+    },
+    {
+     "en": "enjoy ~ing",
+     "ja": "〜して楽しむ"
+    },
+    {
+     "en": "how to",
+     "ja": "〜のしかた"
+    },
+    {
+     "en": "what to",
+     "ja": "何を〜すべきか"
+    },
+    {
+     "en": "It is … for A to ~.",
+     "ja": "Aにとって〜することは…だ。"
+    },
+    {
+     "en": "ask A to ~",
+     "ja": "Aに〜するように頼む"
+    },
+    {
+     "en": "want A to ~",
+     "ja": "Aに〜してほしい"
+    },
+    {
+     "en": "tell A to ~",
+     "ja": "Aに〜するように言う"
+    },
+    {
+     "en": "help A ~",
+     "ja": "Aが〜するのを手伝う"
+    }
+   ]
+  },
+  {
+   "id": "e3-talk",
+   "title": "Conversation ・ 会話表現",
+   "group": "熟語・表現 ・ Phrases",
+   "words": [
+    {
+     "en": "Have you ever ~?",
+     "ja": "今までに〜したことがありますか。"
+    },
+    {
+     "en": "How long have you ~?",
+     "ja": "どのくらい〜していますか。"
+    },
+    {
+     "en": "What do you mean?",
+     "ja": "どういう意味ですか。"
+    },
+    {
+     "en": "I'm afraid ~.",
+     "ja": "残念ながら〜です。"
+    },
+    {
+     "en": "I hope so.",
+     "ja": "そうだといいね。"
+    },
+    {
+     "en": "It's my pleasure.",
+     "ja": "どういたしまして。"
+    },
+    {
+     "en": "Could you ~?",
+     "ja": "〜していただけますか。"
+    },
+    {
+     "en": "Do you mind if ~?",
+     "ja": "〜してもかまいませんか。"
+    },
+    {
+     "en": "How was ~?",
+     "ja": "〜はどうでしたか。"
+    },
+    {
+     "en": "What happened?",
+     "ja": "何があったの？"
+    },
+    {
+     "en": "Good luck.",
+     "ja": "がんばってね。"
+    },
+    {
+     "en": "Congratulations!",
+     "ja": "おめでとう！"
+    },
+    {
+     "en": "That sounds fun.",
+     "ja": "楽しそうだね。"
+    },
+    {
+     "en": "Me, too.",
+     "ja": "私もです。"
+    },
+    {
+     "en": "Not at all.",
+     "ja": "どういたしまして・全然。"
     }
    ]
   }
