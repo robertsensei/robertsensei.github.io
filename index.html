@@ -239,6 +239,7 @@
     }
     .tag.es  { background: #e3f5e7; color: var(--es-dark); }
     .tag.jhs { background: #efe7fb; color: var(--jhs-dark); }
+    .tag.eiken { background: #e3ecfb; color: #2a52a8; }
 
     .card-body p { font-size: 1.2rem; line-height: 1.4; flex: 1; }
 
@@ -310,13 +311,14 @@
     //  To add a textbook: put its deck file in flashcards/decks/, add it to
     //  the DECKS list in flashcards/index.html, then add a block here.
     //    deck:  the deck file name without .json (e.g. "new-horizon-1")
-    //    grade: "es1"-"es6" or "jhs1"-"jhs3"
+    //    grade: "es1"-"es6", "jhs1"-"jhs3", or "eiken5"/"eiken4"/"eiken3"
     //    color: the book's spine color
     //    soon:  true = show it greyed out as "Coming soon"
     // =====================================================================
     const BOOKS = [
       { title: "New Horizon 1", deck: "new-horizon-1", grade: "jhs1", color: "#2f9e8f" },
       { title: "Here We Go! 3", deck: "here-we-go-3", grade: "jhs3", color: "#e0583c" },
+      { title: "Eiken Grade 5", deck: "eiken-5", grade: "eiken5", color: "#3d6fd6" },
     ];
 
     function renderBooks() {
@@ -518,6 +520,7 @@
     }
 
     function gradeTag(grade) {
+      if (grade.startsWith("eiken")) return `<span class="tag eiken">英検${grade.replace(/\D/g, "")}級</span>`;
       const school = grade.startsWith("jhs") ? "jhs" : "es";
       const short = (school === "jhs" ? "中" : "小") + grade.replace(/\D/g, "");
       return `<span class="tag ${school}">${short}</span>`;
