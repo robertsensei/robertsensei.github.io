@@ -1,0 +1,50 @@
+{
+ "id": "card01",
+ "grade": "3級",
+ "title": "School Gardens",
+ "passage": "Many schools in Japan have gardens. Students grow vegetables and flowers there. Some students like taking care of plants, so they join the gardening club after school.",
+ "picture": "cards/card01.svg",
+ "pictureAlt": "A school garden. A girl is watering flowers. Three birds are sitting on the fence. Tomato plants grow on the right.",
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Please look at the passage. Why do some students join the gardening club after school?",
+   "tip": "パッセージの “so” の前を探そう。“Because they …” で答えよう。",
+   "model": "Because they like taking care of plants."
+  },
+  {
+   "id": "q2",
+   "text": "Please look at the picture. How many birds are there on the fence?",
+   "tip": "数を数えて “There are …” で答えよう。",
+   "model": "There are three."
+  },
+  {
+   "id": "q3",
+   "text": "What is the girl doing?",
+   "tip": "“She is …ing” の形で答えよう。",
+   "model": "She is watering the flowers."
+  },
+  {
+   "id": "q4",
+   "text": "What do you like to do on weekends?",
+   "tip": "自分のことを答えよう。“I like to …” で文で言おう。",
+   "model": "I like to play soccer with my friends."
+  },
+  {
+   "id": "q5",
+   "text": "Do you like cooking?",
+   "tip": "まず Yes か No で答えよう。",
+   "model": "Yes, I do. / No, I don't.",
+   "followYes": {
+    "text": "Please tell me more.",
+    "tip": "もう1文、くわしく言おう。",
+    "model": "I often make curry with my mother."
+   },
+   "followNo": {
+    "text": "Why not?",
+    "tip": "理由を1文で言おう。",
+    "model": "Because it is difficult for me."
+   }
+  }
+ ]
+}
