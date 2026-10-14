@@ -223,24 +223,44 @@ const CARDS = [
 
 // =====================================================================
 //  YOUR OWN VOICE (later)
-//  Put an mp3/m4a file in audio/ and write its path next to the line id.
+//  Put an mp3/m4a file in audio/common/ and write its path next to the line id.
 //  Lines without a file use the iPad's built-in voice.
-//  For card questions, add  "audio": "audio/card01-q1.mp3"  to the
+//  For card questions, add  "audio": "audio/card01/q1.m4a"  to the
 //  question in the card's .json file.
 // =====================================================================
 const COMMON_AUDIO = {
-  // hello: "audio/common/hello.mp3",
+  hello: "audio/common/hello.m4a",
+  card: "audio/common/card.m4a",
+  sit: "audio/common/sit.m4a",
+  name: "audio/common/name.m4a",
+  grade: "audio/common/grade.m4a",
+  howare: "audio/common/howare.m4a",
+  start: "audio/common/start.m4a",
+  silent: "audio/common/silent.m4a",
+  aloud: "audio/common/aloud.m4a",
+  questions: "audio/common/questions.m4a",
+  no1: "audio/common/no1.m4a",
+  no2: "audio/common/no2.m4a",
+  no3: "audio/common/no3.m4a",
+  no4: "audio/common/no4.m4a",
+  no5: "audio/common/no5.m4a",
+  turn: "audio/common/turn.m4a",
+  back: "audio/common/back.m4a",
+  bye: "audio/common/bye.m4a",
 };
 
 const COMMON = {
   hello:  "Hello. Please come in.",
-  card:   "Can I have your score card, please?",
+  card:   "Can I have your card, please?",
   sit:    "Please sit down.",
   name:   "May I have your name, please?",
+  grade:  "This is the Grade 3 test. OK?",
   howare: "How are you?",
   start:  "OK. Let's start the test. This is your card.",
   silent: "Please read the passage silently.",
   aloud:  "All right. Please read the passage aloud.",
+  questions: "Now, I'll ask you five questions.",
+  no1: "No. 1", no2: "No. 2", no3: "No. 3", no4: "No. 4", no5: "No. 5",
   turn:   "Now, please turn the card over.",
   back:   "This is the end of the test. Could I have the card back, please?",
   bye:    "You may go now.",
@@ -265,10 +285,24 @@ function pickVoice() {
 if ("speechSynthesis" in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
 
 let playToken = 0;
-let currentAudio = null;
+// One audio player, reused for every clip. iPads only allow sound that starts from a tap,
+// so we "unlock" this player on the first tap and then keep using it.
+const player = new Audio();
+player.preload = "auto";
+let unlocked = false;
+function unlockAudio() {
+  if (unlocked) return;
+  unlocked = true;
+  player.muted = true;
+  player.src = COMMON_AUDIO.no1 || "";
+  const p = player.play();
+  if (p) p.then(() => { player.pause(); player.muted = false; }).catch(() => { player.muted = false; });
+  else player.muted = false;
+  if ("speechSynthesis" in window) speechSynthesis.speak(new SpeechSynthesisUtterance(""));
+}
 function stopVoice() {
   playToken++;
-  if (currentAudio) { currentAudio.pause(); currentAudio = null; }
+  player.onended = null; player.onerror = null; player.pause();
   if ("speechSynthesis" in window) speechSynthesis.cancel();
   $("examiner").classList.remove("talking");
 }
@@ -290,10 +324,12 @@ function say(text, audioPath, done) {
     speechSynthesis.speak(u);
   };
   if (audioPath) {
-    const a = new Audio(audioPath);
-    currentAudio = a;
-    a.onended = finish;
-    a.play().catch(tts);
+    player.muted = false;
+    player.src = audioPath;
+    player.onended = finish;
+    player.onerror = () => { player.onerror = null; tts(); };
+    const p = player.play();
+    if (p) p.catch(() => { if (token === playToken) tts(); });
   } else tts();
 }
 
@@ -308,16 +344,18 @@ function buildSteps(card) {
     { line: L("card"),   show: "none", tip: "カードを渡しながら答えよう。", ex: "Here you are.", wait: 5 },
     { line: L("sit"),    show: "none", tip: "お礼を言ってすわろう。", ex: "Thank you.", wait: 5 },
     { line: L("name"),   show: "none", tip: "名前を文で答えよう。", ex: "My name is ____.", wait: 6 },
+    { line: L("grade"),  show: "none", tip: "確認に答えよう。", ex: "OK.", wait: 4 },
     { line: L("howare"), show: "none", tip: "元気よく答えよう。", ex: "I'm fine, thank you.", wait: 5 },
     { line: L("start"),  show: "card", tip: "カードを受け取ろう。", ex: "Thank you.", wait: 5 },
     { line: L("silent"), show: "card", tip: "声に出さずにパッセージを読もう。", silent: 20 },
     { line: L("aloud"),  show: "card", tip: "タイトルから、大きな声ではっきり読もう。読み終わったら「次へ」。", wait: 40, readAloud: true },
-    { line: Q(qs[0]), show: "card", q: qs[0], wait: 15, label: "No.1" },
-    { line: Q(qs[1]), show: "card", q: qs[1], wait: 15, label: "No.2" },
-    { line: Q(qs[2]), show: "card", q: qs[2], wait: 15, label: "No.3" },
+    { line: L("questions"), show: "card", tip: "これから5つの質問。よく聞こう。", ex: "OK.", wait: 3 },
+    { line: Q(qs[0]), show: "card", q: qs[0], wait: 15, label: "No.1", num: "no1" },
+    { line: Q(qs[1]), show: "card", q: qs[1], wait: 15, label: "No.2", num: "no2" },
+    { line: Q(qs[2]), show: "card", q: qs[2], wait: 15, label: "No.3", num: "no3" },
     { line: L("turn"),   show: "back", tip: "カードを裏返そう。ここからはカードを見ないで答えます。", ex: "", wait: 3 },
-    { line: Q(qs[3]), show: "back", q: qs[3], wait: 15, label: "No.4" },
-    { line: Q(qs[4]), show: "back", q: qs[4], wait: 10, label: "No.5", yesNo: true },
+    { line: Q(qs[3]), show: "back", q: qs[3], wait: 15, label: "No.4", num: "no4" },
+    { line: Q(qs[4]), show: "back", q: qs[4], wait: 10, label: "No.5", num: "no5", yesNo: true },
     { line: L("back"),   show: "none", tip: "カードを返そう。", ex: "Here you are.", wait: 5 },
     { line: L("bye"),    show: "none", tip: "お礼とあいさつをして退室しよう。", ex: "Thank you. Goodbye.", wait: 5 },
   ];
@@ -403,7 +441,10 @@ function showStep(followUp) {
 
   const play = () => {
     resetTimerBar(); cancelAnimationFrame(timerRAF);
-    say(line.text, line.audio, () => {
+    const ask = (cb) => (s.num && !followUp)
+      ? say(COMMON[s.num], COMMON_AUDIO[s.num], () => say(line.text, line.audio, cb))
+      : say(line.text, line.audio, cb);
+    ask(() => {
       if (s.silent && !followUp) startSilentReading(s.silent);
       else runAnswerTimer(s.wait || 10);
     });
@@ -462,7 +503,7 @@ async function renderList() {
       <img src="${esc(c.picture)}" alt="">
       <div><div class="t">${esc(c.title)}</div><div class="g ja">英検${esc(c.grade)} ・ スタート ▶</div></div>
     </button>`).join("");
-  list.querySelectorAll(".pick").forEach((b) => b.onclick = () => startCard(b.dataset.id));
+  list.querySelectorAll(".pick").forEach((b) => b.onclick = () => { unlockAudio(); startCard(b.dataset.id); });
 }
 
 function renderSubToggle() {
@@ -475,7 +516,7 @@ $("subToggle").onclick = () => {
     setExaminer(shownText);
   }
 };
-$("again").onclick = () => startCard(card.id);
+$("again").onclick = () => { unlockAudio(); startCard(card.id); };
 $("toList").onclick = () => showScreen("start");
 
 renderSubToggle();

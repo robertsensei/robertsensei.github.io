@@ -10,25 +10,29 @@
    "id": "q1",
    "text": "Please look at the passage. Why do some students join the gardening club after school?",
    "tip": "パッセージの “so” の前を探そう。“Because they …” で答えよう。",
-   "model": "Because they like taking care of plants."
+   "model": "Because they like taking care of plants.",
+   "audio": "audio/card01/q1.m4a"
   },
   {
    "id": "q2",
    "text": "Please look at the picture. How many birds are there on the fence?",
    "tip": "数を数えて “There are …” で答えよう。",
-   "model": "There are three."
+   "model": "There are three.",
+   "audio": "audio/card01/q2.m4a"
   },
   {
    "id": "q3",
    "text": "What is the girl doing?",
    "tip": "“She is …ing” の形で答えよう。",
-   "model": "She is watering the flowers."
+   "model": "She is watering the flowers.",
+   "audio": "audio/card01/q3.m4a"
   },
   {
    "id": "q4",
    "text": "What do you like to do on weekends?",
    "tip": "自分のことを答えよう。“I like to …” で文で言おう。",
-   "model": "I like to play soccer with my friends."
+   "model": "I like to play soccer with my friends.",
+   "audio": "audio/card01/q4.m4a"
   },
   {
    "id": "q5",
@@ -38,13 +42,16 @@
    "followYes": {
     "text": "Please tell me more.",
     "tip": "もう1文、くわしく言おう。",
-    "model": "I often make curry with my mother."
+    "model": "I often make curry with my mother.",
+    "audio": "audio/card01/q5-yes.m4a"
    },
    "followNo": {
     "text": "Why not?",
     "tip": "理由を1文で言おう。",
-    "model": "Because it is difficult for me."
-   }
+    "model": "Because it is difficult for me.",
+    "audio": "audio/card01/q5-no.m4a"
+   },
+   "audio": "audio/card01/q5.m4a"
   }
  ]
 }
