@@ -76,6 +76,7 @@
       transition: transform 0.15s ease;
     }
     .tool:hover { transform: translateY(-4px); }
+    .tool .t-face { width: 56px; height: 56px; border-radius: 50%; flex: none; display: block; }
     .tool .t-icon { font-size: 2.8rem; }
     .tool .t-name { font-size: 1.5rem; font-weight: 700; line-height: 1.1; }
     .tool .t-jp { font-family: "M PLUS Rounded 1c", sans-serif; font-size: 1rem; opacity: 0.7; }
@@ -299,6 +300,14 @@
   <h2 class="section-title">🃏 Flashcards ・ フラッシュカード</h2>
   <p class="section-sub">Pick your textbook and practice a little every day! ・ 教科書を選んで、毎日すこしずつ練習しよう！</p>
   <section class="books" id="books"></section>
+
+  <h2 class="section-title">📝 Eiken ・ 英検</h2>
+  <section class="tools">
+    <a class="tool" href="/eiken/interview/">
+      <img class="t-face" src="/eiken/interview/img/examiner-closed.jpg" alt="">
+      <span><div class="t-name">Interview Practice</div><div class="t-jp">英検3級 面接練習</div></span>
+    </a>
+  </section>
 
   <h2 class="section-title">🎮 Games ・ ゲーム</h2>
   <nav class="picker" id="picker"></nav>
