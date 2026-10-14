@@ -1,0 +1,57 @@
+{
+ "id": "card03",
+ "grade": "3級",
+ "title": "Bicycles",
+ "passage": "Bicycles are popular in Japan. People use them to go to school or to the station. Riding a bike is good for the environment, so many people like using bicycles.",
+ "picture": "cards/card03.jpg",
+ "pictureAlt": "A town street. A man is riding a bicycle. A girl is standing in front of an ice cream shop, thinking about buying an ice cream.",
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Please look at the passage. Why do many people like using bicycles?",
+   "tip": "“so” の前を探そう。主語を変えて “Because riding a bike …” で答えよう。",
+   "model": "Because riding a bike is good for the environment.",
+   "audio": "audio/card03/q1.m4a"
+  },
+  {
+   "id": "q2",
+   "text": "Please look at the picture. What is the man doing?",
+   "tip": "“He is …ing” の形で答えよう。",
+   "model": "He is riding a bike.",
+   "audio": "audio/card03/q2.m4a"
+  },
+  {
+   "id": "q3",
+   "text": "Please look at the girl. What is she going to do?",
+   "tip": "吹き出しを見よう。“She is going to …” で答えよう。",
+   "model": "She is going to buy an ice cream.",
+   "audio": "audio/card03/q3.m4a"
+  },
+  {
+   "id": "q4",
+   "text": "How do you come to school?",
+   "tip": "自分のことを文で答えよう。“I … to school.”",
+   "model": "I walk to school.",
+   "audio": "audio/card03/q4.m4a"
+  },
+  {
+   "id": "q5",
+   "text": "Do you like riding a bike?",
+   "tip": "まず Yes か No で答えよう。",
+   "model": "Yes, I do. / No, I don't.",
+   "followYes": {
+    "text": "Please tell me more.",
+    "tip": "もう1文、くわしく言おう。",
+    "model": "I often ride my bike to the park with my friends.",
+    "audio": "audio/card03/q5-yes.m4a"
+   },
+   "followNo": {
+    "text": "Why not?",
+    "tip": "理由を1文で言おう。",
+    "model": "Because I can't ride a bike well.",
+    "audio": "audio/card03/q5-no.m4a"
+   },
+   "audio": "audio/card03/q5.m4a"
+  }
+ ]
+}

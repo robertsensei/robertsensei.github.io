@@ -1,0 +1,57 @@
+{
+ "id": "card04",
+ "grade": "3級",
+ "title": "Summer Festivals",
+ "passage": "Summer festivals are popular in Japan. People enjoy eating food and watching fireworks there. Many people want to wear yukata at festivals, so they buy them before summer.",
+ "picture": "cards/card04.jpg",
+ "pictureAlt": "A summer festival at night with fireworks. Five red lanterns hang over a shaved ice stand. A girl in a yukata is thinking about eating shaved ice.",
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Please look at the passage. Why do many people buy yukata before summer?",
+   "tip": "“so” の前を探そう。“Because they …” で答えよう。",
+   "model": "Because they want to wear them at festivals.",
+   "audio": "audio/card04/q1.m4a"
+  },
+  {
+   "id": "q2",
+   "text": "Please look at the picture. How many lanterns are there?",
+   "tip": "数を数えて “There are …” で答えよう。",
+   "model": "There are five.",
+   "audio": "audio/card04/q2.m4a"
+  },
+  {
+   "id": "q3",
+   "text": "Please look at the girl. What is she going to do?",
+   "tip": "吹き出しを見よう。“She is going to …” で答えよう。",
+   "model": "She is going to eat shaved ice.",
+   "audio": "audio/card04/q3.m4a"
+  },
+  {
+   "id": "q4",
+   "text": "What did you do during your summer vacation?",
+   "tip": "過去形で答えよう。",
+   "model": "I went to the beach with my family.",
+   "audio": "audio/card04/q4.m4a"
+  },
+  {
+   "id": "q5",
+   "text": "Do you like watching fireworks?",
+   "tip": "まず Yes か No で答えよう。",
+   "model": "Yes, I do. / No, I don't.",
+   "followYes": {
+    "text": "Please tell me more.",
+    "tip": "もう1文、くわしく言おう。",
+    "model": "I watch fireworks with my family every summer.",
+    "audio": "audio/card04/q5-yes.m4a"
+   },
+   "followNo": {
+    "text": "Why not?",
+    "tip": "理由を1文で言おう。",
+    "model": "Because they are too loud for me.",
+    "audio": "audio/card04/q5-no.m4a"
+   },
+   "audio": "audio/card04/q5.m4a"
+  }
+ ]
+}

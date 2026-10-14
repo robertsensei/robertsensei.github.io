@@ -1,0 +1,57 @@
+{
+ "id": "card02",
+ "grade": "3級",
+ "title": "Libraries",
+ "passage": "Libraries are good places for studying. People can borrow many kinds of books there. Some people want to read new books for free, so they often go to libraries on weekends.",
+ "picture": "cards/card02.jpg",
+ "pictureAlt": "A library. A boy is reading a book at a table. A man is standing next to a closed window, thinking about opening it.",
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Please look at the passage. Why do some people often go to libraries on weekends?",
+   "tip": "“so” の前を探そう。“Because they …” で答えよう。",
+   "model": "Because they want to read new books for free.",
+   "audio": "audio/card02/q1.m4a"
+  },
+  {
+   "id": "q2",
+   "text": "Please look at the picture. What is the boy doing?",
+   "tip": "“He is …ing” の形で答えよう。",
+   "model": "He is reading a book.",
+   "audio": "audio/card02/q2.m4a"
+  },
+  {
+   "id": "q3",
+   "text": "Please look at the man. What is he going to do?",
+   "tip": "吹き出しを見よう。“He is going to …” で答えよう。",
+   "model": "He is going to open the window.",
+   "audio": "audio/card02/q3.m4a"
+  },
+  {
+   "id": "q4",
+   "text": "What did you do last Sunday?",
+   "tip": "過去形で答えよう。“I …ed” の形で。",
+   "model": "I played tennis with my friends.",
+   "audio": "audio/card02/q4.m4a"
+  },
+  {
+   "id": "q5",
+   "text": "Do you often read books?",
+   "tip": "まず Yes か No で答えよう。",
+   "model": "Yes, I do. / No, I don't.",
+   "followYes": {
+    "text": "Please tell me more.",
+    "tip": "もう1文、くわしく言おう。",
+    "model": "I like reading stories about animals.",
+    "audio": "audio/card02/q5-yes.m4a"
+   },
+   "followNo": {
+    "text": "Why not?",
+    "tip": "理由を1文で言おう。",
+    "model": "Because I am busy with club activities.",
+    "audio": "audio/card02/q5-no.m4a"
+   },
+   "audio": "audio/card02/q5.m4a"
+  }
+ ]
+}

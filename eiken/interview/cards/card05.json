@@ -1,0 +1,57 @@
+{
+ "id": "card05",
+ "grade": "3級",
+ "title": "Pets",
+ "passage": "Many families in Japan have pets. Dogs and cats are very popular. Some people live in small apartments, so they keep small animals like fish or hamsters.",
+ "picture": "cards/card05.jpg",
+ "pictureAlt": "A living room. An orange cat is sleeping on the sofa. A boy is feeding a goldfish in a fishbowl.",
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Please look at the passage. Why do some people keep small animals like fish or hamsters?",
+   "tip": "“so” の前を探そう。“Because they …” で答えよう。",
+   "model": "Because they live in small apartments.",
+   "audio": "audio/card05/q1.m4a"
+  },
+  {
+   "id": "q2",
+   "text": "Please look at the picture. Where is the cat?",
+   "tip": "場所を答えよう。“It is on / under …”",
+   "model": "It is on the sofa.",
+   "audio": "audio/card05/q2.m4a"
+  },
+  {
+   "id": "q3",
+   "text": "What is the boy doing?",
+   "tip": "“He is …ing” の形で答えよう。",
+   "model": "He is feeding the fish.",
+   "audio": "audio/card05/q3.m4a"
+  },
+  {
+   "id": "q4",
+   "text": "What time do you usually get up?",
+   "tip": "“I usually get up at …” で答えよう。",
+   "model": "I usually get up at six thirty.",
+   "audio": "audio/card05/q4.m4a"
+  },
+  {
+   "id": "q5",
+   "text": "Do you like animals?",
+   "tip": "まず Yes か No で答えよう。",
+   "model": "Yes, I do. / No, I don't.",
+   "followYes": {
+    "text": "Please tell me more.",
+    "tip": "もう1文、くわしく言おう。",
+    "model": "I have a dog, and I walk him every morning.",
+    "audio": "audio/card05/q5-yes.m4a"
+   },
+   "followNo": {
+    "text": "Why not?",
+    "tip": "理由を1文で言おう。",
+    "model": "Because I am afraid of dogs.",
+    "audio": "audio/card05/q5-no.m4a"
+   },
+   "audio": "audio/card05/q5.m4a"
+  }
+ ]
+}
